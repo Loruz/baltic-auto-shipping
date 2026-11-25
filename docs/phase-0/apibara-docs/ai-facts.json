@@ -1,0 +1,602 @@
+{
+    "schema_version": "1.2",
+    "measurement_metadata": {
+        "contract_facts_reviewed_at": "2026-10-27",
+        "retained_dataset_measured_at": "2026-11-20T22:00:04Z",
+        "note": "Contract fact review is independent of periodically measured dataset counts. Never interpret contract_facts_reviewed_at as the newest inventory measurement.",
+        "coverage_measurements_url": "https://apibara.tech/coverage.json",
+        "performance_measurements_url": "https://apibara.tech/performance.json",
+        "market_summary_url": "https://apibara.tech/data/auction-market-summary.json",
+        "field_coverage_url": "https://apibara.tech/data/field-coverage.json"
+    },
+    "live_transport": {
+        "status": "pro_and_higher_read_only_beta",
+        "account_activation_required": false,
+        "minimum_plan": "pro",
+        "extra_monthly_fee_usd": 0,
+        "stream_messages_count_against_rest_quota": false,
+        "session_url": "https://apibara.tech/live/v1/session",
+        "websocket_url": "wss://apibara.tech/live/v1/socket",
+        "lane_message": "watch_lot",
+        "guide": "https://apibara.tech/en/products/vehicle-auction-data-api/docs#live-integration",
+        "ai_readable_guide": "https://apibara.tech/docs/vehicle-auction-live.md",
+        "lifecycle_rule": "Scheduled session start never proves a lot finished. Render auction.phase; bidding-now requires a fresh source observation."
+    },
+    "facts_last_verified_at": "2026-10-27",
+    "entity": {
+        "name": "Apibara.tech",
+        "type": "API provider",
+        "canonical_url": "https://apibara.tech/en",
+        "independent": true,
+        "not_affiliated_with": [
+            "Copart",
+            "IAA",
+            "IAAI"
+        ],
+        "disambiguation": "Apibara.tech is a vehicle-auction data API provider and is separate from the similarly named apibara.com blockchain/indexing project."
+    },
+    "product": {
+        "name": "Apibara Vehicle Auction Data API",
+        "category": "Vehicle Auction Data API",
+        "canonical_url": "https://apibara.tech/en/products/vehicle-auction-data-api",
+        "description": "Normalized JSON API for supported Copart and IAA / IAAI current and retained vehicle-auction records.",
+        "base_url": "https://apibara.tech/api/v1/vehicle-auction",
+        "authentication": {
+            "type": "apiKey",
+            "header": "X-API-Key"
+        },
+        "response_format": "application/json",
+        "openapi": {
+            "specification_version": "3.1.0",
+            "api_contract_version": "1.1.2",
+            "canonical_url": "https://apibara.tech/openapi/v1.json",
+            "compatibility_alias": "https://apibara.tech/openapi/vehicle-auction-data-api.json"
+        },
+        "mcp": {
+            "endpoint": "https://apibara.tech/mcp",
+            "read_only": true,
+            "authentication": {
+                "preferred": "X-API-Key",
+                "compatible_bearer_alias": true,
+                "note": "The hosted MCP endpoint accepts the Apibara API key either as X-API-Key or as Authorization: Bearer <API_KEY> for MCP clients that only expose bearer-token authentication."
+            },
+            "registry_id": "tech.apibara/vehicle-auction",
+            "registry_url": "https://registry.modelcontextprotocol.io/?q=tech.apibara%2Fvehicle-auction"
+        }
+    },
+    "related_products": [
+        {
+            "name": "Apibara Cloud",
+            "category": "Hosted automotive website builder",
+            "status": "early_access",
+            "canonical_marketing_url": "https://apibara.tech/en/solutions/white-label-car-auction-platform",
+            "product_url": "https://cloud.apibara.tech/",
+            "templates_url": "https://cloud.apibara.tech/templates",
+            "implementation_guide_url": "https://cloud.apibara.tech/guides/how-to-build-car-auction-website",
+            "website_seo_guide_url": "https://cloud.apibara.tech/guides/car-auction-website-seo",
+            "machine_overview_url": "https://cloud.apibara.tech/llms.txt",
+            "capabilities": [
+                "visual_section_editor",
+                "six_automotive_templates",
+                "custom_seo_pages",
+                "custom_vehicle_url_patterns",
+                "domain_dns_verification",
+                "hosted_https_website"
+            ],
+            "first_website_trial_days": 30,
+            "no_card_trial": true,
+            "api_subscription_is_separate": true,
+            "vehicle_data_requires_apibara_api_key": true,
+            "direct_copart_iaai_bidding_included": false
+        }
+    ],
+    "public_facts": {
+        "historical_coverage": {
+            "approximate_months": 12,
+            "label": "Approximately one year of auction history",
+            "note": "Approximately one year of retained Copart and IAA / IAAI auction history. Availability varies by VIN, lot and source; not every vehicle has a complete year of records. A five-year archive is not available.",
+            "five_year_archive_available": false,
+            "complete_per_vin_coverage_guaranteed": false,
+            "verified_at": "2026-10-27"
+        },
+        "lifetime_indexed_auction_records": {
+            "minimum": 20000000,
+            "label": "20M+",
+            "scope": "lifetime_cumulative",
+            "meaning": "Lifetime/cumulative records indexed by Apibara over time. This is not the number of records currently retained and is not a unique-VIN or unique-vehicle count."
+        },
+        "retained_dataset_snapshot": {
+            "measured_at": "2026-11-20T22:00:04Z",
+            "current_supported_vehicle_records": 4538613,
+            "retained_historical_auction_records": 6578336,
+            "current_plus_retained_records": 11116949,
+            "methodology": "Exact full-table production counts for the retained dataset snapshot; separate from the lifetime/cumulative indexing counter.",
+            "source_breakdown": {
+                "copart": {
+                    "current_vehicle_records": 2666615,
+                    "retained_historical_auction_records": 3894675,
+                    "retained_records": 6561290
+                },
+                "iaai": {
+                    "current_vehicle_records": 1871998,
+                    "retained_historical_auction_records": 2683661,
+                    "retained_records": 4555659
+                }
+            },
+            "live_measurements_url": "https://apibara.tech/coverage.json"
+        },
+        "supported_vehicle_records": {
+            "exact_snapshot": 4538613,
+            "label": "4.5M+"
+        },
+        "records_added_or_refreshed_daily": {
+            "approximate": 30000,
+            "label": "30K+"
+        },
+        "source_data_freshness": {
+            "general_price_and_auction_status_max_minutes": 15,
+            "general_note": "Supported price and auction-status changes can refresh within up to 15 minutes and often sooner.",
+            "live_bid_seconds": {
+                "min": 10,
+                "max": 15
+            },
+            "live_bid_note": "Approximate for supported live-auction workflows when live source data is available."
+        },
+        "free_tier": {
+            "requests_per_month": 100,
+            "payment_card_required": false,
+            "renews_monthly": true,
+            "pricing_url": "https://apibara.tech/en/pricing"
+        }
+    },
+    "supported_sources": [
+        {
+            "name": "Copart",
+            "platform_value": "copart",
+            "landing_url": "https://apibara.tech/en/products/vehicle-auction-data-api/copart-api"
+        },
+        {
+            "name": "IAA / IAAI",
+            "platform_value": "iaai",
+            "landing_url": "https://apibara.tech/en/products/vehicle-auction-data-api/iaai-api"
+        }
+    ],
+    "capabilities": {
+        "vehicle_search": true,
+        "vehicle_details": true,
+        "vehicle_detail_includes": {
+            "parameter": "include",
+            "values": [
+                "history",
+                "vin_lots"
+            ],
+            "combined_example": "include=history,vin_lots",
+            "purpose": "Reduce detail-page round trips by embedding retained sale history and other known lots for the same VIN."
+        },
+        "retained_auction_history": true,
+        "related_vehicles": true,
+        "source_media_when_available": true,
+        "price_and_bid_fields_when_available": true,
+        "filter_metadata": true,
+        "vehicle_hierarchy_filtering": {
+            "supported": true,
+            "levels": [
+                "make",
+                "series",
+                "model",
+                "generation"
+            ],
+            "all_levels_optional": true,
+            "series_parameter": "series",
+            "series_semantics": "canonical model family",
+            "model_parameter": "model",
+            "generation_id_parameter": "generation_id",
+            "generation_alias_parameter": "generation",
+            "dependent_options_endpoint": "https://apibara.tech/api/v1/vehicle-auction/vehicles/filters?make=BMW&series=Series%203&model=330I",
+            "response_fields": [
+                "series",
+                "generation"
+            ],
+            "series_only_returns_all_models_and_generations": true,
+            "series_fallback_from_model_catalog": true,
+            "generation_may_be_unavailable": true,
+            "never_invent_missing_generation": true
+        },
+        "vehicle_generation_filtering": {
+            "supported": true,
+            "canonical_parameter": "generation_id",
+            "readable_alias": "generation",
+            "dependent_options_endpoint": "https://apibara.tech/api/v1/vehicle-auction/vehicles/filters?make=BMW&series=Series%203",
+            "response_field": "generation"
+        },
+        "auction_locations": true,
+        "shipping_workflows": true,
+        "usage_reporting": true,
+        "cursor_pagination": true,
+        "optional_exact_total": {
+            "supported": true,
+            "parameter": "include_total",
+            "response_field": "meta.total",
+            "default": false
+        },
+        "filter_transparency": {
+            "applied_filters_field": "meta.applied_filters",
+            "unknown_filters_field": "meta.unknown_filters",
+            "invalid_validated_values_return_422": true
+        },
+        "market_sold_price_statistics": {
+            "supported": true,
+            "endpoint": "https://apibara.tech/api/v1/vehicle-auction/market/sold-prices",
+            "metrics": [
+                "records_count",
+                "average_sold_price",
+                "min_sold_price",
+                "max_sold_price"
+            ]
+        },
+        "copart_360_media": true,
+        "failed_http_requests_consume_quota": false,
+        "agentic_access_contract": {
+            "published_in_openapi": true,
+            "operation_extension": "x-agentic-access",
+            "default_current_surface": "read-only data access"
+        },
+        "search_surface": {
+            "query_controls": 52,
+            "search_filter_sync_controls": 48,
+            "technical_controls": [
+                "cursor",
+                "per_page",
+                "units",
+                "include_total"
+            ],
+            "fields": [
+                "s",
+                "lot_status",
+                "lot_sub_status",
+                "upcoming",
+                "price_min",
+                "price_max",
+                "year_from",
+                "year_to",
+                "auction_type",
+                "platform",
+                "type",
+                "body_style",
+                "body_type",
+                "vin_prefix",
+                "make",
+                "series",
+                "model",
+                "generation_id",
+                "generation",
+                "color",
+                "fuel_type",
+                "odometer_from",
+                "odometer_to",
+                "engine_size_from",
+                "engine_size_to",
+                "engine_type",
+                "transmission",
+                "cylinders",
+                "drive_type",
+                "run_cond",
+                "damage",
+                "has_key",
+                "updated_within_minutes",
+                "cursor",
+                "zip",
+                "radius",
+                "units",
+                "sort",
+                "per_page",
+                "include_total",
+                "facility_id",
+                "loc_state",
+                "office_name",
+                "auction_date_from",
+                "auction_date_to",
+                "today_only",
+                "auction_date_pending",
+                "sale_document_pending",
+                "sale_document_name",
+                "sale_document_type",
+                "seller_type",
+                "has_shipping_price"
+            ]
+        },
+        "incremental_sync": {
+            "supported": true,
+            "preferred_endpoint": "https://apibara.tech/api/v1/vehicle-auction/changes",
+            "cursor_parameter": "after",
+            "cursor_response_field": "meta.next_cursor",
+            "ordering": "sequence_asc",
+            "retention_days_beta": 14,
+            "cursor_expired_http_status": 410,
+            "reconciliation_parameter": "updated_within_minutes",
+            "min_minutes": 1,
+            "max_minutes": 525600
+        },
+        "managed_sync_center": {
+            "supported": true,
+            "beta": true,
+            "initial_snapshot": true,
+            "durable_incremental_files": true,
+            "normal_api_quota_consumed_by_generation_or_download": false,
+            "separate_generation_or_download_fee": false,
+            "active_snapshot_scope": [
+                "Open",
+                "Live"
+            ],
+            "complete_historical_archive_export": false,
+            "file_retention_hours": 48,
+            "plan_capabilities": {
+                "test": {
+                    "enabled": false,
+                    "max_feeds": 0,
+                    "min_cadence": null,
+                    "allowed_cadences": [],
+                    "modes": [],
+                    "webhooks": false,
+                    "initial_snapshot": false,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                },
+                "basic": {
+                    "enabled": false,
+                    "max_feeds": 0,
+                    "min_cadence": null,
+                    "allowed_cadences": [],
+                    "modes": [],
+                    "webhooks": false,
+                    "initial_snapshot": false,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                },
+                "power": {
+                    "enabled": false,
+                    "max_feeds": 0,
+                    "min_cadence": null,
+                    "allowed_cadences": [],
+                    "modes": [],
+                    "webhooks": false,
+                    "initial_snapshot": false,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                },
+                "pro": {
+                    "enabled": true,
+                    "max_feeds": 1,
+                    "min_cadence": 30,
+                    "allowed_cadences": [
+                        30,
+                        60,
+                        180,
+                        360,
+                        720,
+                        1440
+                    ],
+                    "modes": [
+                        "incremental"
+                    ],
+                    "webhooks": false,
+                    "initial_snapshot": true,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                },
+                "pro+": {
+                    "enabled": true,
+                    "max_feeds": 2,
+                    "min_cadence": 30,
+                    "allowed_cadences": [
+                        30,
+                        60,
+                        180,
+                        360,
+                        720,
+                        1440
+                    ],
+                    "modes": [
+                        "incremental",
+                        "snapshot"
+                    ],
+                    "webhooks": false,
+                    "initial_snapshot": true,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                },
+                "pro-max": {
+                    "enabled": true,
+                    "max_feeds": 3,
+                    "min_cadence": 15,
+                    "allowed_cadences": [
+                        15,
+                        30,
+                        60,
+                        180,
+                        360,
+                        720,
+                        1440
+                    ],
+                    "modes": [
+                        "incremental",
+                        "snapshot"
+                    ],
+                    "webhooks": false,
+                    "initial_snapshot": true,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                },
+                "mega": {
+                    "enabled": true,
+                    "max_feeds": 5,
+                    "min_cadence": 15,
+                    "allowed_cadences": [
+                        15,
+                        30,
+                        60,
+                        180,
+                        360,
+                        720,
+                        1440
+                    ],
+                    "modes": [
+                        "incremental",
+                        "snapshot"
+                    ],
+                    "webhooks": true,
+                    "initial_snapshot": true,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                },
+                "mega-max": {
+                    "enabled": true,
+                    "max_feeds": 10,
+                    "min_cadence": 10,
+                    "allowed_cadences": [
+                        10,
+                        15,
+                        30,
+                        60,
+                        180,
+                        360,
+                        720,
+                        1440
+                    ],
+                    "modes": [
+                        "incremental",
+                        "snapshot"
+                    ],
+                    "webhooks": true,
+                    "initial_snapshot": true,
+                    "formats": [
+                        "jsonl_gz",
+                        "csv_gz"
+                    ],
+                    "history_hours": 48
+                }
+            },
+            "formats": [
+                "jsonl_gz",
+                "csv_gz"
+            ],
+            "account_url": "https://apibara.tech/en/account/sync-center"
+        },
+        "signed_data_feed_webhooks": {
+            "supported": true,
+            "beta": true,
+            "plans": [
+                "Mega",
+                "Mega Max"
+            ],
+            "purpose": "Push notification when a managed data-feed generation becomes ready.",
+            "signature_algorithm": "HMAC-SHA256",
+            "signature_input": "timestamp + \".\" + raw_request_body",
+            "headers": [
+                "X-Apibara-Event-Id",
+                "X-Apibara-Timestamp",
+                "X-Apibara-Signature"
+            ],
+            "signature_prefix": "v1=",
+            "success_status": "HTTP 2xx",
+            "automatic_retries": true,
+            "delivery_history": true,
+            "generation_specific_download_url": true
+        },
+        "upcoming_filter": {
+            "parameter": "upcoming",
+            "values": [
+                "all",
+                "only",
+                "without"
+            ]
+        },
+        "source_filtering": {
+            "readable_parameter": "platform",
+            "values": [
+                "copart",
+                "iaai"
+            ],
+            "numeric_alias_parameter": "auction_type"
+        }
+    },
+    "interpretation_rules": {
+        "indexed_records_are_unique_vehicles": false,
+        "one_vehicle_can_have_multiple_auction_records": true,
+        "rounded_public_counts_are_database_snapshots": false,
+        "nullable_source_fields_are_expected": true,
+        "missing_field_means_real_world_absence": false,
+        "data_freshness_is_http_latency": false,
+        "client_4xx_is_server_downtime": false,
+        "http_429_is_server_downtime": false,
+        "auction_history_is_complete_ownership_history": false,
+        "openapi_is_exact_api_contract_source_of_truth": true,
+        "zero_price_means_unknown": false,
+        "null_price_may_mean_unavailable": true,
+        "current_bid_at_is_inferred_from_updated_at": false
+    },
+    "source_of_truth": {
+        "api_contract": "https://apibara.tech/openapi/v1.json",
+        "stable_product_facts": "https://apibara.tech/ai-facts.json",
+        "coverage_snapshot": "https://apibara.tech/coverage.json",
+        "performance_snapshot": "https://apibara.tech/performance.json",
+        "service_status": "https://apibara.tech/status.json",
+        "current_pricing": "https://apibara.tech/en/pricing",
+        "api_catalog": "https://apibara.tech/.well-known/api-catalog",
+        "market_summary": "https://apibara.tech/data/auction-market-summary.json",
+        "field_dictionary": "https://apibara.tech/data/vehicle-field-dictionary.json",
+        "field_coverage": "https://apibara.tech/data/field-coverage.json",
+        "market_insights_landing": "https://apibara.tech/en/research/auction-market-insights",
+        "data_dictionary_landing": "https://apibara.tech/en/developers/vehicle-auction-api-data-dictionary",
+        "database_sync_guide": "https://apibara.tech/en/guides/copart-iaai-database-sync"
+    },
+    "machine_readable_resources": {
+        "llms_txt": "https://apibara.tech/llms.txt",
+        "llms_full_txt": "https://apibara.tech/llms-full.txt",
+        "apis_json": "https://apibara.tech/apis.json",
+        "apis_json_well_known": "https://apibara.tech/.well-known/apis.json",
+        "api_catalog_rfc9727": "https://apibara.tech/.well-known/api-catalog",
+        "openapi": "https://apibara.tech/openapi/v1.json",
+        "openapi_compatibility_alias": "https://apibara.tech/openapi/vehicle-auction-data-api.json",
+        "coverage_json": "https://apibara.tech/coverage.json",
+        "performance_json": "https://apibara.tech/performance.json",
+        "status_json": "https://apibara.tech/status.json",
+        "status_history_json": "https://apibara.tech/status-history.json",
+        "postman_collection": "https://apibara.tech/postman/apibara-vehicle-auction-api.postman_collection.json",
+        "arazzo_incremental_sync": "https://apibara.tech/ai/workflows/incremental-sync.arazzo.yaml",
+        "arazzo_vin_research": "https://apibara.tech/ai/workflows/vin-research.arazzo.yaml",
+        "ai_product_profile": "https://apibara.tech/ai/vehicle-auction-data-api.md",
+        "agent_prompt": "https://apibara.tech/ai/prompts/vehicle-auction-agent.md",
+        "agent_rules": "https://apibara.tech/ai/rules/vehicle-auction-agent-rules.md",
+        "auction_history_landing": "https://apibara.tech/en/auction-history-api",
+        "sdk_manifest": "https://apibara.tech/sdk/v1/manifest.json",
+        "sdk_bundle": "https://apibara.tech/sdk/apibara-vehicle-auction-sdk-starters-v1.zip",
+        "agentic_access_manifest": "https://apibara.tech/ai/agentic-access.json",
+        "market_summary_json": "https://apibara.tech/data/auction-market-summary.json",
+        "vehicle_field_dictionary_json": "https://apibara.tech/data/vehicle-field-dictionary.json",
+        "field_coverage_json": "https://apibara.tech/data/field-coverage.json",
+        "auction_market_insights": "https://apibara.tech/en/research/auction-market-insights",
+        "vehicle_api_data_dictionary": "https://apibara.tech/en/developers/vehicle-auction-api-data-dictionary"
+    }
+}

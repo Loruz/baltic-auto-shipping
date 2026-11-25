@@ -1,0 +1,45 @@
+{
+  "request": "/api/v1/vehicle-auction/changes?after=0&limit=2000",
+  "status": 422,
+  "ms": 789,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db59dbca2f1ecb-ARN",
+    "connection": "keep-alive",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:25 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=jQscO7ru3ljMxl%2B1OcxtBXQUP0gEsXErYhRX6n61UpGexbN8hzrgWfjRfI96KjsY7rWoacbozNC5sBk3dIQXbrQIZOc2gyo%2FFX3KDcwEzdNDtYr5rheoL9TrMGn4aGo%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "7",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:25",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "96",
+    "x-subscription-used": "4"
+  },
+  "body": {
+    "message": "The limit field must not be greater than 500.",
+    "errors": {
+      "limit": [
+        "The limit field must not be greater than 500."
+      ]
+    },
+    "ok": false,
+    "status": 422,
+    "code": "validation_error"
+  }
+}

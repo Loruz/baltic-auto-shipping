@@ -1,0 +1,83 @@
+# Apibara.tech
+
+> Independent developer API for structured Copart and IAA / IAAI vehicle auction data.
+
+Product/contract facts last reviewed: 2026-10-27
+Retained dataset snapshot (2026-11-20): 4,538,613 current vehicle/lot records + 6,578,336 retained historical records = 11,116,949 retained records. These are not unique VIN counts; live data: https://apibara.tech/coverage.json.
+Website: https://apibara.tech/en
+Product: https://apibara.tech/en/products/vehicle-auction-data-api
+API base: https://apibara.tech/api/v1/vehicle-auction
+OpenAPI: https://apibara.tech/openapi/v1.json
+Authentication: \`X-API-Key\`
+Response format: JSON
+
+Apibara.tech provides one normalized API for supported Copart and IAA / IAAI current and retained auction records. The free plan includes 100 requests per month with no payment card required. Apibara.tech is independent and is not operated by, affiliated with, or endorsed by Copart or IAA / IAAI.
+
+## Start here
+
+- [Vehicle Auction Data API](https://apibara.tech/en/products/vehicle-auction-data-api): product overview and commercial capabilities.
+- [Documentation](https://apibara.tech/en/products/vehicle-auction-data-api/docs): authentication and integration guide.
+- [Endpoint reference](https://apibara.tech/en/products/vehicle-auction-data-api/endpoints): human-readable API surface.
+- [OpenAPI 3.1](https://apibara.tech/openapi/v1.json): exact request/response contract and source of truth.
+- [Pricing](https://apibara.tech/en/pricing): current plans, quotas and entitlements.
+- [Public demo](https://apibara.tech/en/products/vehicle-auction-data-api/demo): test the API.
+- [Create free account](https://apibara.tech/en/register): 100 requests/month, no card.
+
+## Supported sources
+
+- [Copart API](https://apibara.tech/en/products/vehicle-auction-data-api/copart-api)
+- [IAA / IAAI API](https://apibara.tech/en/products/vehicle-auction-data-api/iaai-api)
+
+## Measured market data, field semantics and synchronization
+
+- [Auction Market Insights](https://apibara.tech/en/research/auction-market-insights): dated counts and bounded-sample field availability, not unique vehicle counts or a public sold-price archive.
+- [Aggregate market JSON](https://apibara.tech/data/auction-market-summary.json): first-party retained-record metrics with measurement timestamps.
+- [Source field coverage JSON](https://apibara.tech/data/field-coverage.json): sample sizes and measured sale-price-field presence, not global guaranteed completeness.
+- [Vehicle API data dictionary](https://apibara.tech/en/developers/vehicle-auction-api-data-dictionary): null semantics, bid versus sale price, document type, source-specific identifiers and lifecycle.
+- [Field dictionary JSON](https://apibara.tech/data/vehicle-field-dictionary.json): machine-readable definitions and single-example observations (not population rates).
+- [Production database synchronization guide](https://apibara.tech/en/guides/copart-iaai-database-sync): checkpoints, snapshots, idempotent changes, terminal outcomes and cursor-expiration recovery.
+
+## Separate website-builder product: Apibara Cloud
+
+Apibara Cloud is a hosted, no-code automotive website builder, not an additional vehicle-data API endpoint. It is suitable for branded car auction marketplaces, dealer websites and VIN-related websites. It includes six editable templates, custom pages and SEO URLs, a 30-day Cloud hosting trial, and optional integration with a separate Apibara Vehicle Auction Data API key. Cloud hosting and API access have separate entitlements.
+
+- [Cloud product and capabilities](https://apibara.tech/en/solutions/white-label-car-auction-platform): public product overview.
+- [Cloud builder](https://cloud.apibara.tech/): website builder and hosted platform.
+- [Six Cloud templates](https://cloud.apibara.tech/templates): public design gallery.
+- [How to build a car auction website](https://cloud.apibara.tech/guides/how-to-build-car-auction-website): implementation planning, inventory identity, vehicle pages, custom domain and launch.
+- [Car auction website SEO checklist](https://cloud.apibara.tech/guides/car-auction-website-seo): canonical lots, XML sitemaps, localized content and filtered URL indexing.
+- [Cloud machine-readable overview](https://cloud.apibara.tech/llms.txt): builder capabilities, trial and separation from the data API.
+
+## AI and developer discovery
+
+- [Full AI reference](https://apibara.tech/llms-full.txt): detailed product, endpoint and interpretation context.
+- [AI facts](https://apibara.tech/ai-facts.json): stable machine-readable product facts.
+- [APIs.json](https://apibara.tech/apis.json): API discovery index.
+- [RFC 9727 API catalog](https://apibara.tech/.well-known/api-catalog): automated API discovery.
+- [Coverage](https://apibara.tech/coverage.json): measured retained-data coverage snapshot.
+- [Performance](https://apibara.tech/performance.json): measured API performance.
+- [Service status](https://apibara.tech/status.json): current service status.
+- [SDK resources](https://apibara.tech/en/vehicle-auction-api-sdks): starter clients and code-generation guidance.
+- [MCP server](https://apibara.tech/en/vehicle-auction-mcp-server): read-only MCP access for compatible agents.
+- [MCP endpoint](https://apibara.tech/mcp): hosted read-only MCP endpoint.
+- [Agentic access manifest](https://apibara.tech/ai/agentic-access.json): operation semantics and side-effect policy.
+
+## Interpretation
+
+Use OpenAPI for exact parameters, accepted values and schemas. Missing or null source-backed fields are normal and do not prove real-world absence. Unknown monetary values are null rather than synthetic zeroes. Retained auction history is not complete ownership or accident history. Source-data freshness and HTTP latency are separate measurements. Use the live pricing page and authenticated \`/usage\` response for current commercial entitlements.
+
+## Historical coverage
+
+Approximately one year of retained Copart and IAA / IAAI auction history. Availability varies by VIN, lot and source; not every vehicle has a complete year of records. A five-year archive is not available.
+Do not infer archive depth or full source-inventory coverage from record counts.
+
+
+## Auction lifecycle and live lane integration (2026-11-11)
+
+Guide: https://apibara.tech/en/products/vehicle-auction-data-api/docs#live-integration
+AI-readable protocol: https://apibara.tech/docs/vehicle-auction-live.md
+Backend example: https://apibara.tech/examples/live-lane-client.mjs
+
+A regular auction's scheduled start is not its per-lot finish time. Read auction.phase and source-backed outcome evidence. In-progress lots must not become Ended after a 30/60-minute countdown. Use fresh lane observations to identify Bidding now. Unknown/awaiting_result is not Sold.
+
+Read-only customer live streaming is included in active Pro and higher plans at no additional charge (no live-message or overage charges; messages do not use REST monthly quota): POST /live/v1/session with X-API-Key, then authenticated WebSocket /live/v1/socket. Send watch_lot for full lane snapshots or subscribe for durable per-lot batches with ACK/cursor recovery. Do not use the origin-restricted public demo socket for customer integrations. Sync Center generation webhooks are separate from live bid messages.

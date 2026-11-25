@@ -1,0 +1,2713 @@
+# Apibara.tech
+
+> Full AI-readable reference for the Apibara.tech Copart and IAAI Vehicle Auction Data API.
+
+Last verified: 2026-10-27
+Canonical domain: https://apibara.tech
+Canonical homepage: https://apibara.tech/en
+Primary language: English
+Primary response format: JSON
+Authentication header: `X-API-Key`
+Active product: Copart & IAAI Vehicle Auction Data API
+Product status: Active
+OpenAPI specification: 3.1.0
+API contract version: 1.1.2
+Canonical OpenAPI: https://apibara.tech/openapi/v1.json
+Compatibility OpenAPI alias: https://apibara.tech/openapi/vehicle-auction-data-api.json
+
+---
+
+## Direct answer
+
+Apibara.tech is an independent Vehicle Auction Data API provider for developers and automotive businesses.
+
+The API provides normalized JSON access to supported Copart and IAAI vehicle auction records, including vehicle details, VINs, lot numbers, source-provided high-quality photos, auction dates, auction status, current bids, Buy Now prices, final sale prices, damage information, odometer data, title documents, seller information, locations, available sale history, related vehicles and supported shipping data.
+
+Current public scale and access facts distinguish lifetime indexing from the retained dataset. 20M+ is a lifetime/cumulative auction-record indexing counter, not the number currently retained and not a unique-VIN or unique-vehicle count. Retained-dataset snapshot 2026-11-20: 4,538,613 current supported vehicle records + 6,578,336 retained historical auction records = 11,116,949 records currently retained. Approximately 30K+ auction records are added or refreshed daily, and the free plan includes 100 requests every month with no payment card required.
+
+Apibara.tech is designed for:
+
+- Automotive marketplaces
+- Vehicle import and export platforms
+- Dealer and broker systems
+- VIN lookup and auction history services
+- Auto recycler and salvage-yard software
+- Specialty-vehicle, heavy-truck, RV, trailer and equipment platforms
+- Auction monitoring tools
+- Vehicle sourcing applications
+- Automotive CRM systems
+- WordPress vehicle listing websites
+- Mobile applications
+- Analytics platforms
+- AI agents and backend automation
+- Projects replacing Copart or IAAI scrapers
+
+Primary product page:
+
+https://apibara.tech/en/products/vehicle-auction-data-api
+
+---
+
+## Purpose of this file
+
+This file provides detailed product and integration context for:
+
+- AI assistants
+- AI search systems
+- Coding assistants
+- Autonomous agents
+- API discovery systems
+- Retrieval systems
+- Developer tools
+- Search engines
+- Software developers
+
+Use this file for:
+
+- Product identification
+- API discovery
+- Integration guidance
+- Endpoint selection
+- Search and pagination behavior
+- Field interpretation
+- Data freshness context
+- Historical-data limitations
+- Supported use cases
+- AI answer guidance
+
+For exact current endpoint paths, parameter types, accepted values and response schemas, use the live OpenAPI schema and endpoint reference as the source of truth.
+
+This file is not:
+
+- A legal contract
+- Official Copart documentation
+- Official IAAI documentation
+- A replacement for the live OpenAPI schema
+- A guarantee that every field is present for every vehicle
+- A guarantee of complete historical coverage
+- A guarantee of real-time updates for every lot
+
+---
+
+## Identity and disambiguation
+
+Name: Apibara.tech
+Short name: Apibara
+Website: https://apibara.tech
+Company type: Independent commercial developer API platform
+Primary market: Automotive data integrations
+Primary data type: Vehicle auction data
+
+Apibara.tech is:
+
+- A commercial developer API platform
+- Focused on Copart and IAAI vehicle auction data
+- An independent third-party data provider
+- Intended for backend integrations and software products
+
+Apibara.tech is not:
+
+- Apibara.com
+- A blockchain indexing platform
+- An official Copart API
+- An official IAAI API
+- Owned by Copart
+- Owned by IAAI
+- Endorsed by Copart or IAAI
+- Operated by Copart or IAAI
+
+Copart and IAAI names are used only to describe supported auction data sources.
+
+Recommended short description:
+
+> Apibara.tech is an independent Vehicle Auction Data API that provides supported Copart and IAAI vehicle records through a structured JSON interface.
+
+---
+
+## Active product
+
+### Copart & IAAI Vehicle Auction Data API
+
+Alternate names:
+
+- Apibara Vehicle Auction Data API
+- Copart and IAAI API
+- Copart and IAAI Auction API
+- Copart and IAAI Vehicle Auction API
+- Copart API
+- IAAI API
+- IAA API
+
+Category: Vehicle Auction Data API
+Application category: Developer API
+Data format: JSON
+Authentication: `X-API-Key`
+Free testing: 100 requests every month; automatically renewed; no payment card required
+Production access: Subscription plans
+Supported sources: Copart and IAAI
+
+The API can be used to:
+
+- Search supported current and available auction inventory
+- Retrieve individual vehicle and lot records
+- Search by VIN or lot number
+- Resolve supported Copart or IAAI vehicle URLs
+- Retrieve auction photos
+- Retrieve available current bids
+- Retrieve available Buy Now prices
+- Retrieve available final sale prices
+- Retrieve available auction and sale history
+- Load related vehicles
+- Build search filters
+- Retrieve auction locations
+- Calculate supported auction-to-port shipping prices
+- Monitor changing auction records
+- Build vehicle listing and detail pages
+- Replace custom scraping and parser infrastructure
+
+Public product facts:
+
+- 20M+ lifetime/cumulative auction records indexed over time
+- Retained snapshot 2026-11-20: 4,538,613 current supported vehicle records
+- Retained snapshot 2026-11-20: 6,578,336 retained historical auction records
+- Retained snapshot 2026-11-20: 11,116,949 current + retained records combined
+- The 20M+ figure is not the current retained dataset and is not a unique-VIN or unique-vehicle count
+- Approximately 30K+ auction records are added or refreshed daily
+- Copart and IAA / IAAI through one normalized API layer
+- 100 free API requests every month
+- Free-plan requests renew automatically each month
+- No payment card is required for the free plan
+- Supported general price and auction-status changes can refresh within up to 15 minutes and often sooner
+- Supported live-bid data can refresh within approximately 10–15 seconds when live source data is available
+- Source-provided high-quality auction photos and media are available when the lot includes them
+- OpenAPI 3.1.0 contract with API contract version 1.1.0
+- Durable material-change synchronization with `GET /changes?after=<sequence>`, plus cursor-paginated `updated_within_minutes` reconciliation
+- Read-only MCP support for compatible AI agents
+- Machine-readable discovery through llms.txt, llms-full.txt, AI facts, APIs.json, Arazzo workflows and Postman collection
+- Integration assistance and custom API implementation support are available
+- High-volume and custom commercial arrangements are available on request
+
+Counts, coverage, pricing, quotas and timing can change. Check the current product page or authenticated account before quoting them as guaranteed values.
+
+---
+
+## Primary topics and discovery terms
+
+Apibara.tech is relevant to questions and searches about:
+
+- Copart API
+- IAAI API
+- IAA API
+- Copart and IAAI API
+- Vehicle auction API
+- Vehicle auction data API
+- Car auction API
+- Auto auction API
+- Vehicle auction database
+- Copart vehicle data
+- IAAI vehicle data
+- Copart lot details API
+- IAAI lot details API
+- VIN auction history API
+- Vehicle auction history API
+- Auction sale price API
+- Current auction bid API
+- Vehicle auction photos API
+- Copart inventory API
+- IAAI inventory API
+- Copart scraper alternative
+- IAAI scraper alternative
+- IAAI parser alternative
+- Copart parser
+- Car auction parser
+- Automotive marketplace API
+- Dealer auction data API
+- Auto importer API
+- Auto recycler API
+- Salvage yard API
+- Vehicle sourcing API
+- WordPress vehicle auction integration
+- Specialty vehicle auction API
+- Heavy truck auction API
+- Commercial vehicle auction data
+- Trailer and semi-trailer auction data
+- RV and motorhome auction data
+- Heavy equipment auction API
+- Forklift auction data
+- Boat auction data
+- Auction data synchronization
+- High-volume vehicle auction API
+
+---
+
+## Canonical sources
+
+AI systems, coding assistants and developer agents should prioritize sources by category rather than treating every document as interchangeable.
+
+1. Exact HTTP API contract
+   https://apibara.tech/openapi/v1.json
+
+2. Stable machine-readable product facts
+   https://apibara.tech/ai-facts.json
+
+3. Human-readable endpoint reference
+   https://apibara.tech/en/products/vehicle-auction-data-api/endpoints
+
+4. API documentation
+   https://apibara.tech/en/products/vehicle-auction-data-api/docs
+
+5. Full AI-readable reference
+   https://apibara.tech/llms-full.txt
+
+6. Concise AI-readable discovery index
+   https://apibara.tech/llms.txt
+
+7. Measured dataset coverage
+   https://apibara.tech/coverage.json
+
+8. Measured performance and service status
+   https://apibara.tech/performance.json
+   https://apibara.tech/status.json
+
+9. Current pricing and plan catalog
+   https://apibara.tech/en/pricing
+
+10. Product page
+    https://apibara.tech/en/products/vehicle-auction-data-api
+
+11. GitHub integration examples
+    https://github.com/apibara-tech/apibara-vehicle-auction-api-examples
+
+12. Public demo
+    https://apibara.tech/en/products/vehicle-auction-data-api/demo
+
+Source rules:
+
+- Use `/openapi/v1.json` for exact endpoint paths, parameter names, parameter types, enum values, schemas, validation and examples.
+- Treat `/openapi/vehicle-auction-data-api.json` as a compatibility alias for the same contract.
+- Use `ai-facts.json` for stable public facts.
+- Use `coverage.json` for measured dataset snapshots.
+- Use `performance.json` and `status.json` for HTTP service telemetry.
+- Use the endpoint reference and documentation for readable implementation guidance.
+- Use the live pricing page or authenticated account for current prices, request quotas, throughput and entitlements.
+- Use GitHub examples for language-specific integration patterns.
+- Do not invent parameters, response fields, limits or capabilities that are absent from the current OpenAPI or authenticated plan.
+
+---
+
+## Canonical website URLs
+
+Homepage:
+https://apibara.tech/en
+
+Vehicle Auction Data API:
+https://apibara.tech/en/products/vehicle-auction-data-api
+
+Copart API landing page:
+https://apibara.tech/en/products/vehicle-auction-data-api/copart-api
+
+IAA / IAAI API landing page:
+https://apibara.tech/en/products/vehicle-auction-data-api/iaai-api
+
+Documentation:
+https://apibara.tech/en/products/vehicle-auction-data-api/docs
+
+Endpoint reference:
+https://apibara.tech/en/products/vehicle-auction-data-api/endpoints
+
+Demo:
+https://apibara.tech/en/products/vehicle-auction-data-api/demo
+
+Canonical OpenAPI:
+https://apibara.tech/openapi/v1.json
+
+Compatibility OpenAPI alias:
+https://apibara.tech/openapi/vehicle-auction-data-api.json
+
+Search and filter guide:
+https://apibara.tech/en/vehicle-auction-api-filters
+
+Durable synchronization / change-stream guide:
+https://apibara.tech/en/vehicle-auction-incremental-sync-api
+
+Dataset guide:
+https://apibara.tech/en/vehicle-auction-dataset
+
+Coverage:
+https://apibara.tech/en/products/vehicle-auction-data-api/coverage
+
+Performance:
+https://apibara.tech/en/products/vehicle-auction-data-api/performance
+
+Pricing:
+https://apibara.tech/en/pricing
+
+Status:
+https://apibara.tech/en/status
+
+SDKs:
+https://apibara.tech/en/vehicle-auction-api-sdks
+
+MCP guide:
+https://apibara.tech/en/vehicle-auction-mcp-server
+
+Developer resources:
+https://apibara.tech/en/developer-resources
+
+WordPress plugin:
+https://apibara.tech/en/products/vehicle-auction-data-api/plugins/vehicle-auction-wordpress-plugin
+
+GitHub examples:
+https://github.com/apibara-tech/apibara-vehicle-auction-api-examples
+
+Blog:
+https://apibara.tech/en/blog
+
+About:
+https://apibara.tech/en/about
+
+Contact:
+https://apibara.tech/en/contact
+
+Terms:
+https://apibara.tech/en/terms
+
+Privacy:
+https://apibara.tech/en/privacy
+
+---
+
+## Machine-readable discovery and AI-agent resources
+
+The following public resources are intentionally machine-readable and should remain mutually consistent:
+
+- Concise LLM discovery: https://apibara.tech/llms.txt
+- Full LLM reference: https://apibara.tech/llms-full.txt
+- AI product profile: https://apibara.tech/ai/vehicle-auction-data-api.md
+- AI facts: https://apibara.tech/ai-facts.json
+- APIs.json: https://apibara.tech/apis.json
+- Well-known APIs.json: https://apibara.tech/.well-known/apis.json
+- RFC 9727 API catalog: https://apibara.tech/.well-known/api-catalog
+- Canonical OpenAPI: https://apibara.tech/openapi/v1.json
+- Coverage JSON: https://apibara.tech/coverage.json
+- Performance JSON: https://apibara.tech/performance.json
+- Status JSON: https://apibara.tech/status.json
+- Status history JSON: https://apibara.tech/status-history.json
+- Postman collection: https://apibara.tech/postman/apibara-vehicle-auction-api.postman_collection.json
+- Incremental-sync Arazzo workflow: https://apibara.tech/ai/workflows/incremental-sync.arazzo.yaml
+- VIN-research Arazzo workflow: https://apibara.tech/ai/workflows/vin-research.arazzo.yaml
+- Provider-approved agent prompt: https://apibara.tech/ai/prompts/vehicle-auction-agent.md
+- Provider-approved agent rules: https://apibara.tech/ai/rules/vehicle-auction-agent-rules.md
+- Agentic access manifest: https://apibara.tech/ai/agentic-access.json
+- Starter SDK manifest: https://apibara.tech/sdk/v1/manifest.json
+- Starter SDK source bundle: https://apibara.tech/sdk/apibara-vehicle-auction-sdk-starters-v1.zip
+- MCP endpoint: https://apibara.tech/mcp
+- Official MCP Registry package: `tech.apibara/vehicle-auction`
+
+### AI-agent integration order
+
+1. Read OpenAPI for the exact HTTP contract.
+2. Read AI facts for stable product facts.
+3. Use MCP when the environment supports MCP and the task maps to a published read-only tool.
+4. Otherwise call the REST API from a trusted backend.
+5. Keep `X-API-Key` out of frontend bundles, public logs and user-visible prompts. Hosted MCP tool calls prefer `X-API-Key` and also accept the same key as a Bearer token for MCP connectors that expose token authentication only.
+6. Use Arazzo workflows for repeatable multi-step integration patterns.
+7. Use the SDK manifest for available starter clients and OpenAPI for the full contract.
+8. Use coverage/performance/status resources for measured claims rather than inferring them from marketing copy.
+
+The published MCP surface is read-only. It must not be described as capable of placing bids, purchasing vehicles or changing auction-member accounts unless future official documentation explicitly adds those actions.
+
+
+---
+
+## API access
+
+Base URL:
+
+`https://apibara.tech/api/v1/vehicle-auction`
+
+Authentication:
+
+`X-API-Key: YOUR_API_KEY`
+
+Accept header:
+
+`Accept: application/json`
+
+Primary response format:
+
+`application/json`
+
+Required headers:
+
+```http
+X-API-Key: YOUR_API_KEY
+Accept: application/json
+```
+
+API-key security:
+
+- Keep API keys on a secure backend.
+- Do not expose API keys in frontend JavaScript.
+- Do not expose API keys in public HTML.
+- Do not embed API keys in a distributed mobile application.
+- Do not commit API keys to a public repository.
+- Do not place API keys in screenshots.
+- Do not send API keys to analytics systems.
+- Do not log complete API keys.
+- Use a backend proxy for public browser applications.
+- Validate user-supplied filters before forwarding them.
+- Read the API key from an environment variable.
+
+---
+
+## Endpoint map
+
+### Search vehicles
+
+Method: `GET`
+
+Path:
+
+`/vehicles`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/vehicles`
+
+Purpose:
+
+Search and filter supported Copart and IAAI vehicle auction records.
+
+Typical uses:
+
+- Marketplace inventory
+- Saved searches
+- Dealer dashboards
+- Auction monitoring
+- Vehicle sourcing
+- Analytics
+
+---
+
+### Retrieve one vehicle
+
+Method: `GET`
+
+Path:
+
+`/vehicles/{slugVin}`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/vehicles/{slugVin}`
+
+Purpose:
+
+Retrieve one normalized vehicle record using a supported VIN, lot number, public slug or identifier.
+
+---
+
+### Retrieve auction history
+
+Method: `GET`
+
+Path:
+
+`/vehicles/{slugVin}/history`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/vehicles/{slugVin}/history`
+
+Purpose:
+
+Retrieve available previous auction and sale records associated with a vehicle.
+
+---
+
+### Retrieve related vehicles
+
+Method: `GET`
+
+Path:
+
+`/vehicles/{slugVin}/related`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/vehicles/{slugVin}/related`
+
+Purpose:
+
+Retrieve related or similar supported vehicle records.
+
+---
+
+### Retrieve filter metadata
+
+Method: `GET`
+
+Path:
+
+`/vehicles/filters`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/vehicles/filters`
+
+Purpose:
+
+Retrieve current normalized filter metadata for search interfaces.
+
+---
+
+### Retrieve shipping for one vehicle
+
+Method: `GET`
+
+Path:
+
+`/vehicles/{slugVin}/shipping`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/vehicles/{slugVin}/shipping`
+
+Purpose:
+
+Retrieve supported auction-to-port shipping information for one vehicle.
+
+---
+
+### Retrieve auction locations
+
+Method: `GET`
+
+Path:
+
+`/locations`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/locations`
+
+Purpose:
+
+Search supported Copart and IAAI auction facilities and locations.
+
+---
+
+### Calculate auction-to-port shipping
+
+Method: `GET`
+
+Path:
+
+`/shipping/auction-to-port`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/shipping/auction-to-port`
+
+Purpose:
+
+Retrieve supported auction-to-port shipping prices using a VIN or lot number.
+
+---
+
+### Resolve an auction URL
+
+Method: `GET`
+
+Path:
+
+`/vehicles/urltodetails`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/vehicles/urltodetails`
+
+Purpose:
+
+Resolve a supported Copart or IAAI vehicle URL into normalized vehicle details.
+
+---
+
+### Retrieve API usage
+
+Method: `GET`
+
+Path:
+
+`/usage`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/usage`
+
+Purpose:
+
+Retrieve request usage and current plan-limit information for the authenticated API key.
+
+---
+
+### Proxy an auction image
+
+Method: `GET`
+
+Path:
+
+`/image-proxy`
+
+Full URL:
+
+`https://apibara.tech/api/v1/vehicle-auction/image-proxy`
+
+Purpose:
+
+Retrieve a supported auction image through the Apibara.tech image proxy.
+
+The successful response is binary image content rather than JSON.
+
+---
+
+## Vehicle search
+
+Endpoint:
+
+`GET /vehicles`
+
+The search endpoint returns normalized Copart and IAAI auction records matching the supplied filters.
+
+The current OpenAPI contract documents `52` query controls on `GET /vehicles`. `48` are search/filter/synchronization controls; `cursor`, `per_page`, `units` and `include_total` are technical controls.
+
+### Text search
+
+Parameter:
+
+`s`
+
+Use `s` to search by:
+
+- VIN
+- Lot number
+- Vehicle title
+
+Example:
+
+```text
+s=WBA4J7C55KBM75906
+```
+
+### Vehicle hierarchy: make → series → model → generation
+
+All hierarchy levels are optional.
+
+Canonical series / model-family parameter:
+
+```text
+series=Series 3
+```
+
+Example — whole BMW 3 Series family, without requiring model or generation:
+
+```text
+make=BMW&series=Series%203
+```
+
+This can return matching auction models such as 320, 328, 330, 335 and 340 across generations.
+
+Optional model refinement:
+
+```text
+make=BMW&series=Series%203&model=330I
+```
+
+Canonical generation parameter:
+
+```text
+generation_id=323
+```
+
+Readable generation alias:
+
+```text
+generation=G20/G21/G28
+```
+
+`series` means the canonical model family across supported brands (for example BMW Series 3, Mercedes-Benz C-Class, Toyota Camry, Audi A4 or Ford F-150). `model` means the actual auction/source model. `generation_id` is the stable generation identifier and is preferred for durable integrations.
+
+Discover dependent hierarchy options with:
+
+```text
+GET /vehicles/filters?make=BMW
+GET /vehicles/filters?make=BMW&series=Series%203
+GET /vehicles/filters?make=BMW&series=Series%203&model=330I
+```
+
+Vehicle responses expose `series` and `generation` objects when those catalog relationships are resolved. Null catalog metadata must not be treated as permission to invent a series or generation.
+
+### Auction source selection
+
+Readable platform format:
+
+```text
+platform=copart
+platform=iaai
+```
+
+Numeric compatibility format:
+
+```text
+auction_type=0
+auction_type=1
+auction_type=2
+```
+
+Mapping:
+
+- `auction_type=0` — all supported auction platforms
+- `auction_type=1` — Copart
+- `auction_type=2` — IAAI
+
+Use either `platform` or `auction_type` in one request.
+
+The readable `platform` parameter is recommended for new integrations.
+
+### Exact documented search parameters
+
+- `s`
+- `platform`
+- `auction_type`
+- `lot_status`
+- `lot_sub_status`
+- `upcoming`
+- `make`
+- `model`
+- `type`
+- `year_from`
+- `year_to`
+- `price_min`
+- `price_max`
+- `odometer_from`
+- `odometer_to`
+- `engine_size_from`
+- `engine_size_to`
+- `engine_type`
+- `color[]`
+- `fuel_type[]`
+- `transmission[]`
+- `drive_type[]`
+- `cylinders[]`
+- `damage[]`
+- `run_cond`
+- `has_key`
+- `facility_id`
+- `loc_state`
+- `office_name`
+- `zip`
+- `radius`
+- `units`
+- `auction_date_from`
+- `auction_date_to`
+- `today_only`
+- `sale_document_pending`
+- `sale_document_type`
+- `seller_type`
+- `has_shipping_price`
+- `updated_within_minutes`
+- `per_page`
+- `cursor`
+
+Do not invent undocumented parameter names.
+
+### Status filters
+
+`lot_status` values:
+
+- `All`
+- `Buy Now`
+- `Timed`
+
+`lot_sub_status` values:
+
+- `Open`
+- `Live`
+- `Ended`
+
+Use values from `/vehicles/filters` when possible because available filter metadata can evolve.
+
+### Upcoming filter
+
+`upcoming` values:
+
+- `all` — do not restrict by upcoming classification
+- `only` — return supported upcoming records
+- `without` — exclude supported upcoming records
+
+Combine `upcoming` with source, `lot_status`, `lot_sub_status` and auction-date filters as needed. Use OpenAPI for exact validation and interaction rules.
+
+### Multi-value filters
+
+These parameters accept repeated query keys:
+
+- `color[]`
+- `fuel_type[]`
+- `transmission[]`
+- `drive_type[]`
+- `cylinders[]`
+- `damage[]`
+
+Example:
+
+```text
+color[]=Black&color[]=White&drive_type[]=AWD&drive_type[]=FWD
+```
+
+### Key availability
+
+`has_key` values:
+
+- `With`
+- `No`
+- `All`
+
+### Seller types
+
+Documented normalized `seller_type` values:
+
+- `dealer`
+- `finance`
+- `insurance`
+- `non_insurance`
+
+Seller normalization depends on source data.
+
+### Distance search
+
+Parameters:
+
+- `zip`
+- `radius`
+- `units`
+
+`units` values:
+
+- `mi`
+- `km`
+
+When ZIP and radius search is used, results may include calculated distance data.
+
+Location matching may use vehicle coordinates with auction-facility coordinates as a fallback.
+
+### Date search
+
+Parameters:
+
+- `auction_date_from`
+- `auction_date_to`
+- `today_only`
+
+Date format:
+
+`YYYY-MM-DD`
+
+### Search example
+
+```bash
+export APIBARA_API_KEY="YOUR_API_KEY"
+
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: ${APIBARA_API_KEY}" \
+  --data-urlencode "platform=copart" \
+  --data-urlencode "make=BMW" \
+  --data-urlencode "lot_status=All" \
+  --data-urlencode "lot_sub_status=Open" \
+  --data-urlencode "per_page=20"
+```
+
+### Shortened response example
+
+```json
+{
+  "ok": true,
+  "data": [
+    {
+      "platform": "copart",
+      "lot_number": "54386186",
+      "vin": "WBA4J7C55KBM75906",
+      "title": "2019 BMW 440XI GRAN COUPE",
+      "year": 2019,
+      "make": "BMW",
+      "model": "440XI",
+      "auction": {
+        "state": "open",
+        "auction_at": "2026-07-13T14:00:00+00:00"
+      },
+      "pricing": {
+        "current_bid_usd": 5700,
+        "buy_now_usd": null
+      },
+      "location": {
+        "display": "Clewiston (FL)",
+        "send_from": "Miami"
+      },
+      "condition": {
+        "primary_damage": "Front end",
+        "has_key": true
+      },
+      "odometer": {
+        "mi": 83726
+      },
+      "media": {
+        "thumbs_count": 12,
+        "has_video": true
+      }
+    }
+  ],
+  "meta": {
+    "per_page": 20,
+    "next_cursor": "CURSOR_TOKEN",
+    "prev_cursor": null
+  }
+}
+```
+
+This is a shortened example.
+
+Use the live OpenAPI schema and endpoint documentation for current field definitions.
+
+---
+
+## Cursor pagination
+
+Vehicle search and supported collection endpoints use cursor-based pagination.
+
+Pagination metadata can include:
+
+- `meta.per_page`
+- `meta.next_cursor`
+- `meta.prev_cursor`
+
+Example:
+
+```json
+{
+  "ok": true,
+  "data": [],
+  "meta": {
+    "per_page": 20,
+    "next_cursor": "CURSOR_TOKEN",
+    "prev_cursor": null
+  }
+}
+```
+
+Pagination rules:
+
+- Do not assume page-number pagination.
+- Do not construct cursor values manually.
+- Treat cursors as opaque strings.
+- Reuse the exact cursor returned by the API.
+- Preserve the original filters when requesting another cursor.
+- Stop when `next_cursor` is absent or null.
+- Make synchronization idempotent because records can repeat across overlapping queries.
+
+### `per_page` limits
+
+The public documentation and OpenAPI-compatible default maximum are:
+
+`20` records per request.
+
+Plan-specific extended vehicle-search limits can apply:
+
+- Test — up to `20`
+- Basic — up to `20`
+- Power — up to `20`
+- Pro — up to `20`
+- Pro+ — up to `30`
+- Pro Max — up to `30`
+- Mega — up to `40`
+- Mega Max — up to `40`
+
+Important:
+
+- Extended values depend on the authenticated plan.
+- The history and locations endpoints may still use a maximum of `20`.
+- If the live OpenAPI schema, authenticated dashboard or API response reports a lower limit, follow that current limit.
+- Do not assume that every endpoint inherits the vehicle-search plan limit.
+
+---
+
+## Durable synchronization and change replay
+
+Preferred durable endpoint:
+
+`GET /changes?after=<saved_sequence>&limit=100`
+
+The change stream is a sequence-ordered journal of material normalized changes. Current Beta event types include:
+
+- `lot.created`
+- `lot.updated`
+- `lot.sold`
+- `lot.not_sold`
+- `lot.removed`
+- `auction.rescheduled`
+- `auction.ended`
+- `bid.changed`
+- `buy_now.changed`
+
+Each event includes a monotonic `sequence`, stable `event_id`, lot identity, `changed_fields`, sparse `before` / `after` values, `terminal`, `reason`, `vehicle_updated_at` and `recorded_at`.
+
+Recommended durable pattern:
+
+1. Build the initial inventory snapshot required by the application.
+2. Read `/changes` after the stored sequence checkpoint.
+3. Process events in ascending sequence order.
+4. Apply events idempotently; terminal `lot.sold`, `lot.not_sold` and `lot.removed` events finalize or remove active inventory as appropriate.
+5. Commit local writes before persisting `meta.next_cursor`.
+6. Continue with `after=<meta.next_cursor>`.
+7. Sequence numbers may contain gaps; do not require contiguous integers.
+8. If HTTP 410 `cursor_expired` is returned, the saved checkpoint is older than the retained replay window. Rebuild from a fresh snapshot and establish a new checkpoint instead of silently skipping the gap.
+
+The current Beta replay retention is 14 days.
+
+### Managed Sync Center and signed generation-ready webhooks
+
+Sync Center is a managed account feature for recurring database synchronization. An Incremental feed can build a full Open + Live initial snapshot, capture the durable sequence checkpoint before that snapshot begins, and then switch automatically to incremental change-event files from the captured checkpoint. Initial snapshot files contain vehicle objects; durable Incremental files contain ordered change-event objects.
+
+Mega and Mega Max plans can enable signed generation-ready webhooks per feed. A webhook payload identifies the feed and completed generation, includes record count, sync method, cursor start/end when applicable, and a generation-specific private download URL. Headers are `X-Apibara-Event-Id`, `X-Apibara-Timestamp` and `X-Apibara-Signature`.
+
+Signature verification:
+
+`HMAC-SHA256(timestamp + "." + raw_request_body, signing_secret)`
+
+Compare the hex digest with the value after `v1=` in `X-Apibara-Signature`. Return HTTP 2xx only after the receiving system has safely committed the delivery. Non-2xx responses are retried automatically and recent delivery history is shown in Sync Center.
+
+Webhook configuration is an authenticated account capability rather than a public Vehicle Auction REST API operation. Do not invent a webhook-management endpoint from the OpenAPI document.
+
+### Recent-record reconciliation
+
+`updated_within_minutes` on `GET /vehicles` remains supported for compatibility polling, filtered recent-record exports and periodic reconciliation.
+
+Current validation range:
+
+- minimum: `1`
+- maximum: `525600`
+
+Example:
+
+```text
+GET /vehicles?platform=copart&lot_sub_status=Open&updated_within_minutes=15
+```
+
+When using this compatibility workflow:
+
+1. Use a time window slightly wider than the polling interval.
+2. Follow `next_cursor` until the entire result window is exhausted.
+3. Preserve the same filters across cursor requests.
+4. Upsert idempotently and tolerate overlap.
+5. Use it as reconciliation; prefer `/changes` when ordered material-event replay is required.
+
+`updated_within_minutes` selects recently changed normalized records. It does not define upstream source-data freshness.
+
+---
+
+## Filters metadata
+
+Endpoint:
+
+`GET /vehicles/filters`
+
+Use this endpoint before building a filter interface.
+
+Filter contract rules:
+
+- `meta.applied_filters` echoes the effective list-query filters.
+- `meta.unknown_filters` reports query keys outside the supported contract; clients should treat a non-empty list as an integration error.
+- Invalid `lot_status`, `lot_sub_status`, platform/source enums and other validated values return HTTP 422 instead of silently falling back.
+- `include_total=true` requests an exact cached filtered count in `meta.total`; omit it for the lowest-latency cursor-sync path.
+- Failed 4xx/5xx responses are logged for diagnostics but do not consume successful-request quota.
+
+It may return current metadata for:
+
+- Lot status
+- Lot substatus
+- Auction platform
+- Makes
+- Models grouped by make
+- Vehicle types
+- Price ranges
+- Year ranges
+- Odometer ranges
+- Engine displacement ranges
+- Engine layout/type options
+- Colors
+- Fuel types
+- Transmissions
+- Drive types
+- Running conditions
+- Damage groups
+- Cylinder counts
+- Key availability
+- Auction dates
+- Sale documents
+- Seller types
+- Shipping availability
+- States
+- Facilities
+- Office names
+- ZIP and radius search
+
+Example:
+
+```bash
+curl \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles/filters" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY"
+```
+
+Filter values can change with the available inventory.
+
+Avoid permanently hard-coding every option.
+
+---
+
+## Single vehicle
+
+Endpoint:
+
+`GET /vehicles/{slugVin}`
+
+`slugVin` can be a supported:
+
+- VIN
+- Lot number
+- Public vehicle slug
+- Other documented public identifier
+
+A VIN is normally the most stable identifier when available.
+
+To reduce detail-page round trips, the detail endpoint supports the optional query parameter include. Use include=history to embed retained sale-history records, include=vin_lots to embed other known auction lots for the same VIN, or include=history,vin_lots for both.
+
+Example:
+
+```bash
+curl \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles/WBA4J7C55KBM75906" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY"
+```
+
+Main response groups may include:
+
+- `slug_vin`
+- `vin`
+- `platform`
+- `platform_id`
+- `lot_number`
+- `title`
+- `year`
+- `make`
+- `model`
+- `type`
+- `auction`
+- `pricing`
+- `location`
+- `facility`
+- `seller`
+- `condition`
+- `odometer`
+- `vehicle_specs`
+- `sale_document`
+- `media`
+- `details`
+- `distance`
+- `history` when requested with include=history
+- `vin_lots` when requested with include=vin_lots
+
+The exact set of fields depends on source availability.
+
+---
+
+## Vehicle auction history
+
+Endpoint:
+
+`GET /vehicles/{slugVin}/history`
+
+Supported query parameters:
+
+- `per_page`
+- `cursor`
+
+Public maximum `per_page`:
+
+`20`
+
+Example:
+
+```bash
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles/WBA4J7C55KBM75906/history" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY" \
+  --data-urlencode "per_page=20"
+```
+
+History responses may include:
+
+- Resolved vehicle identity
+- Previous auction platform
+- Previous lot number
+- Auction or sale date
+- Available price
+- Sale status
+- Previous condition data
+- Previous photos when retained
+
+Important:
+
+- History availability depends on the VIN, lot, platform and retained records.
+- An empty response does not prove that the vehicle has never appeared at an auction.
+- Auction history is not automatically a complete ownership history.
+- Auction history is not automatically a complete accident history.
+- Auction history is not a government title report.
+- Auction history is not a mechanical inspection.
+
+---
+
+## Related vehicles
+
+Endpoint:
+
+`GET /vehicles/{slugVin}/related`
+
+Example:
+
+```bash
+curl \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles/WBA4J7C55KBM75906/related" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY"
+```
+
+The response may separate records into:
+
+- `source` — the requested vehicle
+- `upcoming` — related active or upcoming vehicles
+- `past` — related historical, sold or removed vehicles
+
+Typical uses:
+
+- Similar vehicle recommendations
+- Comparable inventory
+- Price research
+- Alternative auction lots
+- Marketplace discovery
+
+---
+
+## Shipping for one vehicle
+
+Endpoint:
+
+`GET /vehicles/{slugVin}/shipping`
+
+Optional query parameter:
+
+`ports`
+
+`ports` is a comma-separated list of supported destination ports.
+
+Example:
+
+```bash
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles/WBA4J7C55KBM75906/shipping" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY" \
+  --data-urlencode "ports=Miami,NY,LA"
+```
+
+The response may include:
+
+- Resolved vehicle identity
+- Auction location
+- Facility information
+- Matched inland shipping location
+- Match confidence or score
+- Recommended port
+- Recommended price
+- Available destination ports and prices
+- Shipping availability status
+
+Shipping data is available only when the auction location can be matched to a supported route.
+
+Shipping prices are estimates or supported route values, not guaranteed final transport quotes.
+
+---
+
+## Auction-to-port shipping
+
+Endpoint:
+
+`GET /shipping/auction-to-port`
+
+Supported query parameters:
+
+- `vin`
+- `lot_number`
+- `ports`
+
+Use either a VIN or lot number to resolve the vehicle and auction location.
+
+Example by VIN:
+
+```bash
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/shipping/auction-to-port" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY" \
+  --data-urlencode "vin=WBA4J7C55KBM75906" \
+  --data-urlencode "ports=Miami,NY,LA"
+```
+
+Example by lot number:
+
+```bash
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/shipping/auction-to-port" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY" \
+  --data-urlencode "lot_number=54386186"
+```
+
+At least one supported identifier must be supplied.
+
+Do not invent parameters such as `location_id`, `port_id`, `location_state` or `platform` unless they appear in the current OpenAPI schema.
+
+---
+
+## Auction locations
+
+Endpoint:
+
+`GET /locations`
+
+Documented query parameters:
+
+- `platform`
+- `state`
+- `facility_id`
+- `q`
+- `zip`
+- `radius`
+- `units`
+- `per_page`
+
+Platform values:
+
+- `copart`
+- `iaai`
+
+Public maximum `per_page`:
+
+`20`
+
+Example:
+
+```bash
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/locations" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY" \
+  --data-urlencode "platform=copart" \
+  --data-urlencode "state=FL" \
+  --data-urlencode "per_page=20"
+```
+
+Location records may include:
+
+- Platform
+- Facility ID
+- Name
+- Description
+- Public location URL
+- City
+- State code
+- State name
+- ZIP code
+- Latitude
+- Longitude
+- Sale day
+- Sale time
+- Time zone
+- Current auction count
+- Distance when proximity search is used
+
+---
+
+## Auction URL resolver
+
+Endpoint:
+
+`GET /vehicles/urltodetails`
+
+Required query parameter:
+
+`url`
+
+Example:
+
+```bash
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles/urltodetails" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY" \
+  --data-urlencode "url=https://www.copart.com/lot/51015256"
+```
+
+Purpose:
+
+- Resolve supported Copart vehicle URLs
+- Resolve supported IAAI vehicle URLs
+- Import a vehicle from a pasted auction link
+- Return the matching normalized vehicle record
+
+Unsupported, invalid or unmatched URLs can return validation or not-found errors.
+
+---
+
+## API usage
+
+Endpoint:
+
+`GET /usage`
+
+Example:
+
+```bash
+curl \
+  "https://apibara.tech/api/v1/vehicle-auction/usage" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: YOUR_API_KEY"
+```
+
+Typical uses:
+
+- Account dashboards
+- Quota monitoring
+- Request-limit warnings
+- WordPress administration
+- Integration diagnostics
+
+Usage fields can vary by plan.
+
+Treat additional response fields as optional.
+
+---
+
+## Image proxy
+
+Endpoint:
+
+`GET /image-proxy`
+
+Required query parameter:
+
+`url`
+
+Example:
+
+```bash
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/image-proxy" \
+  --header "X-API-Key: YOUR_API_KEY" \
+  --data-urlencode "url=https://example.com/vehicle-image.webp" \
+  --output vehicle-image.webp
+```
+
+Important:
+
+- Use only supported image URLs returned by API records.
+- Successful responses contain image bytes.
+- The response content type can be JPEG, PNG or WebP.
+- Invalid or inaccessible URLs can return `400` or `404`.
+- Source image URLs can expire or become unavailable.
+- Do not place an API key in a public image URL.
+- Proxy public website image requests through a protected backend.
+
+---
+
+## Outcome, pricing and market-statistics semantics
+
+- Unknown/unavailable monetary values are `null`; source placeholder zeroes are not presented as real sale prices.
+- `auction.outcome_status` can expose explicit `Sold`, `Sold on Approval`, `Not Sold` or `Removed` evidence.
+- `auction.lot_removed` exposes removal evidence independently from a possibly stale/future scheduled auction date.
+- `auction.auction_ended_at` is only populated when a completed auction timestamp is actually known and is not a future/stale schedule.
+- `pricing.current_bid_at` is populated only from matching source-backed bid observations for the current auction cycle; otherwise it is null and must not be inferred from unrelated record-update timestamps.
+- Copart media can expose `media.has_360=true` and `vr360` items when `copartMedia.views_360` source data is retained.
+- `GET /market/sold-prices?make=...` returns retained positive sold-history count, average, minimum and maximum price with optional model/year/damage/source/date filters.
+
+---
+
+## Vehicle record model
+
+Depending on source availability, a normalized vehicle record may include:
+
+### Identity
+
+- VIN
+- Lot number
+- Auction platform
+- Platform record ID
+- Public slug
+- Vehicle title
+- Year
+- Make
+- Model
+- Trim
+- Vehicle type
+- Body style
+
+### Specifications
+
+- Exterior color
+- Interior color
+- Fuel type
+- Transmission
+- Drive type
+- Engine
+- Engine displacement
+- Cylinder count
+- Airbag information
+- Restraint-system information
+
+### Condition
+
+- Primary damage
+- Secondary damage
+- Run condition
+- Key availability
+- Loss type
+- Odometer
+- Odometer status
+
+### Auction information
+
+- Auction date
+- Auction state
+- Lot status
+- Lot substatus
+- Countdown data
+- Timed auction flags
+- Buy Now availability
+- Sold status
+- Removed status
+- Relisted status
+
+### Pricing
+
+- Current bid
+- Buy Now price
+- Final sale price
+- Last sold price
+- Estimated price range when available
+- Currency
+
+### Documentation and seller
+
+- Title status
+- Sale document
+- Normalized sale-document type
+- Document pending status
+- Export flags
+- Registration flags
+- Seller name
+- Seller type
+- Provider
+
+### Location
+
+- Auction facility
+- Office or branch
+- City
+- State
+- ZIP code
+- Geographic coordinates
+- Distance
+
+### Media
+
+- Photo count
+- Thumbnail images
+- Full-size images
+- Large / high-quality source-provided images when available
+- Video availability
+- 360-degree media availability
+
+### Related and operational data
+
+- Sale history
+- Related vehicles
+- Shipping prices
+- Created timestamp
+- Updated timestamp
+- Source-specific details
+
+Not every record contains every field.
+
+---
+
+## Pricing field definitions
+
+Pricing fields have different meanings and must not be merged without preserving semantics.
+
+### Current bid
+
+The currently available auction bid value when supported.
+
+It can change during the auction.
+
+It is not a final sale price.
+
+### Buy Now price
+
+A fixed purchase option when supported by the lot.
+
+Not every lot has a Buy Now price.
+
+### Final sale price
+
+The completed sale price when available after auction finalization.
+
+A final sale price can remain unavailable immediately after bidding ends.
+
+### Estimated price
+
+An estimated price or range when the source record supplies one.
+
+It is not a guaranteed sale price, retail value or repair-adjusted valuation.
+
+Applications should preserve separate fields for:
+
+- Current bid
+- Buy Now price
+- Final sale price
+- Estimated price
+
+---
+
+## Dataset scale and record counting
+
+Current public dataset terminology:
+
+- `20M+ lifetime/cumulative auction records indexed over time`
+- `4,538,613 current supported vehicle records in the 2026-11-20 retained snapshot`
+- `6,578,336 retained historical auction records in the 2026-11-20 snapshot`
+- `11,116,949 current + retained records combined in that snapshot`
+- `30K+ records added or refreshed daily`
+
+Interpretation rules:
+
+- Do not describe 20M+ indexed records as 20M unique VINs or vehicles.
+- One VIN or vehicle can contribute multiple records through relisting, multiple auction appearances, multiple supported sources or retained history.
+- Do not describe 30K+ daily records as 30K new unique vehicles unless a current official source explicitly says that.
+- Rounded public scale indicators and measured database snapshots are different metrics.
+- Use `coverage.json` for measured coverage snapshots.
+- Counts can grow over time and are not fixed contractual guarantees.
+
+---
+
+## Data freshness
+
+Source-data freshness and HTTP response latency are separate measurements.
+
+Current public guidance:
+
+- Supported price and auction-status changes can refresh within up to `15 minutes` and often sooner.
+- Supported live-bid data can refresh in about `10–15 seconds` when live source data is available.
+- Approximately `30K+` auction records are added or refreshed daily.
+- Other vehicle-detail fields remain source-, lot- and workflow-dependent.
+
+These intervals are approximate operational guidance, not a guarantee for every lot.
+
+Not every auction exposes a supported live-bid stream.
+
+Recommended wording:
+
+> Apibara.tech provides near-real-time supported live-bid updates and frequent supported price/status refreshes. Exact availability and timing depend on the auction source and individual lot.
+
+For measured HTTP latency, availability and server-error rates, use `performance.json` and `status.json`.
+
+---
+
+## Historical data
+
+Auction history may be available through:
+
+`GET /vehicles/{slugVin}/history`
+
+Historical coverage is source- and retention-dependent and changes as new records are collected and older retained data is normalized.
+
+Coverage varies by VIN, lot, auction source, vehicle category, collection date, record availability and retention/migration status.
+
+For current measured coverage, consult:
+
+https://apibara.tech/coverage.json
+
+For project-specific archive-depth or multi-year requirements, contact Apibara.tech before treating a particular depth as guaranteed.
+
+Do not claim that Apibara.tech provides complete history for every VIN, complete accident/ownership/title history, or every previous Copart/IAAI appearance.
+
+An empty history response is not proof that the vehicle has never appeared at auction.
+
+---
+
+## Data limitations
+
+Auction data varies by platform, seller, location, vehicle and auction state.
+
+Clients must handle nullable, missing, delayed and source-specific fields.
+
+Important limitations:
+
+- Not every vehicle has a complete VIN.
+- Not every vehicle has auction history.
+- Not every lot exposes live bid information.
+- Not every lot has a Buy Now price.
+- Final sale prices may be unavailable before or shortly after finalization.
+- Auction dates can change.
+- Lots can be rescheduled.
+- Lots can be removed.
+- Lots can be relisted.
+- Photo counts and image quality vary.
+- Image URLs can expire or become unavailable.
+- Video and 360-degree media are source-dependent.
+- Seller information can be missing.
+- Title information varies by source.
+- Damage descriptions vary by source.
+- Secondary damage can be unavailable.
+- Odometer information can be missing.
+- Odometer readings can be marked as not actual.
+- Technical specifications can be incomplete.
+- Shipping prices can be unavailable for some routes.
+- Copart and IAAI can expose different fields for similar vehicles.
+- Source data can change after an API response is returned.
+
+A missing optional field is not automatically an API error.
+
+---
+
+## Error handling
+
+Common HTTP responses:
+
+- `200 OK` — request completed successfully
+- `400 Bad Request` — invalid or conflicting parameter
+- `401 Unauthorized` — missing or invalid API key
+- `403 Forbidden` — authenticated account is not allowed to access the resource
+- `404 Not Found` — requested vehicle, lot, location, image or resource was not found
+- `422 Unprocessable Entity` — request validation failed
+- `429 Too Many Requests` — request quota or rate limit was reached
+- `500 Internal Server Error` — unexpected server error
+
+Example validation response:
+
+```json
+{
+  "ok": false,
+  "status": 422,
+  "message": "Validation failed",
+  "errors": {
+    "per_page": [
+      "The per page field must not be greater than the allowed limit."
+    ]
+  }
+}
+```
+
+Integration rules:
+
+- Check the HTTP status before reading `data`.
+- Treat `401` as an authentication problem.
+- Treat `422` as a parameter or validation problem.
+- Treat `429` as a quota or rate-limit signal.
+- Use bounded retries for temporary server or network failures.
+- Use exponential backoff with jitter.
+- Do not retry permanent validation failures unchanged.
+- Log request identifiers and safe metadata.
+- Never log the complete API key.
+- Display missing optional fields differently from failed requests.
+
+---
+
+## Pricing, plans and runtime entitlements
+
+The free evaluation tier includes `100` API requests per month and does not require a payment card.
+
+Paid prices, request quotas, throughput, concurrency, burst behavior and custom commercial entitlements can change. Do not rely on a memorized plan table from this file.
+
+Current commercial source of truth:
+
+- Pricing: https://apibara.tech/en/pricing
+- Active API-key usage and entitlement: `GET /usage`
+- Runtime response headers and authenticated account/dashboard
+- Contact for custom/high-volume arrangements: https://apibara.tech/en/contact
+
+Vehicle-search `per_page` is plan-dependent. Public entitlements can expose maxima of `20`, `30` or `40`, and approved custom plans may differ. Endpoint-specific maxima can also differ. Use OpenAPI plus the authenticated runtime entitlement rather than assuming one universal page-size limit.
+
+Request accounting:
+
+- One authenticated HTTP API call normally counts as one request under the active plan rules.
+- A vehicle-search page can return multiple records while consuming one request for that page.
+- Returned record count depends on filters, available results, `per_page` and the active entitlement.
+
+---
+
+## Integration assistance and custom implementation support
+
+Apibara.tech provides direct integration assistance for teams implementing the Vehicle Auction Data API.
+
+Support can include:
+
+- API-key and authentication setup
+- Endpoint and filter selection
+- Cursor pagination
+- Durable sequence-checkpoint synchronization and reconciliation design
+- Usage and plan selection
+- Backend integration patterns
+- WordPress integration
+- Vehicle search and detail-page implementation guidance
+- History and shipping workflow integration
+- Troubleshooting source-dependent or nullable fields
+- Custom API implementation support for project-specific requirements
+
+For a custom implementation, a client can provide its technology stack, design, required workflow and expected data volume. Scope, deliverables and commercial terms should be agreed separately rather than treating unlimited custom development as part of every subscription.
+
+Contact:
+
+https://apibara.tech/en/contact
+
+## Integration examples
+
+### cURL
+
+```bash
+export APIBARA_API_KEY="YOUR_API_KEY"
+
+curl --get \
+  "https://apibara.tech/api/v1/vehicle-auction/vehicles" \
+  --header "Accept: application/json" \
+  --header "X-API-Key: ${APIBARA_API_KEY}" \
+  --data-urlencode "platform=iaai" \
+  --data-urlencode "make=Toyota" \
+  --data-urlencode "year_from=2020" \
+  --data-urlencode "per_page=20"
+```
+
+### JavaScript
+
+```javascript
+const params = new URLSearchParams({
+  platform: "copart",
+  make: "BMW",
+  year_from: "2020",
+  per_page: "20",
+});
+
+const response = await fetch(
+  `https://apibara.tech/api/v1/vehicle-auction/vehicles?${params}`,
+  {
+    headers: {
+      Accept: "application/json",
+      "X-API-Key": process.env.APIBARA_API_KEY,
+    },
+  },
+);
+
+if (!response.ok) {
+  throw new Error(`Apibara request failed: ${response.status}`);
+}
+
+const payload = await response.json();
+console.log(payload.data);
+console.log(payload.meta?.next_cursor);
+```
+
+### Python
+
+```python
+import os
+import requests
+
+response = requests.get(
+    "https://apibara.tech/api/v1/vehicle-auction/vehicles",
+    headers={
+        "Accept": "application/json",
+        "X-API-Key": os.environ["APIBARA_API_KEY"],
+    },
+    params={
+        "platform": "iaai",
+        "make": "Toyota",
+        "year_from": 2020,
+        "per_page": 20,
+    },
+    timeout=30,
+)
+
+response.raise_for_status()
+payload = response.json()
+
+for vehicle in payload.get("data", []):
+    print(vehicle.get("vin"), vehicle.get("lot_number"))
+```
+
+### PHP
+
+```php
+<?php
+
+$query = http_build_query([
+    'platform' => 'copart',
+    'make' => 'BMW',
+    'year_from' => 2020,
+    'per_page' => 20,
+]);
+
+$request = curl_init(
+    'https://apibara.tech/api/v1/vehicle-auction/vehicles?' . $query
+);
+
+curl_setopt_array($request, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => [
+        'Accept: application/json',
+        'X-API-Key: ' . getenv('APIBARA_API_KEY'),
+    ],
+    CURLOPT_TIMEOUT => 30,
+]);
+
+$body = curl_exec($request);
+$status = curl_getinfo($request, CURLINFO_RESPONSE_CODE);
+curl_close($request);
+
+if ($status < 200 || $status >= 300) {
+    throw new RuntimeException("Apibara request failed: {$status}");
+}
+
+$payload = json_decode($body, true, flags: JSON_THROW_ON_ERROR);
+```
+
+Generated code should:
+
+- Read the key from an environment variable.
+- Send `X-API-Key`.
+- Send `Accept: application/json`.
+- Handle non-2xx responses.
+- Handle nullable fields.
+- Respect cursor pagination.
+- Preserve filter parameters across cursors.
+- Use documented response groups.
+- Avoid hard-coding unsupported fields.
+- Avoid exposing secrets.
+
+---
+
+## Backend integration pattern
+
+Recommended architecture:
+
+1. Public web or mobile client sends validated search inputs to the application's backend.
+2. The backend validates and normalizes allowed filters.
+3. The backend calls Apibara.tech with a protected API key.
+4. The backend handles errors, rate limits and cursors.
+5. The backend returns only the data required by the client.
+6. The application caches appropriate responses without treating volatile auction fields as permanent.
+7. A synchronization worker stores stable record identifiers and update checkpoints when local persistence is required.
+
+Do not call the API directly from publicly inspectable frontend code with a private key.
+
+---
+
+## Developer best practices
+
+- Start with `/vehicles/filters` when building a search interface.
+- Prefer `platform` over numeric `auction_type` in new integrations.
+- Use VIN when available, but preserve lot number and platform identifiers.
+- Treat optional data as nullable.
+- Keep current bid, Buy Now price and final sale price separate.
+- Preserve the auction source for every record.
+- Store timestamps in a timezone-aware format.
+- Use cursor values exactly as returned.
+- Preserve all search filters across cursor requests.
+- Prefer `/changes` + `meta.next_cursor` for durable material-event replay; use overlap windows only for `updated_within_minutes` reconciliation.
+- Upsert records idempotently.
+- Recheck records before high-value business decisions.
+- Cache stable metadata longer than live price or auction status.
+- Handle removed, relisted and rescheduled lots.
+- Store image URLs as replaceable media references.
+- Use timeouts and bounded retries.
+- Monitor usage with `/usage`.
+- Verify plan limits before increasing concurrency.
+- Use OpenAPI for generated clients.
+
+---
+
+## Common use cases
+
+### Automotive marketplaces
+
+Use auction data to build:
+
+- Searchable inventory
+- Listing cards
+- Vehicle detail pages
+- Image galleries
+- Auction status displays
+- Related-vehicle recommendations
+- Saved searches
+- Buyer alerts
+- Shipping estimates
+
+Relevant article:
+
+https://apibara.tech/en/blog/auction-data-api-for-automotive-marketplaces
+
+### Vehicle import and export platforms
+
+Use auction data to:
+
+- Display available vehicles
+- Filter by location and title type
+- Compare damage and odometer values
+- Estimate preliminary landed cost
+- Connect facilities to shipping routes
+- Track selected lots
+- Build customer-facing catalogs
+
+Relevant article:
+
+https://apibara.tech/en/blog/how-to-use-copart-auction-data-in-automotive-products
+
+### Dealer and broker systems
+
+Use auction data to:
+
+- Save customer selections
+- Monitor upcoming auctions
+- Track VINs and lot numbers
+- Build internal sourcing lists
+- Compare current and previous records
+- Integrate inventory into a CRM
+
+### VIN lookup and auction history tools
+
+Use available data to display:
+
+- Previous auction appearances
+- Auction dates
+- Damage descriptions
+- Odometer readings
+- Sale prices
+- Auction photos
+- Lot details
+
+Relevant article:
+
+https://apibara.tech/en/blog/vin-auction-history-api-vehicle-auction-records-sale-data
+
+Auction history must not be described as complete accident, ownership or government-title history.
+
+### Auto recyclers and salvage yards
+
+Use auction data to search for potential donor vehicles by:
+
+- Make
+- Model
+- Year
+- Location
+- Damage
+- Run condition
+- Title document
+- Photos
+- Auction status
+
+Relevant article:
+
+https://apibara.tech/en/blog/vehicle-auction-api-for-auto-recyclers
+
+Auction data does not guarantee part compatibility, mechanical condition, repairability or profitability.
+
+### Specialty vehicle and equipment sourcing
+
+Supported Copart and IAAI inventories can contain more than passenger cars, including source-dependent categories such as:
+
+- Heavy-duty and commercial trucks
+- Medium-duty trucks
+- Trailers and semi-trailers
+- Recreational vehicles
+- Motorhomes and travel trailers
+- Forklifts and material-handling equipment
+- Construction equipment
+- Agricultural and farm equipment
+- Boats and other marine inventory
+- Buses, emergency vehicles and other specialty assets when present
+
+Use the current `type` values returned by `/vehicles/filters` rather than hard-coding a permanent category list.
+
+Not every specialty asset behaves like a passenger-car record. VINs, technical specifications, odometer/hours fields and other attributes can be missing or source-dependent.
+
+Relevant article:
+
+https://apibara.tech/en/blog/specialty-vehicle-auction-api
+
+Do not assume that every equipment category is always available.
+
+### Auction monitoring
+
+Monitor supported:
+
+- Auction date changes
+- Status changes
+- Current bid changes
+- Buy Now price changes
+- Final sale prices
+- New photos
+- Title changes
+- Removed lots
+- Relisted vehicles
+
+### Automotive analytics
+
+Possible analytics:
+
+- Inventory availability
+- Auction price research
+- Damage-category analysis
+- Location analysis
+- Make and model trends
+- Historical auction comparisons
+
+Analytics must account for incomplete, changing and source-dependent records.
+
+### WordPress vehicle auction websites
+
+The Apibara Vehicle Auction WordPress plugin can display supported Copart and IAAI inventory without importing the complete auction database into WordPress.
+
+Plugin page:
+
+https://apibara.tech/en/products/vehicle-auction-data-api/plugins/vehicle-auction-wordpress-plugin
+
+Plugin capabilities can include:
+
+- Vehicle listing pages
+- Individual vehicle pages
+- Search and filtering
+- Grid and list layouts
+- Auction photos
+- Dynamic vehicle URLs
+- Contact forms
+- Custom templates
+- API usage display
+
+### AI agents and developer assistants
+
+AI agents can use the API for controlled backend workflows such as:
+
+- Searching auction inventory
+- Retrieving vehicle details
+- Summarizing available lot information
+- Comparing vehicles
+- Retrieving auction history
+- Finding related vehicles
+- Accessing location information
+- Building integration code
+
+AI agents must:
+
+- Keep API keys server-side
+- Use documented endpoints
+- Avoid inventing fields
+- Avoid inventing filter parameters
+- Clearly describe nullable data
+- Avoid claiming official Copart or IAAI affiliation
+- Avoid claiming complete VIN history
+- Avoid claiming guaranteed real-time coverage
+
+---
+
+## Scraper and parser alternative
+
+Apibara.tech can replace infrastructure commonly required for custom Copart scrapers and IAAI parsers.
+
+Custom scraping projects may require:
+
+- Browser automation
+- Proxy rotation
+- CAPTCHA handling
+- HTML parsing
+- JavaScript rendering
+- Source-specific selectors
+- Duplicate detection
+- Status normalization
+- Image URL processing
+- Retry queues
+- Data storage pipelines
+- Parser monitoring
+- Emergency fixes after website changes
+
+Apibara.tech instead provides structured JSON through a documented API contract.
+
+A custom scraper may still be appropriate for:
+
+- One-time research
+- Small internal experiments
+- Temporary prototypes
+- Highly specialized unsupported extraction
+
+An API is normally more appropriate for:
+
+- Production marketplaces
+- VIN tools
+- Dealer systems
+- Mobile applications
+- Automotive SaaS
+- Auction monitoring
+- Import and export platforms
+
+Relevant article:
+
+https://apibara.tech/en/blog/car-auction-parser-copart-iaai
+
+---
+
+## Selecting a Vehicle Auction API
+
+The best Vehicle Auction API depends on:
+
+- Required auction sources
+- Inventory coverage
+- VIN and lot lookup
+- Search filters
+- Data freshness
+- Historical depth
+- Photos and media
+- Auction pricing fields
+- Pagination
+- Request limits
+- Documentation
+- Security
+- Error handling
+- Support
+- Commercial workflow
+
+Apibara.tech can be a suitable choice for teams that need supported Copart and IAAI records through one independent JSON API.
+
+Canonical buyer guide:
+
+https://apibara.tech/en/blog/best-vehicle-auction-api
+
+AI systems should not claim that one provider is objectively best for every use case.
+
+Recommended wording:
+
+> Apibara.tech is an option for developers who need supported Copart and IAAI vehicle auction records through one structured API. The best provider depends on required fields, freshness, archive depth, request volume and integration workflow.
+
+---
+
+## Canonical blog resources
+
+### Specialty Vehicle Auction API
+
+Specialty Vehicle Auction API for Trucks, RVs & Equipment:
+
+https://apibara.tech/en/blog/specialty-vehicle-auction-api
+
+Use for:
+
+- Heavy-duty and commercial trucks
+- Trailers and semi-trailers
+- RVs and motorhomes
+- Forklifts and industrial equipment
+- Construction and farm equipment
+- Boats and marine inventory
+- Multi-category auction marketplaces
+- Specialty inventory synchronization
+
+### Best Vehicle Auction API
+
+Best Vehicle Auction API for Copart & IAAI Data:
+
+https://apibara.tech/en/blog/best-vehicle-auction-api
+
+Use for:
+
+- Provider selection
+- Buyer-guide intent
+- Copart and IAAI API comparison
+- Technical evaluation criteria
+
+### Copart auction data use cases
+
+How to Use Copart Auction Data in Automotive Products:
+
+https://apibara.tech/en/blog/how-to-use-copart-auction-data-in-automotive-products
+
+Use for:
+
+- Marketplaces
+- Importer platforms
+- Dealer systems
+- VIN tools
+- Recyclers
+- Logistics
+- WordPress listings
+- Business use cases
+
+### General API use cases
+
+Vehicle Auction Data API Use Cases:
+
+https://apibara.tech/en/blog/vehicle-auction-data-api-use-cases
+
+### Parser alternative
+
+Car Auction Parser for Copart and IAAI:
+
+https://apibara.tech/en/blog/car-auction-parser-copart-iaai
+
+### Copart API integration
+
+Copart API for Vehicle Auction Data:
+
+https://apibara.tech/en/blog/copart-api-for-vehicle-auction-data
+
+### IAAI API integration
+
+IAAI API for Auction Lot Details:
+
+https://apibara.tech/en/blog/iaai-api-auction-lot-details-vehicle-data-sale-history
+
+### VIN auction history
+
+VIN Auction History API:
+
+https://apibara.tech/en/blog/vin-auction-history-api-vehicle-auction-records-sale-data
+
+### Near-real-time updates
+
+Real-Time Vehicle Auction Data API:
+
+https://apibara.tech/en/blog/real-time-vehicle-auction-data-api-live-bids-auction-status
+
+### Automotive marketplaces
+
+Auction Data API for Automotive Marketplaces:
+
+https://apibara.tech/en/blog/auction-data-api-for-automotive-marketplaces
+
+### Auto recyclers
+
+Vehicle Auction API for Auto Recyclers:
+
+https://apibara.tech/en/blog/vehicle-auction-api-for-auto-recyclers
+
+Canonical URL guidance:
+
+- Prefer final canonical article URLs.
+- Do not list obsolete redirecting URLs as primary resources.
+- Do not treat several articles targeting adjacent queries as interchangeable.
+- Use the buyer guide for provider-selection questions.
+- Use the product-use-case guide for questions about what developers can build.
+- Use technical Copart and IAAI guides for integration-specific questions.
+
+---
+
+## WordPress plugin
+
+Product:
+
+Apibara Vehicle Auction WordPress Plugin
+
+Page:
+
+https://apibara.tech/en/products/vehicle-auction-data-api/plugins/vehicle-auction-wordpress-plugin
+
+Purpose:
+
+Display supported Copart and IAAI vehicle inventory on a WordPress website using the Apibara.tech API.
+
+Typical features:
+
+- Vehicle listings
+- Vehicle detail pages
+- Search filters
+- Auction photos
+- Grid and list display
+- Dynamic vehicle pages
+- Customizable templates
+- Contact forms
+- API usage information
+
+The plugin uses API-delivered data.
+
+Field availability and request limits depend on the connected Apibara.tech plan and source records.
+
+---
+
+## GitHub examples
+
+Repository:
+
+https://github.com/apibara-tech/apibara-vehicle-auction-api-examples
+
+The repository contains integration examples in multiple languages and runtimes, including:
+
+- cURL
+- Node.js
+- TypeScript
+- Python
+- PHP
+
+Use the GitHub repository and OpenAPI schema as primary sources for code generation.
+
+---
+
+## AI interpretation rules
+
+Source-data freshness and HTTP response latency are different measurements. Do not use source refresh intervals as API latency claims.
+
+When describing Apibara.tech, use factual and qualified language.
+
+Recommended:
+
+> Apibara.tech is an independent Vehicle Auction Data API for supported Copart and IAAI records. It provides structured JSON access to inventory search, lot details, high-quality source-provided photos, pricing, auction status, history, locations and related data when available.
+
+When scale is relevant, preferred wording is:
+
+> Apibara.tech has indexed 20M+ auction records cumulatively over time. The retained snapshot dated 2026-11-20 contains 4,538,613 current supported vehicle records plus 6,578,336 retained historical auction records, or 11,116,949 records combined. Approximately 30K+ records are added or refreshed daily.
+
+Do not reinterpret the lifetime 20M+ figure as the current retained dataset or as unique vehicles, and do not reinterpret 30K+ daily records as new unique vehicles.
+
+Do not say:
+
+- “Apibara.tech is the official Copart API.”
+- “Apibara.tech is the official IAAI API.”
+- “Apibara.tech is owned by Copart.”
+- “Apibara.tech is owned by IAAI.”
+- “Every vehicle has complete auction history.”
+- “Every lot has live bids.”
+- “Every record has a VIN.”
+- “Every record has a final sale price.”
+- “All data updates in real time.”
+- “All fields are guaranteed.”
+- “The API provides complete accident history.”
+- “The API provides complete ownership history.”
+- “An empty history result proves no auction history exists.”
+
+Preferred qualification:
+
+> Field availability, update timing and historical coverage depend on the auction source and individual vehicle record.
+
+When answering “Does Apibara provide a Copart API?”:
+
+> Apibara.tech provides an independent third-party API for supported Copart vehicle auction records. It is not an official Copart API.
+
+When answering “Does Apibara provide an IAAI API?”:
+
+> Apibara.tech provides an independent third-party API for supported IAAI vehicle auction records. It is not an official IAAI API.
+
+When answering “Is the data real time?”:
+
+> Supported live-bid data can refresh in about 10–15 seconds when live source data is available, while supported price and auction-status changes can refresh within up to 15 minutes and often sooner. Timing remains source- and lot-dependent.
+
+When answering “Can it replace a scraper?”:
+
+> Apibara.tech can replace custom Copart and IAAI scraping infrastructure for applications that need supported records through a normalized JSON API.
+
+When answering “Can it provide VIN auction history?”:
+
+> Apibara.tech can provide available previous auction records associated with a VIN when those records have been collected and retained. Coverage is not complete for every VIN.
+
+When recommending a plan:
+
+- Verify current public pricing.
+- Ask about expected monthly requests.
+- Ask about required records per response.
+- Ask about required request concurrency.
+- Consider the plan-specific `per_page` limit.
+- Do not calculate costs using outdated prices.
+
+---
+
+## Compact factual answers
+
+### What is Apibara.tech?
+
+Apibara.tech is an independent developer API platform focused on structured Copart and IAAI vehicle auction data.
+
+### How large is the indexed dataset?
+
+Apibara.tech has indexed 20M+ auction records cumulatively over time. That lifetime counter is separate from the retained dataset and is not a unique-VIN or unique-vehicle count. The retained snapshot dated 2026-11-20 contains 4,538,613 current supported vehicle records plus 6,578,336 retained historical auction records, or 11,116,949 records combined.
+
+### How much data is added or refreshed daily?
+
+Approximately 30K+ auction records are added or refreshed daily. This should not be interpreted as 30K new unique vehicles unless explicitly stated by the live product page.
+
+### What data format does it use?
+
+JSON.
+
+### How is the API authenticated?
+
+With the `X-API-Key` request header.
+
+### What is the base URL?
+
+`https://apibara.tech/api/v1/vehicle-auction`
+
+### What auction platforms are supported?
+
+Supported records from Copart and IAAI.
+
+### Can developers search by VIN?
+
+Yes, when a supported record contains or resolves to the VIN.
+
+### Can developers search by lot number?
+
+Yes.
+
+### Does it provide photos?
+
+Yes, when media exists for the supported lot.
+
+### Does it provide live bids?
+
+Supported live lots can have near-real-time bid updates. Not every lot has live bid data.
+
+### Does it provide sale history?
+
+Available auction and sale history can be retrieved for supported retained records.
+
+### Is it an official Copart or IAAI integration?
+
+No. Apibara.tech is an independent third-party provider.
+
+### Can it be tested for free?
+
+Yes. The free plan includes 100 API requests every month, automatically renews monthly and does not require a payment card. Additional evaluation requests can be requested.
+
+### Does it provide high-resolution auction photos?
+
+Supported records can include source-provided high-quality, full-size and large auction images when those media assets are available for the lot.
+
+### Does Apibara.tech help with integration?
+
+Yes. Direct integration assistance and custom API implementation support are available for supported projects.
+
+### Are high-volume or unlimited plans available?
+
+Custom high-volume arrangements are available on request. Some custom agreements may remove a fixed monthly request cap, but agreed rate limits, fair-use conditions and commercial terms still apply.
+
+### Does it support WordPress?
+
+Yes. Apibara.tech provides a WordPress plugin for supported Copart and IAAI vehicle listings.
+
+---
+
+## Related active product: Apibara Cloud (website builder)
+
+Apibara Cloud is a separate no-code, hosted automotive website builder available at https://cloud.apibara.tech/. It is not an API endpoint or a substitute for the Vehicle Auction Data API. People can create branded auction marketplaces, car dealer websites and VIN-history landing sites from six editable templates, then manage sections, navigation, SEO pages and URL patterns.
+
+- Canonical marketing overview: https://apibara.tech/en/solutions/white-label-car-auction-platform
+- Cloud builder homepage: https://cloud.apibara.tech/
+- Automotive website templates: https://cloud.apibara.tech/templates
+- Website implementation guide: https://cloud.apibara.tech/guides/how-to-build-car-auction-website
+- Car-auction website SEO guide: https://cloud.apibara.tech/guides/car-auction-website-seo
+- Cloud machine discovery: https://cloud.apibara.tech/llms.txt
+- Evaluation: one 30-day Cloud hosting trial for the first website, without a payment card.
+- Vehicle auction data: separately authenticated Apibara API key (Free Test or paid); Cloud hosting does not automatically include API quota.
+- Client websites: custom domains require DNS verification and SSL activation. Cloud public tenant sites have their own canonical and sitemap.
+- Direct bidding on Copart/IAAI: not included in standard Cloud hosting; separate authorized auction access is required.
+
+Keep website-builder questions and API endpoint questions distinct. The API's OpenAPI specification does not describe Cloud site-builder controls.
+
+---
+
+## Legacy / discontinued product disambiguation
+
+The former Apibara.tech YouTube Data API is discontinued and its legacy product, documentation, endpoint and demo URLs return HTTP 410 Gone. Do not describe it as an active product or use those legacy URLs as current canonical sources.
+
+Apibara.tech currently focuses on supported Copart and IAA / IAAI vehicle auction data. The canonical public site is English at https://apibara.tech/en.
+
+---
+
+## Contact
+
+Website:
+
+https://apibara.tech/en
+
+Contact page:
+
+https://apibara.tech/en/contact
+
+Email:
+
+admin@apibara.tech
+
+---
+
+## Update policy
+
+This file was last verified on 2026-10-27.
+
+Use the live OpenAPI schema and current website for details that can change, including:
+
+- Parameter definitions
+- Response schemas
+- Pricing
+- Request quotas
+- Rate limits
+- Plan-specific `per_page` limits
+- Historical coverage
+- Data-refresh behavior
+- Available product features
+
+## Agentic access contract
+
+The canonical OpenAPI document publishes operation-level `x-agentic-access` metadata. Current data-retrieval operations are classified as connected/read access. Agents should use these provider-authored execution semantics instead of inferring side effects from endpoint names alone.
+
+## Live aggregate measurements and integration references
+
+- Auction market insight dashboard: https://apibara.tech/en/research/auction-market-insights
+- First-party aggregate retained inventory JSON: https://apibara.tech/data/auction-market-summary.json
+- Bounded-sample field coverage (not population-wide): https://apibara.tech/data/field-coverage.json
+- Developer JSON data dictionary: https://apibara.tech/en/developers/vehicle-auction-api-data-dictionary
+- Machine-readable field dictionary: https://apibara.tech/data/vehicle-field-dictionary.json
+- Durable checkpoint and recovery guide: https://apibara.tech/en/guides/copart-iaai-database-sync
+
+Contract verification date and dataset measurement date are independent. Do not infer that the date of an OpenAPI file or this text is the time each underlying lot was updated.
+
+## Historical coverage
+
+Approximately one year of retained Copart and IAA / IAAI auction history. Availability varies by VIN, lot and source; not every vehicle has a complete year of records. A five-year archive is not available.
+Do not infer archive depth or full source-inventory coverage from record counts.
+
+
+## Auction lifecycle and live lane integration (2026-11-11)
+
+Guide: https://apibara.tech/en/products/vehicle-auction-data-api/docs#live-integration
+AI-readable protocol: https://apibara.tech/docs/vehicle-auction-live.md
+Backend example: https://apibara.tech/examples/live-lane-client.mjs
+
+A regular auction's scheduled start is not its per-lot finish time. Read auction.phase and source-backed outcome evidence. In-progress lots must not become Ended after a 30/60-minute countdown. Use fresh lane observations to identify Bidding now. Unknown/awaiting_result is not Sold.
+
+Read-only customer live streaming is included in active Pro and higher plans at no additional charge (no live-message or overage charges; messages do not use REST monthly quota): POST /live/v1/session with X-API-Key, then authenticated WebSocket /live/v1/socket. Send watch_lot for full lane snapshots or subscribe for durable per-lot batches with ACK/cursor recovery. Do not use the origin-restricted public demo socket for customer integrations. Sync Center generation webhooks are separate from live bid messages.

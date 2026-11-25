@@ -1,0 +1,3 @@
+code,rate_percent,basis,notes
+customs_duty,0,CIF,EXAMPLE - 0% for US-origin cars under Reg. (EU) 2026/1455 if origin proven; 10% otherwise. CONFIRM WITH CUSTOMS AGENT
+import_vat,21,CIF + duty + fees in VAT base,CONFIRM BASIS WITH CUSTOMS AGENT

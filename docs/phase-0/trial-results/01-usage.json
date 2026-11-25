@@ -1,0 +1,104 @@
+{
+  "request": "/api/v1/vehicle-auction/usage",
+  "status": 200,
+  "ms": 1085,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db59b7887c1ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:19 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nH%2BzJTtpro%2BDzKF9GzevuUAbjkHbnG1q5SzcY0ECudPdG57QxwZIouxfGD2S%2FSY84s%2BP98JhB6K087lj0c8yCkQLaYl6%2BCpYtbeG%2Fylvu%2BXBgRtUMVDHQrF9DsVTYrU%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "22",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:19",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "100",
+    "x-subscription-used": "0"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "product": {
+        "id": 1,
+        "name": "Copart & IAAI Auction Data API",
+        "slug": "vehicle-auction-data-api"
+      },
+      "plan": {
+        "id": 2,
+        "name": "Test",
+        "per_page_limit": 20
+      },
+      "period": {
+        "range": "subscription",
+        "from": "2026-11-16",
+        "to": "2026-11-20",
+        "subscription_from": "2026-11-16",
+        "subscription_to": "2027-01-15",
+        "quota_from": "2026-11-16",
+        "quota_to": "2026-11-20"
+      },
+      "quota": {
+        "used": 0,
+        "limit": 100,
+        "left": 100,
+        "percent": 0
+      },
+      "summary": {
+        "today_requests": 0,
+        "today_errors": 0,
+        "period_requests": 0,
+        "period_errors": 0,
+        "avg_latency_ms": 0
+      },
+      "chart": {
+        "labels": [
+          "2026-11-16",
+          "2026-11-17",
+          "2026-11-18",
+          "2026-11-19",
+          "2026-11-20"
+        ],
+        "requests": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "errors": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "latency_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "top_endpoints": []
+    }
+  }
+}

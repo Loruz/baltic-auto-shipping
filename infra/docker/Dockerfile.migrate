@@ -1,0 +1,17 @@
+# Runs packages/db/migrate.ts with drizzle-orm's migrator (no drizzle-kit in production, plan §6).
+#   docker build -f infra/docker/Dockerfile.migrate -t bas-migrate .
+FROM node:24-alpine AS base
+RUN corepack enable
+WORKDIR /repo
+
+FROM base AS pruned
+COPY . .
+RUN pnpm dlx turbo@2.11.13 prune @bas/db --docker
+
+FROM base AS runtime
+COPY --from=pruned /repo/out/json/ .
+RUN pnpm install --frozen-lockfile --prod
+COPY --from=pruned /repo/out/full/ .
+WORKDIR /repo/packages/db
+# Node 24 runs TypeScript directly (type stripping); migrate.ts uses only erasable syntax.
+CMD ["node", "migrate.ts"]

@@ -1,0 +1,36 @@
+{
+  "name": "@bas/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./client.ts",
+    "./schema": "./schema.ts",
+    "./migrate": "./migrate.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx --env-file-if-exists=../../.env migrate.ts",
+    "db:reset": "tsx --env-file-if-exists=../../.env scripts/reset.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:dbml": "tsx dbml.ts",
+    "db:constraint-tests": "tsx --env-file-if-exists=../../.env scripts/constraint-tests.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.4",
+    "postgres": "3.4.9"
+  },
+  "devDependencies": {
+    "@bas/config": "workspace:*",
+    "@types/node": "24.19.4",
+    "drizzle-dbml-generator": "0.10.0",
+    "drizzle-kit": "0.31.11",
+    "eslint": "10.15.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.1.2"
+  }
+}

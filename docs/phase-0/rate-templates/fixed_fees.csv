@@ -1,0 +1,6 @@
+code,label,currency,amount,percent,vat_rate_percent,vehicle_type,is_optional,in_vat_base,notes
+broker_fee,Broker fee,EUR,450.00,,21,,false,false,EXAMPLE ROW
+customs_agent,Customs agent,EUR,150.00,,21,,false,true,EXAMPLE ROW - confirm with customs agent whether it is in the import-VAT base
+unloading,Port unloading,EUR,120.00,,,,false,true,EXAMPLE ROW
+ev_surcharge,EV / hybrid handling,USD,200.00,,,car,false,false,EXAMPLE ROW
+doc_courier,Document courier,USD,20.00,,,,true,false,EXAMPLE ROW - optional = shown as possible extra

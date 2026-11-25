@@ -1,0 +1,378 @@
+[
+  {
+    "run": "day1",
+    "at": "2026-11-20T23:50:28.152Z",
+    "sent": 46,
+    "lastUsed": 44,
+    "calls": [
+      {
+        "file": "01-usage.json",
+        "request": "/api/v1/vehicle-auction/usage",
+        "status": 200,
+        "ms": 1085,
+        "used": 0,
+        "rows": ""
+      },
+      {
+        "file": "02-vehicles-copart-open.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Open&include_total=true",
+        "status": 200,
+        "ms": 1568,
+        "used": 1,
+        "rows": 20
+      },
+      {
+        "file": "03-vehicles-copart-live.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Live&include_total=true",
+        "status": 200,
+        "ms": 825,
+        "used": 2,
+        "rows": 0
+      },
+      {
+        "file": "04-vehicles-iaai-open.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=iaai&lot_sub_status=Open&include_total=true",
+        "status": 200,
+        "ms": 1533,
+        "used": 3,
+        "rows": 20
+      },
+      {
+        "file": "05-vehicles-iaai-live.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=iaai&lot_sub_status=Live&include_total=true",
+        "status": 200,
+        "ms": 863,
+        "used": 4,
+        "rows": 0
+      },
+      {
+        "file": "06-changes-after0.json",
+        "request": "/api/v1/vehicle-auction/changes?after=0&limit=2000",
+        "status": 422,
+        "ms": 789,
+        "used": 4,
+        "rows": ""
+      },
+      {
+        "file": "07-changes-removed.json",
+        "request": "/api/v1/vehicle-auction/changes?event_type=lot.removed&include_record=all&limit=50",
+        "status": 200,
+        "ms": 3890,
+        "used": 5,
+        "rows": 50
+      },
+      {
+        "file": "08-changes-sold.json",
+        "request": "/api/v1/vehicle-auction/changes?event_type=lot.sold&include_record=all&limit=20",
+        "status": 200,
+        "ms": 2127,
+        "used": 6,
+        "rows": 20
+      },
+      {
+        "file": "09-changes-notsold.json",
+        "request": "/api/v1/vehicle-auction/changes?event_type=lot.not_sold&include_record=all&limit=20",
+        "status": 200,
+        "ms": 825,
+        "used": 7,
+        "rows": 0
+      },
+      {
+        "file": "10-changes-sold-iaai.json",
+        "request": "/api/v1/vehicle-auction/changes?event_type=lot.sold&platform=iaai&include_record=all&limit=20",
+        "status": 200,
+        "ms": 1101,
+        "used": 8,
+        "rows": 20
+      },
+      {
+        "file": "11-changes-rescheduled.json",
+        "request": "/api/v1/vehicle-auction/changes?event_type=auction.rescheduled&limit=20",
+        "status": 200,
+        "ms": 908,
+        "used": 9,
+        "rows": 20
+      },
+      {
+        "file": "12-removed-lot-46333705.json",
+        "request": "/api/v1/vehicle-auction/vehicles/46333705",
+        "status": 200,
+        "ms": 904,
+        "used": 10,
+        "rows": ""
+      },
+      {
+        "file": "13-removed-lot-67935976.json",
+        "request": "/api/v1/vehicle-auction/vehicles/67935976",
+        "status": 200,
+        "ms": 917,
+        "used": 11,
+        "rows": ""
+      },
+      {
+        "file": "14-detail-copart-58031866.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2026-acura-mdx-type-s-advance-5J8YD8H88TL003202?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 818,
+        "used": 12,
+        "rows": ""
+      },
+      {
+        "file": "15-detail-copart-77767405.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2014-audi-q7-premium-plus-WA1LGAFE6ED006056?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 822,
+        "used": 13,
+        "rows": ""
+      },
+      {
+        "file": "16-detail-copart-91706395.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2008-gmc-sierra-c1500-1GTEC19J78Z257839?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 900,
+        "used": 14,
+        "rows": ""
+      },
+      {
+        "file": "17-detail-copart-99048265.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2021-honda-accord-sport-1HGCV1F30MA099586?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 934,
+        "used": 15,
+        "rows": ""
+      },
+      {
+        "file": "18-detail-copart-63144366.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2024-toyota-camry-le-4T1C11AK7RU847650?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 842,
+        "used": 16,
+        "rows": ""
+      },
+      {
+        "file": "19-detail-copart-68264476.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2015-kia-optima-5XXGR4A67FG365913?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 813,
+        "used": 17,
+        "rows": ""
+      },
+      {
+        "file": "20-detail-iaai-43713710.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2012-suzuki-kizashi-sport-sls-JS2RF9A85C6101024?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 814,
+        "used": 18,
+        "rows": ""
+      },
+      {
+        "file": "21-detail-iaai-44021160.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2008-harley-davidson-xl1200-c-anniversary-1HD1CT3578K430434?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 807,
+        "used": 19,
+        "rows": ""
+      },
+      {
+        "file": "22-detail-iaai-43869098.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2022-nissan-maxima-platinum-1N4AA6AP0JC385517?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 808,
+        "used": 20,
+        "rows": ""
+      },
+      {
+        "file": "23-detail-iaai-41759902.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2016-dodge-challenger-srt-hellcat-2C3CDZC9XGH335437?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 815,
+        "used": 21,
+        "rows": ""
+      },
+      {
+        "file": "24-detail-iaai-43966547.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2025-triple-g-trailer-1G91A2420SA589160?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 821,
+        "used": 22,
+        "rows": ""
+      },
+      {
+        "file": "25-detail-iaai-44938841.json",
+        "request": "/api/v1/vehicle-auction/vehicles/2012-chevrolet-equinox-1lt-2GNFLEEK5C6177378?include=history%2Cvin_lots",
+        "status": 200,
+        "ms": 826,
+        "used": 23,
+        "rows": ""
+      },
+      {
+        "file": "26-ident-by-vin.json",
+        "request": "/api/v1/vehicle-auction/vehicles/5J8YD8H88TL003202",
+        "status": 200,
+        "ms": 908,
+        "used": 24,
+        "rows": ""
+      },
+      {
+        "file": "27-ident-by-lot.json",
+        "request": "/api/v1/vehicle-auction/vehicles/58031866",
+        "status": 200,
+        "ms": 920,
+        "used": 25,
+        "rows": ""
+      },
+      {
+        "file": "28-ident-urltodetails.json",
+        "request": "/api/v1/vehicle-auction/vehicles/urltodetails?url=https%3A%2F%2Fwww.copart.com%2Flot%2F58031866",
+        "status": 200,
+        "ms": 816,
+        "used": 26,
+        "rows": ""
+      },
+      {
+        "file": "29-vehicles-copart-ended.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Ended&include_total=true",
+        "status": 200,
+        "ms": 3895,
+        "used": 27,
+        "rows": 20
+      },
+      {
+        "file": "30-vehicles-iaai-ended.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=iaai&lot_sub_status=Ended&include_total=true",
+        "status": 200,
+        "ms": 3052,
+        "used": 28,
+        "rows": 20
+      },
+      {
+        "file": "31-ended-1mo-ago.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Ended&auction_date_from=2026-10-20&auction_date_to=2026-10-22&include_total=true",
+        "status": 200,
+        "ms": 4129,
+        "used": 29,
+        "rows": 20
+      },
+      {
+        "file": "32-ended-3mo-ago.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Ended&auction_date_from=2026-08-20&auction_date_to=2026-08-22&include_total=true",
+        "status": 200,
+        "ms": 3861,
+        "used": 30,
+        "rows": 20
+      },
+      {
+        "file": "33-ended-6mo-ago.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Ended&auction_date_from=2026-05-20&auction_date_to=2026-05-22&include_total=true",
+        "status": 200,
+        "ms": 4904,
+        "used": 31,
+        "rows": 20
+      },
+      {
+        "file": "34-ended-9mo-ago.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Ended&auction_date_from=2026-02-20&auction_date_to=2026-02-22&include_total=true",
+        "status": 200,
+        "ms": 2229,
+        "used": 32,
+        "rows": 20
+      },
+      {
+        "file": "35-ended-12mo-ago.json",
+        "request": "/api/v1/vehicle-auction/vehicles?platform=copart&lot_sub_status=Ended&auction_date_from=2025-11-20&auction_date_to=2025-11-22&include_total=true",
+        "status": 200,
+        "ms": 800,
+        "used": 33,
+        "rows": 0
+      },
+      {
+        "file": "36-history-CAT0299DPJST00761.json",
+        "request": "/api/v1/vehicle-auction/vehicles/CAT0299DPJST00761/history",
+        "status": 200,
+        "ms": 817,
+        "used": 34,
+        "rows": ""
+      },
+      {
+        "file": "37-history-1GNKVFED6HJ140723.json",
+        "request": "/api/v1/vehicle-auction/vehicles/1GNKVFED6HJ140723/history",
+        "status": 200,
+        "ms": 810,
+        "used": 35,
+        "rows": ""
+      },
+      {
+        "file": "38-history-4T1BK1EB2EU111499.json",
+        "request": "/api/v1/vehicle-auction/vehicles/4T1BK1EB2EU111499/history",
+        "status": 200,
+        "ms": 799,
+        "used": 36,
+        "rows": ""
+      },
+      {
+        "file": "39-history-5FRYD3H43GB018289.json",
+        "request": "/api/v1/vehicle-auction/vehicles/5FRYD3H43GB018289/history",
+        "status": 200,
+        "ms": 807,
+        "used": 37,
+        "rows": ""
+      },
+      {
+        "file": "40-history-1GDGG31V871903678.json",
+        "request": "/api/v1/vehicle-auction/vehicles/1GDGG31V871903678/history",
+        "status": 200,
+        "ms": 810,
+        "used": 38,
+        "rows": ""
+      },
+      {
+        "file": "41-market-sold-prices.json",
+        "request": "/api/v1/vehicle-auction/market/sold-prices?make=Toyota&model=Camry&sale_date_from=2026-08-20",
+        "status": 200,
+        "ms": 6391,
+        "used": 39,
+        "rows": ""
+      },
+      {
+        "file": "42-updated-15min.json",
+        "request": "/api/v1/vehicle-auction/vehicles?updated_within_minutes=15&include_total=true",
+        "status": 200,
+        "ms": 1299,
+        "used": 40,
+        "rows": 20
+      },
+      {
+        "file": "43-towing-58031866.json",
+        "request": "/api/v1/vehicle-auction/shipping/auction-to-port?lot_number=58031866",
+        "status": 200,
+        "ms": 1346,
+        "used": 41,
+        "rows": ""
+      },
+      {
+        "file": "44-towing-77767405.json",
+        "request": "/api/v1/vehicle-auction/shipping/auction-to-port?lot_number=77767405",
+        "status": 200,
+        "ms": 976,
+        "used": 42,
+        "rows": ""
+      },
+      {
+        "file": "45-towing-43713710.json",
+        "request": "/api/v1/vehicle-auction/shipping/auction-to-port?lot_number=43713710",
+        "status": 200,
+        "ms": 1125,
+        "used": 43,
+        "rows": ""
+      },
+      {
+        "file": "46-invalid-perpage.json",
+        "request": "/api/v1/vehicle-auction/vehicles?per_page=999",
+        "status": 200,
+        "ms": 1347,
+        "used": 44,
+        "rows": 20
+      }
+    ]
+  }
+]

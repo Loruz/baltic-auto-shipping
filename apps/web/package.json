@@ -1,0 +1,43 @@
+{
+  "name": "@bas/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@bas/auctions": "workspace:*",
+    "@bas/bidding": "workspace:*",
+    "@bas/billing": "workspace:*",
+    "@bas/config": "workspace:*",
+    "@bas/db": "workspace:*",
+    "@bas/i18n": "workspace:*",
+    "@bas/kyc": "workspace:*",
+    "@bas/notifications": "workspace:*",
+    "@bas/pricing": "workspace:*",
+    "@bas/search": "workspace:*",
+    "ioredis": "5.11.1",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "16.4.6",
+    "@tailwindcss/postcss": "4.3.5",
+    "@types/node": "24.19.4",
+    "@types/react": "19.3.2",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.15.0",
+    "globals": "17.14.0",
+    "tailwindcss": "4.3.5",
+    "typescript": "5.9.3",
+    "vitest": "5.1.2"
+  }
+}

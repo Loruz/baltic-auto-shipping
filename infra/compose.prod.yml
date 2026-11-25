@@ -1,0 +1,62 @@
+# DRAFT: production/staging stack (plan §6). Finalised with the staging deploy in M1.
+# On the server:
+#   docker compose -f compose.prod.yml pull
+#   docker compose -f compose.prod.yml run --rm migrate   # deploy stops here if it fails
+#   docker compose -f compose.prod.yml up -d
+name: bas
+
+x-app: &app
+  env_file: .env
+  restart: unless-stopped
+  depends_on:
+    postgres: { condition: service_healthy }
+    redis: { condition: service_healthy }
+
+services:
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on: [web]
+
+  web:
+    <<: *app
+    image: ghcr.io/loruz/baltic-auto-shipping-web:${IMAGE_TAG}
+
+  worker:
+    <<: *app
+    image: ghcr.io/loruz/baltic-auto-shipping-worker:${IMAGE_TAG}
+
+  migrate:
+    <<: *app
+    image: ghcr.io/loruz/baltic-auto-shipping-migrate:${IMAGE_TAG}
+    restart: "no"
+    profiles: [migrate]
+
+  postgres:
+    image: postgres:17
+    restart: unless-stopped
+    env_file: .env.postgres
+    volumes: [postgres:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
+      interval: 5s
+      retries: 20
+
+  redis:
+    image: redis:7
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: [redis:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 20
+
+volumes:
+  caddy_data:
+  postgres:
+  redis:

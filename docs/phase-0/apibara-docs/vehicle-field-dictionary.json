@@ -1,0 +1,358 @@
+{
+    "version": "1.0",
+    "product": "Apibara Vehicle Auction Data API",
+    "contract": "https://apibara.tech/openapi/v1.json",
+    "available_sources": [
+        "copart",
+        "iaai"
+    ],
+    "coverage_contract": "Source fields are optional. Sample-observed values are examples from one captured record per source; they are NOT representative availability percentages for the source dataset.",
+    "sample_captured_at": {
+        "copart": "2026-11-20T18:00:10+00:00",
+        "iaai": "2026-11-20T18:00:10+00:00"
+    },
+    "fields": [
+        {
+            "path": "platform",
+            "group": "Identifiers",
+            "meaning": "Normalized auction source: copart or iaai.",
+            "notes": "Always apply the platform filter when comparing source inventories.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": false
+        },
+        {
+            "path": "lot_number",
+            "group": "Identifiers",
+            "meaning": "Auction lot/stock identifier.",
+            "notes": "Combine with platform for source-unique local inventory identity; VIN alone is insufficient.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": false
+        },
+        {
+            "path": "vin",
+            "group": "Identifiers",
+            "meaning": "Source-provided vehicle identification number.",
+            "notes": "May be masked, missing or reused across multiple auction appearances.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "slug_vin",
+            "group": "Identifiers",
+            "meaning": "API detail-route identifier.",
+            "notes": "Use returned values; do not invent missing VIN characters.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "year",
+            "group": "Vehicle",
+            "meaning": "Reported model year.",
+            "notes": "May be null.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "make",
+            "group": "Vehicle",
+            "meaning": "Normalized manufacturer label.",
+            "notes": "May vary from original source spelling.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "model",
+            "group": "Vehicle",
+            "meaning": "Normalized vehicle model.",
+            "notes": "May be null.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "vehicle_specs",
+            "group": "Vehicle",
+            "meaning": "Engine, fuel, body, transmission, drive and related specifications where supplied.",
+            "notes": "Inspect child properties in the response and OpenAPI.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "odometer.mi",
+            "group": "Vehicle",
+            "meaning": "Reported odometer in miles.",
+            "notes": "Null is unknown, not zero.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "odometer.km",
+            "group": "Vehicle",
+            "meaning": "Reported odometer converted or expressed in kilometres.",
+            "notes": "Do not double-count km and mi as separate readings.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "condition.primary_damage",
+            "group": "Condition",
+            "meaning": "Primary damage classification reported by source.",
+            "notes": "Not a certified mechanical assessment.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "condition.secondary_damage",
+            "group": "Condition",
+            "meaning": "Additional reported damage.",
+            "notes": "Not available for every lot.",
+            "observed_non_null_in_single_example": {
+                "copart": false,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "sale_document.name",
+            "group": "Documents",
+            "meaning": "Normalized sale-document or title name.",
+            "notes": "Document type is not evidence that the title is ready.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "sale_document.is_pending",
+            "group": "Documents",
+            "meaning": "Pending-status indication where available.",
+            "notes": "Null or absent does not prove documents are ready.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "pricing.reserve_price_usd",
+            "group": "Prices",
+            "meaning": "Exact officially disclosed seller reserve in USD, when available.",
+            "notes": "Null without an official numeric source. Same as pricing.seller_reserve.price_usd; never inferred from Reserve Off or a sale price. Latest observed auction cycle.",
+            "observed_non_null_in_single_example": {
+                "copart": false,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "pricing.reserve_off_bid_usd",
+            "group": "Prices",
+            "meaning": "First captured IAAI Reserve Off bid amount in USD.",
+            "notes": "An observed bid, not an exact reserve. Reserve Off may mean the seller removed the reserve. Null if unavailable.",
+            "observed_non_null_in_single_example": {
+                "copart": false,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "pricing.seller_reserve",
+            "group": "Prices",
+            "meaning": "Reserve status, source, exact-price flag, observed bids, validated bounds and UTC timestamps.",
+            "notes": "Latest observed auction cycle. Inspect cycle_key and observed_at; do not reuse a prior cycle after relisting. Included in full and summary vehicle responses.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "pricing.current_bid_usd",
+            "group": "Prices",
+            "meaning": "Current or last observed bid amount in USD.",
+            "notes": "Not a confirmed final sale price; may be delayed.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "pricing.buy_now_usd",
+            "group": "Prices",
+            "meaning": "Source-reported Buy Now amount in USD.",
+            "notes": "May be null and is not a sale event.",
+            "observed_non_null_in_single_example": {
+                "copart": false,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "pricing.sale_price_usd",
+            "group": "Prices",
+            "meaning": "Reported sale amount after a documented outcome.",
+            "notes": "Absent or null is unknown; ended does not imply sold.",
+            "observed_non_null_in_single_example": {
+                "copart": false,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "auction.state",
+            "group": "Auction",
+            "meaning": "Normalized broad auction lifecycle.",
+            "notes": "Use phase and outcome_status to avoid treating scheduled auctions as completed.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "auction.phase",
+            "group": "Auction",
+            "meaning": "Detailed lifecycle stage.",
+            "notes": "Do not infer bidding-now from start time alone.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "auction.outcome_status",
+            "group": "Auction",
+            "meaning": "Reported sold, not-sold, pending or related outcome.",
+            "notes": "Approval is not a confirmed sale.",
+            "observed_non_null_in_single_example": {
+                "copart": false,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "auction.auction_at",
+            "group": "Auction",
+            "meaning": "Source-provided scheduled auction time when assigned.",
+            "notes": "Can be null for active lots with pending dates.",
+            "observed_non_null_in_single_example": {
+                "copart": false,
+                "iaai": false
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "auction.auction_date_pending",
+            "group": "Auction",
+            "meaning": "True when an active lot has no assigned auction date.",
+            "notes": "Null date does not mean the lot was sold or removed.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "seller.name",
+            "group": "Source",
+            "meaning": "Source-reported seller name.",
+            "notes": "Often unavailable; preserve missing values.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "seller.type",
+            "group": "Source",
+            "meaning": "Name-based seller category if inferred.",
+            "notes": "An inference, not a verified insurer/owner status.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "location",
+            "group": "Source",
+            "meaning": "Auction yard and geographic details.",
+            "notes": "Location is not the issuing state of a document.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "media.images_count",
+            "group": "Media",
+            "meaning": "Number of source-listed images.",
+            "notes": "Image availability and permitted use vary by source.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "media.thumbs",
+            "group": "Media",
+            "meaning": "Thumbnail URLs when provided.",
+            "notes": "Third-party images are not licensed for unrestricted redistribution.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        },
+        {
+            "path": "updated_at",
+            "group": "Freshness",
+            "meaning": "Last reported API record update timestamp.",
+            "notes": "Not an authoritative timestamp for every underlying source field or bid.",
+            "observed_non_null_in_single_example": {
+                "copart": true,
+                "iaai": true
+            },
+            "nullable_or_absent_possible": true
+        }
+    ],
+    "methodology": "Documentation semantics are authored from the versioned OpenAPI and observed normalization behavior. Do not interpret single-record observations as population completeness."
+}

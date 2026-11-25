@@ -1,0 +1,232 @@
+{
+    "info": {
+        "_postman_id": "2f31bc0a-c0d8-4f56-b80b-apibara20260918",
+        "name": "Apibara Vehicle Auction Data API",
+        "description": "Starter collection for normalized Copart and IAA / IAAI vehicle auction data. Exact schemas are governed by https://apibara.tech/openapi/v1.json.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "auth": {
+        "type": "apikey",
+        "apikey": [
+            {
+                "key": "key",
+                "value": "X-API-Key",
+                "type": "string"
+            },
+            {
+                "key": "value",
+                "value": "{{api_key}}",
+                "type": "string"
+            },
+            {
+                "key": "in",
+                "value": "header",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://apibara.tech/api/v1/vehicle-auction"
+        },
+        {
+            "key": "api_key",
+            "value": "YOUR_API_KEY"
+        },
+        {
+            "key": "slug_vin",
+            "value": "YOUR_SLUG_OR_VIN"
+        },
+        {
+            "key": "auction_url",
+            "value": "https://www.copart.com/lot/YOUR_LOT"
+        },
+        {
+            "key": "image_url",
+            "value": "https://example.com/vehicle-image.webp"
+        }
+    ],
+    "item": [
+        {
+            "name": "Search vehicles — Copart Open",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles?platform=copart&lot_sub_status=Open&per_page=20",
+                "description": "Readable source filtering with Open state."
+            }
+        },
+        {
+            "name": "Search vehicles — Upcoming only",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles?upcoming=only&lot_sub_status=Open&per_page=20",
+                "description": "Supported upcoming-auction classification."
+            }
+        },
+        {
+            "name": "Search vehicles — BMW 3 Series",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles?make=BMW&series=Series%203&lot_sub_status=Open&per_page=20",
+                "description": "Returns all matching BMW 3 Series models and generations without requiring model or generation."
+            }
+        },
+        {
+            "name": "Reconcile inventory with exact total",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles?platform=copart&lot_sub_status=Open&include_total=true&per_page=20",
+                "description": "Returns meta.total, meta.has_more, applied_filters and unknown_filters."
+            }
+        },
+        {
+            "name": "Market sold-price statistics",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/market/sold-prices?make=BMW&model=X5",
+                "description": "Retained positive sold-history count, average, minimum and maximum price."
+            }
+        },
+        {
+            "name": "Search vehicles — BMW 330I in 3 Series",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles?make=BMW&series=Series%203&model=330I&lot_sub_status=Open&per_page=20",
+                "description": "Optional model refinement inside a canonical series."
+            }
+        },
+        {
+            "name": "Search vehicles — BMW X5 F15 generation",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles?make=BMW&series=X5&generation_id=379&lot_sub_status=Open&per_page=20",
+                "description": "Stable vehicle-generation filtering by generation_id."
+            }
+        },
+        {
+            "name": "Hierarchy options — BMW 3 Series / 330I",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/filters?make=BMW&series=Series%203&model=330I",
+                "description": "Returns series/model-family metadata and only generations valid for the selected make, series and model."
+            }
+        },
+        {
+            "name": "Durable change stream — from checkpoint",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/changes?after=0&limit=100",
+                "description": "Persist meta.next_cursor only after local commit. Terminal sold/not-sold/removed events are explicit; HTTP 410 means the replay cursor expired."
+            }
+        },
+        {
+            "name": "Recent-record reconciliation — last 15 minutes",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles?updated_within_minutes=15&per_page=20",
+                "description": "Compatibility/reconciliation workflow. Follow next_cursor until the recent-update window is exhausted."
+            }
+        },
+        {
+            "name": "Filter metadata",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/filters"
+            }
+        },
+        {
+            "name": "Vehicle details",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/{{slug_vin}}"
+            }
+        },
+        {
+            "name": "Vehicle details + history + same-VIN lots",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/{{slug_vin}}?include=history%2Cvin_lots",
+                "description": "Embeds retained sale history and other known auction lots for the same VIN to reduce client round trips."
+            }
+        },
+        {
+            "name": "Vehicle auction history",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/{{slug_vin}}/history"
+            }
+        },
+        {
+            "name": "Related vehicles",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/{{slug_vin}}/related"
+            }
+        },
+        {
+            "name": "Vehicle shipping",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/{{slug_vin}}/shipping"
+            }
+        },
+        {
+            "name": "Auction locations",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/locations"
+            }
+        },
+        {
+            "name": "Auction-to-port shipping",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/shipping/auction-to-port?vin={{slug_vin}}"
+            }
+        },
+        {
+            "name": "Resolve auction URL",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/vehicles/urltodetails?url={{auction_url}}"
+            }
+        },
+        {
+            "name": "API usage",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/usage"
+            }
+        },
+        {
+            "name": "Image proxy",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/image-proxy?url={{image_url}}",
+                "description": "Binary response when successful."
+            }
+        }
+    ]
+}

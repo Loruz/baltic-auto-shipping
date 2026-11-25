@@ -1,0 +1,49 @@
+{
+    "scope": "bounded_source_specific_sample_not_population",
+    "description": "Measured availability of supported fields from bounded recent source-specific samples. A null metric means it is not currently measured, not that the field is absent.",
+    "sources": {
+        "copart": {
+            "recent_source_sample_rows_all_states": {
+                "value": 62619,
+                "unit": "rows",
+                "measured_at": "2026-11-20T23:30:02+00:00",
+                "note": "Rows from the bounded recent sample used for source-specific field-availability measurements.",
+                "recorded_sold_state_sample_rows": null,
+                "cohort": null
+            },
+            "sale_price_observation_cohort": "recent_records_with_recorded_sold_state",
+            "sold_state_cohort_rows": 8557,
+            "sale_price_presence_among_recorded_sold_state_percent": {
+                "value": 99.3,
+                "unit": "%",
+                "measured_at": "2026-11-20T23:30:02+00:00",
+                "note": "Measured on 8,557 recent Copart records with a recorded sold state; normalized source field: last_sold_price.",
+                "recorded_sold_state_sample_rows": 8557,
+                "cohort": "recent_records_with_recorded_sold_state"
+            }
+        },
+        "iaai": {
+            "recent_source_sample_rows_all_states": {
+                "value": 37381,
+                "unit": "rows",
+                "measured_at": "2026-11-20T23:30:02+00:00",
+                "note": "Rows from the bounded recent sample used for source-specific field-availability measurements.",
+                "recorded_sold_state_sample_rows": null,
+                "cohort": null
+            },
+            "sale_price_observation_cohort": "recent_records_with_recorded_sold_state",
+            "sold_state_cohort_rows": 4571,
+            "sale_price_presence_among_recorded_sold_state_percent": {
+                "value": 98.7,
+                "unit": "%",
+                "measured_at": "2026-11-20T23:30:02+00:00",
+                "note": "Measured on 4,571 recent IAAI records with a recorded sold state; normalized source field: last_sold_price.",
+                "recorded_sold_state_sample_rows": 4571,
+                "cohort": "recent_records_with_recorded_sold_state"
+            }
+        }
+    },
+    "dictionary": "https://apibara.tech/data/vehicle-field-dictionary.json",
+    "coverage": "https://apibara.tech/coverage.json",
+    "record_level_examples_are_not_statistical_samples": true
+}

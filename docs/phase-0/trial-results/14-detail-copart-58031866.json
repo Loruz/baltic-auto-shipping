@@ -1,0 +1,349 @@
+{
+  "request": "/api/v1/vehicle-auction/vehicles/2026-acura-mdx-type-s-advance-5J8YD8H88TL003202?include=history%2Cvin_lots",
+  "status": 200,
+  "ms": 818,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5a24088b1ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:36 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hCLCX4x6mTAXJ5dWGpKMUPvq%2FIL8jDDO9424fFrpbTaI5XRasDULTek2TzWNaUC%2BwivI%2FjjKIpodRwEVD2TYz0KrWQUPkeO%2B5lHIWGXJSU5aFu5u%2FO9letDACETOM04%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-detail-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "58",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:36",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "88",
+    "x-subscription-used": "12",
+    "x-upstream-time-ms": "54"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "slug_vin": "2026-acura-mdx-type-s-advance-5J8YD8H88TL003202",
+      "vin": "5J8YD8H88TL003202",
+      "platform": "copart",
+      "platform_id": 1,
+      "lot_number": "58031866",
+      "ad": null,
+      "title": "2026 ACURA MDX TYPE S ADVANCE",
+      "year": 2026,
+      "make": "ACURA",
+      "model": "MDX",
+      "series": null,
+      "generation": null,
+      "type": null,
+      "subLot": false,
+      "auction": {
+        "state": "open",
+        "phase": "unscheduled",
+        "phase_label": "Auction date to be announced",
+        "result_confirmed": false,
+        "completion_source": null,
+        "is_bidding_now": null,
+        "live_window_expires_at": null,
+        "formatted": null,
+        "full_date": null,
+        "diff_minutes": 0,
+        "ad": null,
+        "countdown": {
+          "days": 0,
+          "hours": 0,
+          "minutes": 0
+        },
+        "is_timed": false,
+        "is_buy_now": false,
+        "auction_at": null,
+        "auction_date_pending": true,
+        "timed_end_at": null,
+        "last_sold_day": null,
+        "last_sold_at": null,
+        "last_sold_status": null,
+        "outcome_status": null,
+        "auction_ended_at": null,
+        "outcome_observed_at": null,
+        "lot_removed": false,
+        "sold_buy_now": false,
+        "sold_timed": false
+      },
+      "pricing": {
+        "current_bid_usd": 1500,
+        "current_bid_at": null,
+        "current_bid2_usd": 1500,
+        "buy_now_usd": null,
+        "estimated_retail_value_usd": null,
+        "sale_price_usd": null,
+        "last_sold_price_usd": null,
+        "reserve_price_usd": null,
+        "reserve_off_bid_usd": null,
+        "seller_reserve": {
+          "price_usd": null,
+          "price_is_exact": false,
+          "price_source": null,
+          "scope": "latest_observed_auction_cycle",
+          "reserve_off_bid_usd": null,
+          "reserve_off_previous_bid_usd": null,
+          "reserve_off_observed_at": null,
+          "status": "unknown",
+          "last_unmet_bid_usd": null,
+          "first_met_bid_usd": null,
+          "inferred_range_usd": null,
+          "latest_signal": null,
+          "cycle_key": null,
+          "observed_at": null,
+          "observations": 0
+        },
+        "estimated_cost": {
+          "from": 25388,
+          "to": 41000,
+          "median": 30250,
+          "text": "$25,388 - $41,000",
+          "sample_count": 6,
+          "refinement_method": null,
+          "refinement_sample_count": null,
+          "engine_size_l": null,
+          "mileage_bucket": null,
+          "market_multiplier": null,
+          "previous_high_bid_usd": null
+        }
+      },
+      "location": {
+        "display": "Glassboro East (NJ)",
+        "send_from": "NY",
+        "state": null
+      },
+      "seller": {
+        "name": "unknown",
+        "type": "unknown",
+        "class": "bg-282828",
+        "text_class": "text-primary",
+        "name_source": "unavailable",
+        "type_source": "unavailable",
+        "type_is_inferred": false
+      },
+      "condition": {
+        "run_condition": {
+          "value": "DEFAULT",
+          "label": "No information",
+          "class_hint": "secondary"
+        },
+        "has_key": false,
+        "loss": null,
+        "primary_damage": "Vandalism",
+        "secondary_damage": null
+      },
+      "odometer": {
+        "mi": 0,
+        "km": 0
+      },
+      "vehicle_specs": {
+        "exterior_color": "Black",
+        "engine": {
+          "raw": "3.0L 6",
+          "size_l": null,
+          "hp": 0,
+          "layout": null
+        },
+        "transmission": "Automatic",
+        "fuel_type": "Gas",
+        "drive_type": "ALL WHEEL DRIVE",
+        "body_style": "Sport utility vehicle",
+        "airbags": null,
+        "restraint_system": null
+      },
+      "sale_document": {
+        "variant_id": "9b9ddf88745d2710cf122e9ed593c281c3a643a0f49e2e75f5ba8102f8a279a9",
+        "source_name": "SC",
+        "name": "SC",
+        "raw_name": "NJ - Sc",
+        "issuing_state": "NJ",
+        "type": "other",
+        "export": true,
+        "registration": true,
+        "is_pending": false,
+        "pending_status": "unknown",
+        "pending_source": null,
+        "page_id": 1,
+        "sale_document_group": "warning"
+      },
+      "media": {
+        "thumbs_count": 13,
+        "images_count": 13,
+        "items_count": 14,
+        "has_video": false,
+        "has_360": true,
+        "thumbs": [
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/b1d5fed5fa144858af65d7888c254c02_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/e8d62796818e4507be29cc7897015ddd_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/c30fd8f03e5140cd9f27b5b4b43f3500_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7f458c4f7f84498e99dc5c7b48abdf34_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/fb0d2161507046ee9f854726c22bde9a_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/f25212dcfbcd4becbd4e327b9526c117_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/2519c54a63c44e8d8fbdde24ca21eb6e_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7d5505923e8840478284c340dd3b5ea5_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/58f9820e7c674c8193898931e609c0a9_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/8520265e222b4f929b395ddbbd267b66_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/0d36e988be2c4613b7d55688854743bb_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/617e4929461c4329b145b3221c1aa259_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/a48e6f3f478f48fdadfeac8bf52493f0_ful.jpg"
+        ],
+        "items": [
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/b1d5fed5fa144858af65d7888c254c02_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/b1d5fed5fa144858af65d7888c254c02_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/b1d5fed5fa144858af65d7888c254c02_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/e8d62796818e4507be29cc7897015ddd_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/e8d62796818e4507be29cc7897015ddd_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/e8d62796818e4507be29cc7897015ddd_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/c30fd8f03e5140cd9f27b5b4b43f3500_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/c30fd8f03e5140cd9f27b5b4b43f3500_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/c30fd8f03e5140cd9f27b5b4b43f3500_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7f458c4f7f84498e99dc5c7b48abdf34_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7f458c4f7f84498e99dc5c7b48abdf34_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7f458c4f7f84498e99dc5c7b48abdf34_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/fb0d2161507046ee9f854726c22bde9a_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/fb0d2161507046ee9f854726c22bde9a_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/fb0d2161507046ee9f854726c22bde9a_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/f25212dcfbcd4becbd4e327b9526c117_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/f25212dcfbcd4becbd4e327b9526c117_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/f25212dcfbcd4becbd4e327b9526c117_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/2519c54a63c44e8d8fbdde24ca21eb6e_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/2519c54a63c44e8d8fbdde24ca21eb6e_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/2519c54a63c44e8d8fbdde24ca21eb6e_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7d5505923e8840478284c340dd3b5ea5_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7d5505923e8840478284c340dd3b5ea5_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/7d5505923e8840478284c340dd3b5ea5_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/58f9820e7c674c8193898931e609c0a9_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/58f9820e7c674c8193898931e609c0a9_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/58f9820e7c674c8193898931e609c0a9_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/8520265e222b4f929b395ddbbd267b66_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/8520265e222b4f929b395ddbbd267b66_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/8520265e222b4f929b395ddbbd267b66_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/0d36e988be2c4613b7d55688854743bb_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/0d36e988be2c4613b7d55688854743bb_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/0d36e988be2c4613b7d55688854743bb_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/617e4929461c4329b145b3221c1aa259_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/617e4929461c4329b145b3221c1aa259_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/617e4929461c4329b145b3221c1aa259_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/a48e6f3f478f48fdadfeac8bf52493f0_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/a48e6f3f478f48fdadfeac8bf52493f0_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/a48e6f3f478f48fdadfeac8bf52493f0_hrs.jpg"
+          },
+          {
+            "type": "vr360",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/a251d3183e02475b872fddbb84a274ab_vthb.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/a251d3183e02475b872fddbb84a274ab_vful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/a251d3183e02475b872fddbb84a274ab_vhrs.jpg"
+          }
+        ]
+      },
+      "details": {
+        "source": "copart_csv",
+        "sale_status": "On Minimum Bid",
+        "bid_status": null,
+        "has_bid": null,
+        "seller_reserve_met": null,
+        "starting_bid": null,
+        "buy_now_available": false,
+        "buy_now_price_usd": null,
+        "estimated_retail_value_usd": null,
+        "yard": {
+          "number": 31,
+          "name": "NJ - GLASSBORO EAST"
+        },
+        "media": {
+          "source_image_count": 14,
+          "views_360_count": 1,
+          "image_api_url": "https://inventoryv2.copart.io/v1/lotImages/58031866?country=us&brand=cprt&yardNumber=31",
+          "fetched_at": "2026-10-27T15:09:20+02:00"
+        },
+        "source_updated_at": "2026-09-28 11:30:00"
+      },
+      "facility": {
+        "id": 31,
+        "state": "NJ",
+        "zip": "08028",
+        "lat": 39.6966,
+        "lng": -75.10663,
+        "office_name": "NJ - GLASSBORO EAST",
+        "address": "200 GROVE ST.",
+        "city": "GLASSBORO",
+        "source_location_name": "NJ - GLASSBORO EAST",
+        "is_offsite": false,
+        "storage_location_id": null,
+        "storage_facility_id": 31,
+        "canonical": {
+          "id": 31,
+          "name": "NJ - GLASSBORO EAST",
+          "address": "200 GROVE ST.",
+          "city": "GLASSBORO",
+          "state": "NJ",
+          "zip": "08028",
+          "lat": 39.6966,
+          "lng": -75.10663,
+          "url": "/locations/glassboro-east-nj-31"
+        }
+      },
+      "distance": null,
+      "updated_at": "2026-11-19T06:15:48.000000Z",
+      "added_at": "2026-10-27T09:13:37+00:00",
+      "history": [],
+      "vin_lots": []
+    }
+  }
+}
