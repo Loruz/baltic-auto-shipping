@@ -1,7 +1,7 @@
 // apibara trial (see ../apibara-trial-plan.md). Node 20+, no dependencies.
 //   node trial.mjs day1       steps 1–9, 13, 14 (≈47 requests)
 //   node trial.mjs followup   steps 10–12, run on day 2 and day 7 (≈8 requests)
-// Raw responses go to ../trial-results/. The API key is read from ../../.env and never printed.
+// Raw responses go to ../trial-results/. The API key comes from the environment or ../../../.env and is never printed.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -12,9 +12,8 @@ const BASE = "https://apibara.tech/api/v1/vehicle-auction";
 const QUOTA_STOP = 92; // Test plan = 100 requests; keep a margin
 const RUN_CAP = 55; // hard cap per run
 
-const env = readFileSync(join(here, "..", "..", ".env"), "utf8");
-const KEY = env.match(/^APIBARA_API_KEY=["']?([^"'\r\n]+)/m)?.[1]?.trim();
-if (!KEY) throw new Error("APIBARA_API_KEY missing in .env");
+const KEY = process.env.APIBARA_API_KEY?.trim() || readFileSync(join(here, "..", "..", "..", ".env"), "utf8").match(/^APIBARA_API_KEY=["']?([^"'\r\n]+)/m)?.[1]?.trim();
+if (!KEY) throw new Error("APIBARA_API_KEY missing in environment or root .env");
 mkdirSync(OUT, { recursive: true });
 
 let sent = 0;
@@ -72,7 +71,8 @@ async function day1() {
     await call(`vehicles-${p}-live`, "/vehicles", { platform: p, lot_sub_status: "Live", include_total: true });
   }
   // 3 change feed
-  const ch = await call("changes-after0", "/changes", { after: 0, limit: 2000 });
+  const ch = await call("changes-after0", "/changes", { after: 0, limit: 500 });
+  if (ch.status < 200 || ch.status >= 300) throw new Error(`change feed failed with HTTP ${ch.status}; cursor not saved`);
   st.changesStatus = ch.status;
   const evs = rows(ch);
   st.changesMaxSeq = evs.reduce((m, e) => Math.max(m, Number(e.sequence ?? e.seq ?? e.id ?? 0)), 0) || get(ch.body, "meta.next_after") || null;
@@ -137,7 +137,10 @@ async function followup() {
   const st = JSON.parse(readFileSync(join(OUT, "state.json"), "utf8"));
   const tag = new Date().toISOString().slice(0, 10);
   // 10 resume the change feed from the saved cursor
-  if (st.changesMaxSeq) await call(`changes-resume-${tag}`, "/changes", { after: st.changesMaxSeq, limit: 2000 });
+  if (st.changesMaxSeq) {
+    const ch = await call(`changes-resume-${tag}`, "/changes", { after: st.changesMaxSeq, limit: 500 });
+    if (ch.status < 200 || ch.status >= 300) throw new Error(`change feed resume failed with HTTP ${ch.status}`);
+  }
   // 11 re-fetch picked lots after their sale date
   // lots with a real sale date come from probe2.mjs (st.soonest); the day-1 picks had none
   const pool = st.soonest ? [...st.soonest.copart, ...st.soonest.iaai] : [...st.picked.copart, ...st.picked.iaai];

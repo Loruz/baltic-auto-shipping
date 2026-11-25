@@ -1,6 +1,7 @@
 // One-off extra probes after day1 (3 requests): scheduled-lot counts + soonest lots, change-feed density.
 import { readFileSync, writeFileSync } from "node:fs";
-const KEY = readFileSync(new URL("../../.env", import.meta.url), "utf8").match(/^APIBARA_API_KEY=["']?([^"'\r\n]+)/m)[1].trim();
+const KEY = process.env.APIBARA_API_KEY?.trim() || readFileSync(new URL("../../../.env", import.meta.url), "utf8").match(/^APIBARA_API_KEY=["']?([^"'\r\n]+)/m)?.[1]?.trim();
+if (!KEY) throw new Error("APIBARA_API_KEY missing in environment or root .env");
 const OUT = new URL("../trial-results/", import.meta.url);
 const BASE = "https://apibara.tech/api/v1/vehicle-auction";
 async function call(name, path, params) {

@@ -13,7 +13,17 @@ const connection = new Redis(env.REDIS_URL, { maxRetriesPerRequest: null });
 const queueNames = Object.keys(QUEUES) as QueueName[];
 
 const queues = Object.fromEntries(
-  queueNames.map((name) => [name, new Queue(name, { connection })]),
+  queueNames.map((name) => [
+    name,
+    new Queue(name, {
+      connection,
+      defaultJobOptions: {
+        // Keep recent diagnostics while bounding Redis storage per queue.
+        removeOnComplete: { age: 24 * 60 * 60, count: 1_000 },
+        removeOnFail: { age: 7 * 24 * 60 * 60, count: 1_000 },
+      },
+    }),
+  ]),
 ) as Record<QueueName, Queue>;
 
 for (const schedule of SCHEDULES) {
