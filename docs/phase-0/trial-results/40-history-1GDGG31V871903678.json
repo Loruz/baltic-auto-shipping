@@ -1,0 +1,85 @@
+{
+  "request": "/api/v1/vehicle-auction/vehicles/1GDGG31V871903678/history",
+  "status": 200,
+  "ms": 810,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5b16cbba1ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:50:15 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gdu4eIADdZJUcneeiuEahizLSIK3gciifUuwAnYRRDPKs382C1DicdBpXr8At5lHFUcuz9Wvf6B4QQ%2BY71ghu7%2FFCaOULJHYceF9Zb5v40gBDi%2FuRTvfMnVWttA2C30%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-history-cache": "MISS",
+    "x-history-coverage-months": "12",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "48",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:50:15",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "62",
+    "x-subscription-used": "38",
+    "x-upstream-time-ms": "44"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "vehicle": {
+        "slug_vin": "1GDGG31V871903678",
+        "vin": "1GDGG31V871903678",
+        "platform": "copart",
+        "lot_number": "63359446"
+      },
+      "history": [
+        {
+          "platform": "copart",
+          "lot_number": 63359446,
+          "date": "2026-11-02",
+          "price": 150,
+          "status": "Sold on Approval"
+        },
+        {
+          "platform": "copart",
+          "lot_number": 63359446,
+          "date": "2026-10-05",
+          "price": 175,
+          "status": "Not Sold"
+        },
+        {
+          "platform": "copart",
+          "lot_number": 63359446,
+          "date": "2026-09-02",
+          "price": 150,
+          "status": "Not Sold"
+        },
+        {
+          "platform": "copart",
+          "lot_number": 63359446,
+          "date": "2026-08-17",
+          "price": 275,
+          "status": "Not Sold"
+        }
+      ]
+    },
+    "meta": {
+      "per_page": 50,
+      "next_cursor": null,
+      "prev_cursor": null
+    }
+  }
+}

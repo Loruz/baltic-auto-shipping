@@ -1,0 +1,65 @@
+{
+  "request": "/api/v1/vehicle-auction/shipping/auction-to-port?lot_number=58031866",
+  "status": 200,
+  "ms": 1346,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5b4beac41ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:50:24 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=B%2BwROQlVnjmwXOtscmy2unOQxq0pG6GCgZ%2Bmx3OmlU6t3V7v%2BLj5bynlnOwcVCzukROSE%2FIEqfl9DK045Ikw%2F8atjN9pOUrFrbahf1IXSOhOQe5DFNWpT4K7U%2FDqJc4%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "77",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:50:24",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "59",
+    "x-subscription-used": "41"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "vehicle": {
+        "platform": "copart",
+        "lot_number": "58031866",
+        "vin": "5J8YD8H88TL003202",
+        "title": "2026 ACURA MDX TYPE S ADVANCE",
+        "type": "AUTOMOBILE"
+      },
+      "auction_location": {
+        "display": "Glassboro East (NJ)",
+        "facility_id": 31,
+        "matched_location_id": "Glassboro East-NJ",
+        "match_score": 100
+      },
+      "shipping": {
+        "recommended_port": "NY",
+        "recommended_price_usd": 200,
+        "has_shipping_price": true,
+        "available_ports": [
+          {
+            "port": "NY",
+            "price": 200
+          }
+        ]
+      }
+    }
+  }
+}

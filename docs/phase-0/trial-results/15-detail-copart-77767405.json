@@ -1,0 +1,342 @@
+{
+  "request": "/api/v1/vehicle-auction/vehicles/2014-audi-q7-premium-plus-WA1LGAFE6ED006056?include=history%2Cvin_lots",
+  "status": 200,
+  "ms": 822,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5a292b1b1ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:37 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=obMqos6E0DlwX6Dgw1RYMcKoxTMLoCYEZdqXEmRO%2FjeV%2BJ%2BdHOO8OyEHPue3%2BbBQNtu7%2FvFU2lRfcoGg0T5WHsycsFNeSUYQ2Rc6gk4aRDAwLWhWutOyBl%2BtpHvv%2Fl0%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-detail-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "58",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:37",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "87",
+    "x-subscription-used": "13",
+    "x-upstream-time-ms": "54"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "slug_vin": "2014-audi-q7-premium-plus-WA1LGAFE6ED006056",
+      "vin": "WA1LGAFE6ED006056",
+      "platform": "copart",
+      "platform_id": 1,
+      "lot_number": "77767405",
+      "ad": null,
+      "title": "2014 AUDI Q7 PREMIUM PLUS",
+      "year": 2014,
+      "make": "AUDI",
+      "model": "Q7",
+      "series": null,
+      "generation": null,
+      "type": null,
+      "subLot": false,
+      "auction": {
+        "state": "open",
+        "phase": "unscheduled",
+        "phase_label": "Auction date to be announced",
+        "result_confirmed": false,
+        "completion_source": null,
+        "is_bidding_now": null,
+        "live_window_expires_at": null,
+        "formatted": null,
+        "full_date": null,
+        "diff_minutes": 0,
+        "ad": null,
+        "countdown": {
+          "days": 0,
+          "hours": 0,
+          "minutes": 0
+        },
+        "is_timed": false,
+        "is_buy_now": false,
+        "auction_at": null,
+        "auction_date_pending": true,
+        "timed_end_at": null,
+        "last_sold_day": null,
+        "last_sold_at": null,
+        "last_sold_status": null,
+        "outcome_status": null,
+        "auction_ended_at": null,
+        "outcome_observed_at": null,
+        "lot_removed": false,
+        "sold_buy_now": false,
+        "sold_timed": false
+      },
+      "pricing": {
+        "current_bid_usd": null,
+        "current_bid_at": null,
+        "current_bid2_usd": null,
+        "buy_now_usd": null,
+        "estimated_retail_value_usd": null,
+        "sale_price_usd": null,
+        "last_sold_price_usd": null,
+        "reserve_price_usd": null,
+        "reserve_off_bid_usd": null,
+        "seller_reserve": {
+          "price_usd": null,
+          "price_is_exact": false,
+          "price_source": null,
+          "scope": "latest_observed_auction_cycle",
+          "reserve_off_bid_usd": null,
+          "reserve_off_previous_bid_usd": null,
+          "reserve_off_observed_at": null,
+          "status": "unknown",
+          "last_unmet_bid_usd": null,
+          "first_met_bid_usd": null,
+          "inferred_range_usd": null,
+          "latest_signal": null,
+          "cycle_key": null,
+          "observed_at": null,
+          "observations": 0
+        },
+        "estimated_cost": {
+          "from": 1400,
+          "to": 2600,
+          "median": 2075,
+          "text": "$1,400 - $2,600",
+          "sample_count": 16,
+          "refinement_method": null,
+          "refinement_sample_count": null,
+          "engine_size_l": null,
+          "mileage_bucket": null,
+          "market_multiplier": null,
+          "previous_high_bid_usd": null
+        }
+      },
+      "location": {
+        "display": "Hayward (CA)",
+        "send_from": "LA",
+        "state": null
+      },
+      "seller": {
+        "name": "unknown",
+        "type": "unknown",
+        "class": "bg-282828",
+        "text_class": "text-primary",
+        "name_source": "unavailable",
+        "type_source": "unavailable",
+        "type_is_inferred": false
+      },
+      "condition": {
+        "run_condition": {
+          "value": "Run & Drive Verified",
+          "label": "Run & Drive",
+          "class_hint": "success"
+        },
+        "has_key": true,
+        "loss": null,
+        "primary_damage": "Rear end",
+        "secondary_damage": null
+      },
+      "odometer": {
+        "mi": 149654,
+        "km": 240844
+      },
+      "vehicle_specs": {
+        "exterior_color": "Gray",
+        "engine": {
+          "raw": "3.0L 6",
+          "size_l": null,
+          "hp": 0,
+          "layout": null
+        },
+        "transmission": "Automatic",
+        "fuel_type": "Gas",
+        "drive_type": "ALL WHEEL DRIVE",
+        "body_style": null,
+        "airbags": null,
+        "restraint_system": null
+      },
+      "sale_document": {
+        "variant_id": "628ec00132c6b886f11d07c3d947b1581809dd0cd4ae47a51a318fda1177164b",
+        "source_name": "SC",
+        "name": "SC",
+        "raw_name": "CA - Sc",
+        "issuing_state": "CA",
+        "type": "other",
+        "export": true,
+        "registration": true,
+        "is_pending": false,
+        "pending_status": "unknown",
+        "pending_source": null,
+        "page_id": 1,
+        "sale_document_group": "warning"
+      },
+      "media": {
+        "thumbs_count": 12,
+        "images_count": 12,
+        "items_count": 13,
+        "has_video": false,
+        "has_360": true,
+        "thumbs": [
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/3646e9fc38d942b687322e6ef7962c75_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2a831f2206274e12b10c1d21287af02a_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/473f90f58b37471e8fb5349380b11aab_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/9964b8e14255471fadf638389ae185a3_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/7d9676396ead41ab8cbf91c82bdc2b82_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/67056663ba8f4370b22342002dea6c02_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/44df921b3e4245f097a0371bd56c3f5b_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/87b6cd29f274465387867869d6851706_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/12ea7267e38644c49e674c62a3864b80_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/32e68e66f8f447548e8cc33c7957e59c_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/c0c9f8de2c6e40deb00749f5808026ef_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/b7fbfb9895b34ae386dc49e81e3c969f_ful.jpg"
+        ],
+        "items": [
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/3646e9fc38d942b687322e6ef7962c75_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/3646e9fc38d942b687322e6ef7962c75_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/3646e9fc38d942b687322e6ef7962c75_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2a831f2206274e12b10c1d21287af02a_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2a831f2206274e12b10c1d21287af02a_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2a831f2206274e12b10c1d21287af02a_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/473f90f58b37471e8fb5349380b11aab_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/473f90f58b37471e8fb5349380b11aab_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/473f90f58b37471e8fb5349380b11aab_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/9964b8e14255471fadf638389ae185a3_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/9964b8e14255471fadf638389ae185a3_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/9964b8e14255471fadf638389ae185a3_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/7d9676396ead41ab8cbf91c82bdc2b82_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/7d9676396ead41ab8cbf91c82bdc2b82_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/7d9676396ead41ab8cbf91c82bdc2b82_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/67056663ba8f4370b22342002dea6c02_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/67056663ba8f4370b22342002dea6c02_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/67056663ba8f4370b22342002dea6c02_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/44df921b3e4245f097a0371bd56c3f5b_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/44df921b3e4245f097a0371bd56c3f5b_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/44df921b3e4245f097a0371bd56c3f5b_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/87b6cd29f274465387867869d6851706_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/87b6cd29f274465387867869d6851706_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/87b6cd29f274465387867869d6851706_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/12ea7267e38644c49e674c62a3864b80_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/12ea7267e38644c49e674c62a3864b80_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/12ea7267e38644c49e674c62a3864b80_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/32e68e66f8f447548e8cc33c7957e59c_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/32e68e66f8f447548e8cc33c7957e59c_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/32e68e66f8f447548e8cc33c7957e59c_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/c0c9f8de2c6e40deb00749f5808026ef_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/c0c9f8de2c6e40deb00749f5808026ef_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/c0c9f8de2c6e40deb00749f5808026ef_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/b7fbfb9895b34ae386dc49e81e3c969f_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/b7fbfb9895b34ae386dc49e81e3c969f_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/b7fbfb9895b34ae386dc49e81e3c969f_hrs.jpg"
+          },
+          {
+            "type": "vr360",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2f69415a861c481a9b25c8c8f4daa518_vthb.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2f69415a861c481a9b25c8c8f4daa518_vful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2f69415a861c481a9b25c8c8f4daa518_vhrs.jpg"
+          }
+        ]
+      },
+      "details": {
+        "source": "copart_csv",
+        "sale_status": "Pure Sale",
+        "bid_status": null,
+        "has_bid": null,
+        "seller_reserve_met": null,
+        "starting_bid": null,
+        "buy_now_available": false,
+        "buy_now_price_usd": null,
+        "estimated_retail_value_usd": null,
+        "yard": {
+          "number": 3,
+          "name": "CA - HAYWARD"
+        },
+        "media": {
+          "source_image_count": 13,
+          "views_360_count": 1,
+          "image_api_url": "https://inventoryv2.copart.io/v1/lotImages/77767405?country=us&brand=cprt&yardNumber=3",
+          "fetched_at": "2026-10-27T11:14:19+02:00"
+        },
+        "source_updated_at": "2026-07-16 23:07:33"
+      },
+      "facility": {
+        "id": 3,
+        "state": "CA",
+        "zip": "94545",
+        "lat": 37.65733,
+        "lng": -122.13572,
+        "office_name": "CA - HAYWARD",
+        "address": "1964 SABRE STREET",
+        "city": "HAYWARD",
+        "source_location_name": "CA - HAYWARD",
+        "is_offsite": false,
+        "storage_location_id": null,
+        "storage_facility_id": 3,
+        "canonical": {
+          "id": 3,
+          "name": "CA - HAYWARD",
+          "address": "1964 SABRE STREET",
+          "city": "HAYWARD",
+          "state": "CA",
+          "zip": "94545",
+          "lat": 37.65733,
+          "lng": -122.13572,
+          "url": "/locations/hayward-ca-3"
+        }
+      },
+      "distance": null,
+      "updated_at": "2026-10-27T08:15:49.000000Z",
+      "added_at": "2026-10-27T09:14:06+00:00",
+      "history": [],
+      "vin_lots": []
+    }
+  }
+}

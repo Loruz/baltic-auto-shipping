@@ -1,0 +1,239 @@
+{
+  "changesStatus": 422,
+  "changesMaxSeq": null,
+  "picked": {
+    "copart": [
+      {
+        "lot": "58031866",
+        "vin": "5J8YD8H88TL003202",
+        "slug": "2026-acura-mdx-type-s-advance-5J8YD8H88TL003202",
+        "damage": "Vandalism",
+        "auction_at": null
+      },
+      {
+        "lot": "77767405",
+        "vin": "WA1LGAFE6ED006056",
+        "slug": "2014-audi-q7-premium-plus-WA1LGAFE6ED006056",
+        "damage": "Rear end",
+        "auction_at": null
+      },
+      {
+        "lot": "91706395",
+        "vin": "1GTEC19J78Z257839",
+        "slug": "2008-gmc-sierra-c1500-1GTEC19J78Z257839",
+        "damage": "Front end",
+        "auction_at": null
+      },
+      {
+        "lot": "99048265",
+        "vin": "1HGCV1F30MA099586",
+        "slug": "2021-honda-accord-sport-1HGCV1F30MA099586",
+        "damage": "Side",
+        "auction_at": null
+      },
+      {
+        "lot": "63144366",
+        "vin": "4T1C11AK7RU847650",
+        "slug": "2024-toyota-camry-le-4T1C11AK7RU847650",
+        "damage": "Burn - interior",
+        "auction_at": null
+      },
+      {
+        "lot": "68264476",
+        "vin": "5XXGR4A67FG365913",
+        "slug": "2015-kia-optima-5XXGR4A67FG365913",
+        "damage": "Burn - engine",
+        "auction_at": null
+      }
+    ],
+    "iaai": [
+      {
+        "lot": "43713710",
+        "vin": "JS2RF9A85C6101024",
+        "slug": "2012-suzuki-kizashi-sport-sls-JS2RF9A85C6101024",
+        "damage": "Front end",
+        "auction_at": null
+      },
+      {
+        "lot": "44021160",
+        "vin": "1HD1CT3578K430434",
+        "slug": "2008-harley-davidson-xl1200-c-anniversary-1HD1CT3578K430434",
+        "damage": "All over",
+        "auction_at": null
+      },
+      {
+        "lot": "43869098",
+        "vin": "1N4AA6AP0JC385517",
+        "slug": "2022-nissan-maxima-platinum-1N4AA6AP0JC385517",
+        "damage": "Theft",
+        "auction_at": null
+      },
+      {
+        "lot": "41759902",
+        "vin": "2C3CDZC9XGH335437",
+        "slug": "2016-dodge-challenger-srt-hellcat-2C3CDZC9XGH335437",
+        "damage": "Total burn",
+        "auction_at": null
+      },
+      {
+        "lot": "43966547",
+        "vin": "1G91A2420SA589160",
+        "slug": "2025-triple-g-trailer-1G91A2420SA589160",
+        "damage": "Left side",
+        "auction_at": null
+      },
+      {
+        "lot": "44938841",
+        "vin": "2GNFLEEK5C6177378",
+        "slug": "2012-chevrolet-equinox-1lt-2GNFLEEK5C6177378",
+        "damage": "Left front",
+        "auction_at": null
+      }
+    ]
+  },
+  "historyDepth": {
+    "1mo": {
+      "status": 200,
+      "rows": 20,
+      "total": 39897
+    },
+    "3mo": {
+      "status": 200,
+      "rows": 20,
+      "total": 24484
+    },
+    "6mo": {
+      "status": 200,
+      "rows": 20,
+      "total": null
+    },
+    "9mo": {
+      "status": 200,
+      "rows": 20,
+      "total": 2269
+    },
+    "12mo": {
+      "status": 200,
+      "rows": 0,
+      "total": 0
+    }
+  },
+  "updated15": [
+    {
+      "at": "2026-11-20T23:50:23.339Z",
+      "total": 8499
+    }
+  ],
+  "photos": {
+    "14-detail-copart-58031866.json": [
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/b1d5fed5fa144858af65d7888c254c02_ful.jpg",
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0626/e8d62796818e4507be29cc7897015ddd_ful.jpg"
+    ],
+    "15-detail-copart-77767405.json": [
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/3646e9fc38d942b687322e6ef7962c75_ful.jpg",
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0226/2a831f2206274e12b10c1d21287af02a_ful.jpg"
+    ],
+    "16-detail-copart-91706395.json": [
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/1125/7c4a13200f4a4c06b48780d999d789eb_ful.jpg",
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/1125/c1ad603565c84924982515148a036ac5_ful.jpg"
+    ],
+    "17-detail-copart-99048265.json": [
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0126/776e4a5668134f0a8cd005e59dba6681_ful.jpg",
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0126/90d4e9a2407b4b879bfab04013e5e766_ful.jpg"
+    ],
+    "18-detail-copart-63144366.json": [
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/51fa40b6f28c4287b8f186978d565784_ful.jpg",
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/746f7f97ba444709889b439a3d4e717e_ful.jpg"
+    ],
+    "19-detail-copart-68264476.json": [
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/28a88f39e3124809b58c2f47077c80e8_ful.jpg",
+      "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/1c87f67cc2ab42e9a37bb2b30df0a9fb_ful.jpg"
+    ],
+    "20-detail-iaai-43713710.json": [
+      "https://vis.iaai.com/resizer?imageKeys=44209058~SID~I1&width=400&height=300",
+      "https://vis.iaai.com/resizer?imageKeys=44209058~SID~I2&width=400&height=300"
+    ],
+    "21-detail-iaai-44021160.json": [
+      "https://vis.iaai.com/resizer?imageKeys=44516924~SID~I1&width=400&height=300",
+      "https://vis.iaai.com/resizer?imageKeys=44516924~SID~I2&width=400&height=300"
+    ],
+    "22-detail-iaai-43869098.json": [
+      "https://vis.iaai.com/resizer?imageKeys=44364631~SID~I1&width=400&height=300",
+      "https://vis.iaai.com/resizer?imageKeys=44364631~SID~I2&width=400&height=300"
+    ],
+    "23-detail-iaai-41759902.json": [
+      "https://vis.iaai.com/resizer?imageKeys=42250899~SID~I1&width=400&height=300",
+      "https://vis.iaai.com/resizer?imageKeys=42250899~SID~I2&width=400&height=300"
+    ],
+    "24-detail-iaai-43966547.json": [
+      "https://vis.iaai.com/resizer?imageKeys=44462205~SID~I1&width=400&height=300",
+      "https://vis.iaai.com/resizer?imageKeys=44462205~SID~I2&width=400&height=300"
+    ],
+    "25-detail-iaai-44938841.json": [
+      "https://vis.iaai.com/resizer?imageKeys=45436230~SID~I1&width=400&height=300",
+      "https://vis.iaai.com/resizer?imageKeys=45436230~SID~I2&width=400&height=300"
+    ]
+  },
+  "day1At": "2026-11-20T23:50:28.152Z",
+  "soonest": {
+    "copart": [
+      {
+        "lot": "74897015",
+        "slug": "2014-bmw-328-i-WBA3A5G52ENP33263",
+        "auction_at": "2026-11-23T15:00:00+00:00",
+        "bid": null
+      },
+      {
+        "lot": "76557175",
+        "slug": "2019-audi-a4-premium-WAUGMAF48KA011180",
+        "auction_at": "2026-11-23T15:00:00+00:00",
+        "bid": null
+      },
+      {
+        "lot": "90535855",
+        "slug": "2013-ford-f150-super-cab-1FTFX1EF6DFB35771",
+        "auction_at": "2026-11-23T15:00:00+00:00",
+        "bid": null
+      }
+    ],
+    "iaai": [
+      {
+        "lot": "45807542",
+        "slug": "2014-toyota-corolla-le-2T1BURHE1EC219869",
+        "auction_at": "2026-12-06T14:30:00+00:00",
+        "bid": null
+      },
+      {
+        "lot": "44253668",
+        "slug": "2022-subaru-forester-premium-JF2SKAEC9NH477144",
+        "auction_at": "2026-12-09T14:30:00+00:00",
+        "bid": null
+      },
+      {
+        "lot": "45424403",
+        "slug": "2015-chevrolet-impala-ls-2G11Z5SL9F9274951",
+        "auction_at": "2026-12-09T16:30:00+00:00",
+        "bid": null
+      }
+    ]
+  },
+  "scheduledTotals": {
+    "copart": 72491,
+    "iaai": 306
+  },
+  "density": {
+    "events": 500,
+    "seqSpan": 499,
+    "minutes": 0.6,
+    "types": {
+      "bid.changed": 464,
+      "buy_now.changed": 30,
+      "auction.ended": 2,
+      "auction.rescheduled": 1,
+      "lot.sold": 2,
+      "lot.removed": 1
+    },
+    "from": "2026-11-20T22:55:25+00:00",
+    "latest": 108082680
+  }
+}

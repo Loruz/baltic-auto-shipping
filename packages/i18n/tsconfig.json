@@ -1,0 +1,4 @@
+{
+  "extends": "@bas/config/tsconfig/base.json",
+  "include": ["src", "messages", "*.js"]
+}

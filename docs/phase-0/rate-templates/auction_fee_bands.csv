@@ -1,0 +1,6 @@
+source,fee_code,price_from_usd,price_to_usd,flat_usd,percent,notes
+copart,buyer_fee,0,99.99,25.00,,EXAMPLE ROW - replace with the broker's own Copart fee schedule (their account type)
+copart,virtual_bid_fee,0,99.99,0.00,,EXAMPLE ROW
+copart,gate_fee,0,,79.00,,EXAMPLE ROW - empty price_to = no upper limit
+iaai,buyer_fee,0,99.99,25.00,,EXAMPLE ROW - replace with the broker's IAAI schedule
+iaai,service_fee,0,,95.00,,EXAMPLE ROW

@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+docs/
+packages/db/migrations/
+packages/db/schema.dbml
+.next/
+dist/

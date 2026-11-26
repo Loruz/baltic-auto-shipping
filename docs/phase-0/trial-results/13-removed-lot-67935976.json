@@ -1,0 +1,352 @@
+{
+  "request": "/api/v1/vehicle-auction/vehicles/67935976",
+  "status": 200,
+  "ms": 917,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5a1e4d931ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:35 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aqXnLrW9Vmiq8COGnWDXMA8A%2B7hLy0JkejipYPjhK5uAW7bCsOO94g1BDVCSJBC9EZFce2LvzoZ75gYyKvY%2FuPaO3w%2BrjCmc6yAMqiTqNzyOECqxg1GU%2FXOKtYSobpM%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-detail-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "69",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:35",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "89",
+    "x-subscription-used": "11",
+    "x-upstream-time-ms": "65"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "slug_vin": "2026-toyota-corolla-le-5YFB4MDE2TP407614",
+      "vin": "5YFB4MDE2TP407614",
+      "platform": "copart",
+      "platform_id": 1,
+      "lot_number": "67935976",
+      "ad": "2026-11-24T02:00:00+00:00",
+      "title": "2026 TOYOTA COROLLA LE",
+      "year": 2026,
+      "make": "TOYOTA",
+      "model": "COROLLA",
+      "series": {
+        "key": "COROLLA",
+        "name": "Corolla"
+      },
+      "generation": {
+        "id": 4205,
+        "name": "E210",
+        "generation": "E210",
+        "make": "Toyota",
+        "model": "Corolla",
+        "series": "Corolla",
+        "series_key": "COROLLA",
+        "year_from": 2019,
+        "year_to": null,
+        "label": "E210 (2019+)"
+      },
+      "type": "AUTOMOBILE",
+      "subLot": false,
+      "auction": {
+        "state": "open",
+        "phase": "scheduled",
+        "phase_label": "Scheduled",
+        "result_confirmed": false,
+        "completion_source": null,
+        "is_bidding_now": null,
+        "live_window_expires_at": "2026-11-24T05:00:00+00:00",
+        "formatted": "Nov 24, 2026 04:00",
+        "full_date": "2026-11-24T02:00:00+00:00",
+        "diff_minutes": 4450,
+        "ad": "2026-11-24T02:00:00+00:00",
+        "countdown": {
+          "days": 3,
+          "hours": 2,
+          "minutes": 10
+        },
+        "is_timed": false,
+        "is_buy_now": true,
+        "auction_at": "2026-11-24T02:00:00+00:00",
+        "auction_date_pending": false,
+        "timed_end_at": null,
+        "last_sold_day": null,
+        "last_sold_at": null,
+        "last_sold_status": null,
+        "outcome_status": null,
+        "auction_ended_at": null,
+        "outcome_observed_at": null,
+        "lot_removed": false,
+        "sold_buy_now": false,
+        "sold_timed": false
+      },
+      "pricing": {
+        "current_bid_usd": 8600,
+        "current_bid_at": null,
+        "current_bid2_usd": 8600,
+        "buy_now_usd": 18000,
+        "estimated_retail_value_usd": null,
+        "sale_price_usd": null,
+        "last_sold_price_usd": null,
+        "reserve_price_usd": null,
+        "reserve_off_bid_usd": null,
+        "seller_reserve": {
+          "price_usd": null,
+          "price_is_exact": false,
+          "price_source": null,
+          "scope": "latest_observed_auction_cycle",
+          "reserve_off_bid_usd": null,
+          "reserve_off_previous_bid_usd": null,
+          "reserve_off_observed_at": null,
+          "status": "unknown",
+          "last_unmet_bid_usd": null,
+          "first_met_bid_usd": null,
+          "inferred_range_usd": null,
+          "latest_signal": null,
+          "cycle_key": null,
+          "observed_at": null,
+          "observations": 0
+        },
+        "estimated_cost": {
+          "from": 6000,
+          "to": 9600,
+          "median": 7600,
+          "text": "$6,000 - $9,600",
+          "sample_count": 197,
+          "refinement_method": "engine_mileage",
+          "refinement_sample_count": 178,
+          "engine_size_l": 2,
+          "mileage_bucket": "0-30k",
+          "market_multiplier": 1,
+          "previous_high_bid_usd": 8600
+        }
+      },
+      "location": {
+        "display": "West Palm Beach (FL)",
+        "send_from": "Miami",
+        "state": null
+      },
+      "seller": {
+        "name": "unknown",
+        "type": "unknown",
+        "class": "bg-282828",
+        "text_class": "text-primary",
+        "name_source": "unavailable",
+        "type_source": "unavailable",
+        "type_is_inferred": false
+      },
+      "condition": {
+        "run_condition": {
+          "value": "Run & Drive Verified",
+          "label": "Run & Drive",
+          "class_hint": "success"
+        },
+        "has_key": true,
+        "loss": null,
+        "primary_damage": "Side",
+        "secondary_damage": null
+      },
+      "odometer": {
+        "mi": 415,
+        "km": 668
+      },
+      "vehicle_specs": {
+        "exterior_color": "Black",
+        "engine": {
+          "raw": "2.0L 4",
+          "size_l": "2.0",
+          "hp": null,
+          "layout": null
+        },
+        "transmission": "Automatic",
+        "fuel_type": "Gas",
+        "drive_type": "FRONT WHEEL DRIVE",
+        "body_style": "Sedan",
+        "airbags": null,
+        "restraint_system": null
+      },
+      "sale_document": {
+        "variant_id": "347c239a0d68a7a35c6560f4b49afa339e565cdcb5a014842694c638c535ea16",
+        "source_name": "CERTIFICATE OF TITLE (P)",
+        "name": "CERTIFICATE OF TITLE",
+        "raw_name": "FL - Certificate Of Title (P)",
+        "issuing_state": "FL",
+        "type": "success",
+        "export": true,
+        "registration": true,
+        "is_pending": true,
+        "pending_status": "pending",
+        "pending_source": "copart_legacy_p",
+        "page_id": 10,
+        "sale_document_group": "pending"
+      },
+      "media": {
+        "thumbs_count": 12,
+        "images_count": 12,
+        "items_count": 13,
+        "has_video": true,
+        "has_360": false,
+        "thumbs": [
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8180475e90004443b64ae81aafc0598d_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/cddf9dc1f7ad404ea87e5705dd4d3506_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8bcc02ee8fff4e83b5d325de9bd3f307_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c18798c0041547438f273db9e72c414f_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/4a03b37251974c4096e3d2ccf4b14288_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c7343dbb59b74b1a9d69753bf0a7e26f_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/19193ef25f5e4a46bd820fe9ed53b3b2_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/231c0a8744634ad7b2da6129b0e95ee0_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/afbb2233c74347e08a6984cb4c419676_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a89eebcc3bd2482b82cacd8622ee7062_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/9cad736632f74893ab3867bbf7c6ae7e_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f73cd1cf5d2642f984711f71c799f662_vful.jpg"
+        ],
+        "items": [
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8180475e90004443b64ae81aafc0598d_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8180475e90004443b64ae81aafc0598d_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8180475e90004443b64ae81aafc0598d_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/cddf9dc1f7ad404ea87e5705dd4d3506_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/cddf9dc1f7ad404ea87e5705dd4d3506_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/cddf9dc1f7ad404ea87e5705dd4d3506_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8bcc02ee8fff4e83b5d325de9bd3f307_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8bcc02ee8fff4e83b5d325de9bd3f307_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8bcc02ee8fff4e83b5d325de9bd3f307_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c18798c0041547438f273db9e72c414f_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c18798c0041547438f273db9e72c414f_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c18798c0041547438f273db9e72c414f_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/4a03b37251974c4096e3d2ccf4b14288_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/4a03b37251974c4096e3d2ccf4b14288_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/4a03b37251974c4096e3d2ccf4b14288_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c7343dbb59b74b1a9d69753bf0a7e26f_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c7343dbb59b74b1a9d69753bf0a7e26f_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c7343dbb59b74b1a9d69753bf0a7e26f_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/19193ef25f5e4a46bd820fe9ed53b3b2_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/19193ef25f5e4a46bd820fe9ed53b3b2_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/19193ef25f5e4a46bd820fe9ed53b3b2_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/231c0a8744634ad7b2da6129b0e95ee0_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/231c0a8744634ad7b2da6129b0e95ee0_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/231c0a8744634ad7b2da6129b0e95ee0_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/afbb2233c74347e08a6984cb4c419676_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/afbb2233c74347e08a6984cb4c419676_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/afbb2233c74347e08a6984cb4c419676_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a89eebcc3bd2482b82cacd8622ee7062_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a89eebcc3bd2482b82cacd8622ee7062_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a89eebcc3bd2482b82cacd8622ee7062_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/9cad736632f74893ab3867bbf7c6ae7e_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/9cad736632f74893ab3867bbf7c6ae7e_ful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/9cad736632f74893ab3867bbf7c6ae7e_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f73cd1cf5d2642f984711f71c799f662_vful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f73cd1cf5d2642f984711f71c799f662_vful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f73cd1cf5d2642f984711f71c799f662_vhrs.jpg"
+          },
+          {
+            "type": "video",
+            "url": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/ids-c-prod-lpp/0926/cd89cb91b24c4a22a8d0ac34d9752ee1_O.mp4"
+          }
+        ]
+      },
+      "details": {
+        "source": "copart_csv",
+        "sale_status": "Minimum Bid",
+        "bid_status": null,
+        "has_bid": null,
+        "seller_reserve_met": false,
+        "starting_bid": null,
+        "buy_now_available": false,
+        "buy_now_price_usd": 18000,
+        "estimated_retail_value_usd": null,
+        "yard": {
+          "number": 880,
+          "name": "FL - WEST PALM BEACH"
+        },
+        "media": {
+          "source_image_count": null,
+          "views_360_count": 0,
+          "image_api_url": "https://inventoryv2.copart.io/v1/lotImages/67935976?country=us&brand=cprt&yardNumber=880",
+          "fetched_at": null
+        },
+        "source_updated_at": "2026-11-20 20:18:55"
+      },
+      "facility": {
+        "id": 70,
+        "state": "FL",
+        "zip": "33411",
+        "lat": 26.69202,
+        "lng": -80.17167,
+        "office_name": "FL - WEST PALM BEACH",
+        "address": "7876 W. BELVEDERE ROAD",
+        "city": "WEST PALM BEACH",
+        "source_location_name": "FL - WEST PALM BEACH",
+        "is_offsite": false,
+        "storage_location_id": null,
+        "storage_facility_id": 70,
+        "canonical": {
+          "id": 70,
+          "name": "FL - WEST PALM BEACH",
+          "address": "7876 W. BELVEDERE ROAD",
+          "city": "WEST PALM BEACH",
+          "state": "FL",
+          "zip": "33411",
+          "lat": 26.69202,
+          "lng": -80.17167,
+          "url": "/locations/west-palm-beach-fl-70"
+        }
+      },
+      "distance": null,
+      "updated_at": "2026-11-20T22:01:08.000000Z",
+      "added_at": "2026-09-11T01:39:57+00:00"
+    }
+  }
+}

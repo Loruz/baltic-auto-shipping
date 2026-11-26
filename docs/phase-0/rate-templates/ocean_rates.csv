@@ -1,0 +1,5 @@
+from_port_code,to_port_code,vehicle_type,method,price_usd,transit_days_min,transit_days_max,notes
+US-NJ,LT-KLJ,car,container,1150,30,45,EXAMPLE ROW
+US-SAV,LT-KLJ,car,container,1100,32,48,EXAMPLE ROW
+US-HOU,LT-KLJ,car,container,1250,35,50,EXAMPLE ROW
+US-NJ,LT-KLJ,motorcycle,container,600,30,45,EXAMPLE ROW

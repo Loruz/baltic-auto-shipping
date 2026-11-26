@@ -1,0 +1,34 @@
+{
+  "name": "@bas/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=../../.env src/main.ts",
+    "build": "tsup",
+    "start": "node dist/main.js",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@bas/auctions": "workspace:*",
+    "@bas/bidding": "workspace:*",
+    "@bas/billing": "workspace:*",
+    "@bas/config": "workspace:*",
+    "@bas/db": "workspace:*",
+    "@bas/kyc": "workspace:*",
+    "@bas/notifications": "workspace:*",
+    "bullmq": "5.81.6",
+    "ioredis": "5.11.1",
+    "pino": "10.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.4",
+    "eslint": "10.15.0",
+    "tsup": "8.5.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.1.2"
+  }
+}

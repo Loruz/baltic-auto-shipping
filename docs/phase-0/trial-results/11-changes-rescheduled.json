@@ -1,0 +1,618 @@
+{
+  "request": "/api/v1/vehicle-auction/changes?event_type=auction.rescheduled&limit=20",
+  "status": 200,
+  "ms": 908,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5a12efad1ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:34 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=fvc%2F%2FaXBhpLxHddE%2BGmbJBMIpmYh%2FOVPcyb5V6UbWKCaH3djD3fFsyLKUxTdH%2BlYCubvksnAtXSXH98zm6oPwZe6xbAfMhZdwhgusJJhhTj9qXOAcZKzrdclP8zlKxI%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "160",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:33",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "91",
+    "x-subscription-used": "9"
+  },
+  "body": {
+    "ok": true,
+    "data": [
+      {
+        "sequence": 69097451,
+        "event_id": "chg_69097451",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4275773,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46477407",
+          "vin": "2GKFLVEK9F6199613"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:35:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:04+02:00",
+        "recorded_at": "2026-11-06T23:40:04+00:00"
+      },
+      {
+        "sequence": 69097453,
+        "event_id": "chg_69097453",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4314351,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46359487",
+          "vin": "WDCGG8HBXAF273471"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:35:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:04+02:00",
+        "recorded_at": "2026-11-06T23:40:04+00:00"
+      },
+      {
+        "sequence": 69097456,
+        "event_id": "chg_69097456",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4314429,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46340894",
+          "vin": "KM8K5CA54KU225728"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:35:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:04+02:00",
+        "recorded_at": "2026-11-06T23:40:04+00:00"
+      },
+      {
+        "sequence": 69097458,
+        "event_id": "chg_69097458",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4314612,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46263815",
+          "vin": "3C4NJDBB2JT103529"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:35:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:04+02:00",
+        "recorded_at": "2026-11-06T23:40:04+00:00"
+      },
+      {
+        "sequence": 69097462,
+        "event_id": "chg_69097462",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4315131,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "45998690",
+          "vin": "1C4PJXFN0RW366087"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:35:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:04+02:00",
+        "recorded_at": "2026-11-06T23:40:04+00:00"
+      },
+      {
+        "sequence": 69097673,
+        "event_id": "chg_69097673",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4316466,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46314668",
+          "vin": "3GNAXPEG4SL103692"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:09+02:00",
+        "recorded_at": "2026-11-06T23:40:09+00:00"
+      },
+      {
+        "sequence": 69097674,
+        "event_id": "chg_69097674",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4316525,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46273353",
+          "vin": "5FNRL6H80SB043947"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:09+02:00",
+        "recorded_at": "2026-11-06T23:40:09+00:00"
+      },
+      {
+        "sequence": 69097675,
+        "event_id": "chg_69097675",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4291843,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46133960",
+          "vin": "1V2VMPE87PC027012"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:09+02:00",
+        "recorded_at": "2026-11-06T23:40:09+00:00"
+      },
+      {
+        "sequence": 69097696,
+        "event_id": "chg_69097696",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4316967,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46012941",
+          "vin": "5FNRL3H90AB084987"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:10+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097697,
+        "event_id": "chg_69097697",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4312452,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46524120",
+          "vin": "2T3H1RFVXKW024134"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:10+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097698,
+        "event_id": "chg_69097698",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4314289,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46331475",
+          "vin": "1HGCR2F59GA194275"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:10+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097699,
+        "event_id": "chg_69097699",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4313523,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46249771",
+          "vin": "WDDWF8EB7LR556345"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:10+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097700,
+        "event_id": "chg_69097700",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4313666,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46132612",
+          "vin": "1C4RJFLT7HC633103"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:10+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097701,
+        "event_id": "chg_69097701",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4275807,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46461603",
+          "vin": "5UXKR6C58E0C03185"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:10+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097702,
+        "event_id": "chg_69097702",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4318688,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46334776",
+          "vin": "WBAFU7C52BC870524"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:10+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097721,
+        "event_id": "chg_69097721",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4317469,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46326451",
+          "vin": "JHMFC1F36JX017563"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:11+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097722,
+        "event_id": "chg_69097722",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4314629,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46257421",
+          "vin": "5XYPGDA30KG461223"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:11+02:00",
+        "recorded_at": "2026-11-06T23:40:11+00:00"
+      },
+      {
+        "sequence": 69097723,
+        "event_id": "chg_69097723",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4315135,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "45991140",
+          "vin": "5XYPG4A35HG324674"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:34:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:11+02:00",
+        "recorded_at": "2026-11-06T23:40:12+00:00"
+      },
+      {
+        "sequence": 69108820,
+        "event_id": "chg_69108820",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4316485,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46283121",
+          "vin": "1HGCV1F32KA170073"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:33:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:41+02:00",
+        "recorded_at": "2026-11-06T23:40:41+00:00"
+      },
+      {
+        "sequence": 69108835,
+        "event_id": "chg_69108835",
+        "event": "auction.rescheduled",
+        "terminal": false,
+        "reason": null,
+        "vehicle": {
+          "id": 4316586,
+          "platform": "iaai",
+          "platform_id": 2,
+          "lot_number": "46205611",
+          "vin": "2FMPK4K99KBB42372"
+        },
+        "changed_fields": [
+          "auction.timed_end_at",
+          "auction.is_timed"
+        ],
+        "before": {
+          "auction.timed_end_at": null,
+          "auction.is_timed": 0
+        },
+        "after": {
+          "auction.timed_end_at": "2026-11-08T02:33:00+00:00",
+          "auction.is_timed": 1
+        },
+        "vehicle_updated_at": "2026-11-07T01:40:41+02:00",
+        "recorded_at": "2026-11-06T23:40:41+00:00"
+      }
+    ],
+    "meta": {
+      "schema_version": "2026-10-28.beta3",
+      "after": 0,
+      "next_cursor": 69108835,
+      "has_more": true,
+      "count": 20,
+      "requested_limit": 20,
+      "effective_limit": 20,
+      "scanned_count": 21,
+      "filtered_non_material": 0,
+      "oldest_available_sequence": 69097365,
+      "latest_available_sequence": 108082245,
+      "retention_days": 14,
+      "ordering": "sequence_asc",
+      "delivery_guarantee": "at_least_once_when_cursor_is_committed_after_local_processing",
+      "commit_rule": "Persist meta.next_cursor only after your local transaction succeeds."
+    }
+  }
+}

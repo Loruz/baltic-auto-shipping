@@ -1,0 +1,323 @@
+{
+  "request": "/api/v1/vehicle-auction/vehicles/2024-toyota-camry-le-4T1C11AK7RU847650?include=history%2Cvin_lots",
+  "status": 200,
+  "ms": 842,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5a39cb0a1ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:40 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=64vcaa5hGvfkSwrMwBlrA71iLF%2F97cTLWeGtpCIMkqxdU962JX5y%2BevbfWtG37JtoCeeGIQiEm3x3kRw5uc82JV2iNx8c0VDWB7wGsf%2FaySe61r2Zzqb7IsCU%2FiZGBQ%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-detail-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "60",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:40",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "84",
+    "x-subscription-used": "16",
+    "x-upstream-time-ms": "56"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "slug_vin": "2024-toyota-camry-le-4T1C11AK7RU847650",
+      "vin": "4T1C11AK7RU847650",
+      "platform": "copart",
+      "platform_id": 1,
+      "lot_number": "63144366",
+      "ad": null,
+      "title": "2024 TOYOTA CAMRY LE",
+      "year": 2024,
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "series": null,
+      "generation": null,
+      "type": null,
+      "subLot": false,
+      "auction": {
+        "state": "open",
+        "phase": "unscheduled",
+        "phase_label": "Auction date to be announced",
+        "result_confirmed": false,
+        "completion_source": null,
+        "is_bidding_now": null,
+        "live_window_expires_at": null,
+        "formatted": null,
+        "full_date": null,
+        "diff_minutes": 0,
+        "ad": null,
+        "countdown": {
+          "days": 0,
+          "hours": 0,
+          "minutes": 0
+        },
+        "is_timed": false,
+        "is_buy_now": false,
+        "auction_at": null,
+        "auction_date_pending": true,
+        "timed_end_at": null,
+        "last_sold_day": null,
+        "last_sold_at": null,
+        "last_sold_status": null,
+        "outcome_status": null,
+        "auction_ended_at": null,
+        "outcome_observed_at": null,
+        "lot_removed": false,
+        "sold_buy_now": false,
+        "sold_timed": false
+      },
+      "pricing": {
+        "current_bid_usd": 1100,
+        "current_bid_at": null,
+        "current_bid2_usd": 1100,
+        "buy_now_usd": null,
+        "estimated_retail_value_usd": null,
+        "sale_price_usd": null,
+        "last_sold_price_usd": null,
+        "reserve_price_usd": null,
+        "reserve_off_bid_usd": null,
+        "seller_reserve": {
+          "price_usd": null,
+          "price_is_exact": false,
+          "price_source": null,
+          "scope": "latest_observed_auction_cycle",
+          "reserve_off_bid_usd": null,
+          "reserve_off_previous_bid_usd": null,
+          "reserve_off_observed_at": null,
+          "status": "unknown",
+          "last_unmet_bid_usd": null,
+          "first_met_bid_usd": null,
+          "inferred_range_usd": null,
+          "latest_signal": null,
+          "cycle_key": null,
+          "observed_at": null,
+          "observations": 0
+        },
+        "estimated_cost": null
+      },
+      "location": {
+        "display": "Fresno (CA)",
+        "send_from": "LA",
+        "state": null
+      },
+      "seller": {
+        "name": "unknown",
+        "type": "unknown",
+        "class": "bg-282828",
+        "text_class": "text-primary",
+        "name_source": "unavailable",
+        "type_source": "unavailable",
+        "type_is_inferred": false
+      },
+      "condition": {
+        "run_condition": {
+          "value": "DEFAULT",
+          "label": "No information",
+          "class_hint": "secondary"
+        },
+        "has_key": false,
+        "loss": null,
+        "primary_damage": "Burn - interior",
+        "secondary_damage": null
+      },
+      "odometer": {
+        "mi": 0,
+        "km": 0
+      },
+      "vehicle_specs": {
+        "exterior_color": "White",
+        "engine": {
+          "raw": "2.5L 4",
+          "size_l": null,
+          "hp": 0,
+          "layout": null
+        },
+        "transmission": "Automatic",
+        "fuel_type": "Gas",
+        "drive_type": "FRONT WHEEL DRIVE",
+        "body_style": "Sedan",
+        "airbags": null,
+        "restraint_system": null
+      },
+      "sale_document": {
+        "variant_id": "16c33482e9f90871c22c692b729422af004bae4c8a398c0779e550339af7702e",
+        "source_name": "NR",
+        "name": "NR",
+        "raw_name": "CA - Nr",
+        "issuing_state": "CA",
+        "type": "other",
+        "export": true,
+        "registration": true,
+        "is_pending": false,
+        "pending_status": "unknown",
+        "pending_source": null,
+        "page_id": 1,
+        "sale_document_group": "warning"
+      },
+      "media": {
+        "thumbs_count": 11,
+        "images_count": 11,
+        "items_count": 12,
+        "has_video": false,
+        "has_360": true,
+        "thumbs": [
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/51fa40b6f28c4287b8f186978d565784_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/746f7f97ba444709889b439a3d4e717e_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/4f5567d56e504a67ad4053ffb9bbb0ce_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/b9c33a119aee4a4b800e278518f92233_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/7edaed46924c48e0971af20a2dc325fd_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a37d294c784c4b8183a56015cc0d0a25_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/02d9f2cb583448da94b1cba17bfd33bd_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a48593ce07d54dc284fee81091b935b1_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5b105f314eef446fa658c47457e16a6f_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/11f404fa486f4ab68ccdaa70f9fd8982_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5247c32669c84382a9d938721a23f145_ful.jpg"
+        ],
+        "items": [
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/51fa40b6f28c4287b8f186978d565784_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/51fa40b6f28c4287b8f186978d565784_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/51fa40b6f28c4287b8f186978d565784_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/746f7f97ba444709889b439a3d4e717e_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/746f7f97ba444709889b439a3d4e717e_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/746f7f97ba444709889b439a3d4e717e_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/4f5567d56e504a67ad4053ffb9bbb0ce_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/4f5567d56e504a67ad4053ffb9bbb0ce_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/4f5567d56e504a67ad4053ffb9bbb0ce_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/b9c33a119aee4a4b800e278518f92233_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/b9c33a119aee4a4b800e278518f92233_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/b9c33a119aee4a4b800e278518f92233_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/7edaed46924c48e0971af20a2dc325fd_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/7edaed46924c48e0971af20a2dc325fd_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/7edaed46924c48e0971af20a2dc325fd_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a37d294c784c4b8183a56015cc0d0a25_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a37d294c784c4b8183a56015cc0d0a25_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a37d294c784c4b8183a56015cc0d0a25_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/02d9f2cb583448da94b1cba17bfd33bd_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/02d9f2cb583448da94b1cba17bfd33bd_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/02d9f2cb583448da94b1cba17bfd33bd_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a48593ce07d54dc284fee81091b935b1_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a48593ce07d54dc284fee81091b935b1_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a48593ce07d54dc284fee81091b935b1_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5b105f314eef446fa658c47457e16a6f_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5b105f314eef446fa658c47457e16a6f_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5b105f314eef446fa658c47457e16a6f_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/11f404fa486f4ab68ccdaa70f9fd8982_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/11f404fa486f4ab68ccdaa70f9fd8982_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/11f404fa486f4ab68ccdaa70f9fd8982_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5247c32669c84382a9d938721a23f145_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5247c32669c84382a9d938721a23f145_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/5247c32669c84382a9d938721a23f145_hrs.jpg"
+          },
+          {
+            "type": "vr360",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a8d12902eb064d9fb2c807bcd9a248fa_vthb.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a8d12902eb064d9fb2c807bcd9a248fa_vful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0726/a8d12902eb064d9fb2c807bcd9a248fa_vhrs.jpg"
+          }
+        ]
+      },
+      "details": {
+        "source": "copart_csv",
+        "sale_status": "Pure Sale",
+        "bid_status": null,
+        "has_bid": null,
+        "seller_reserve_met": null,
+        "starting_bid": null,
+        "buy_now_available": false,
+        "buy_now_price_usd": null,
+        "estimated_retail_value_usd": null,
+        "yard": {
+          "number": 4,
+          "name": "CA - FRESNO"
+        },
+        "media": {
+          "source_image_count": 12,
+          "views_360_count": 1,
+          "image_api_url": "https://inventoryv2.copart.io/v1/lotImages/63144366?country=us&brand=cprt&yardNumber=4",
+          "fetched_at": "2026-10-27T11:14:22+02:00"
+        },
+        "source_updated_at": "2026-09-30 15:29:32"
+      },
+      "facility": {
+        "id": 4,
+        "state": "CA",
+        "zip": "93725",
+        "lat": 36.677,
+        "lng": -119.76739,
+        "office_name": "CA - FRESNO",
+        "address": "1255 EAST CENTRAL",
+        "city": "FRESNO",
+        "source_location_name": "CA - FRESNO",
+        "is_offsite": false,
+        "storage_location_id": null,
+        "storage_facility_id": 4,
+        "canonical": {
+          "id": 4,
+          "name": "CA - FRESNO",
+          "address": "1255 EAST CENTRAL",
+          "city": "FRESNO",
+          "state": "CA",
+          "zip": "93725",
+          "lat": 36.677,
+          "lng": -119.76739,
+          "url": "/locations/fresno-ca-4"
+        }
+      },
+      "distance": null,
+      "updated_at": "2026-11-09T06:15:47.000000Z",
+      "added_at": "2026-10-27T09:14:06+00:00",
+      "history": [],
+      "vin_lots": []
+    }
+  }
+}

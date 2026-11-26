@@ -1,0 +1,4 @@
+yard_code,state,export_port_code,vehicle_type,price_usd,notes
+,TX,US-HOU,car,350,EXAMPLE ROW - state-level rate (used when no yard-specific rate exists)
+COPART-TX-DALLAS,,US-HOU,car,325,EXAMPLE ROW - yard-specific rate wins over the state rate
+,GA,US-SAV,car,300,EXAMPLE ROW

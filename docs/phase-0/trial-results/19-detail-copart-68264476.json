@@ -1,0 +1,342 @@
+{
+  "request": "/api/v1/vehicle-auction/vehicles/2015-kia-optima-5XXGR4A67FG365913?include=history%2Cvin_lots",
+  "status": 200,
+  "ms": 813,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5a3f0d891ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:49:41 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=G96W41ozfpU5WgurPfJk20ljdkKLD1hAfl4ud0ZDsN5G2nzad7PB%2BuBaP3A4CbBBkCU74aHk50CE4VqNJ6pHar%2BrFb1EYRUaac6ce8Z%2F9V7dbuT0pXLY2VTannVElG4%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-detail-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "69",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:49:41",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "83",
+    "x-subscription-used": "17",
+    "x-upstream-time-ms": "65"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "slug_vin": "2015-kia-optima-5XXGR4A67FG365913",
+      "vin": "5XXGR4A67FG365913",
+      "platform": "copart",
+      "platform_id": 1,
+      "lot_number": "68264476",
+      "ad": null,
+      "title": "2015 KIA OPTIMA",
+      "year": 2015,
+      "make": "KIA",
+      "model": "OPTIMA",
+      "series": null,
+      "generation": null,
+      "type": null,
+      "subLot": false,
+      "auction": {
+        "state": "open",
+        "phase": "unscheduled",
+        "phase_label": "Auction date to be announced",
+        "result_confirmed": false,
+        "completion_source": null,
+        "is_bidding_now": null,
+        "live_window_expires_at": null,
+        "formatted": null,
+        "full_date": null,
+        "diff_minutes": 0,
+        "ad": null,
+        "countdown": {
+          "days": 0,
+          "hours": 0,
+          "minutes": 0
+        },
+        "is_timed": false,
+        "is_buy_now": false,
+        "auction_at": null,
+        "auction_date_pending": true,
+        "timed_end_at": null,
+        "last_sold_day": null,
+        "last_sold_at": null,
+        "last_sold_status": null,
+        "outcome_status": null,
+        "auction_ended_at": null,
+        "outcome_observed_at": null,
+        "lot_removed": false,
+        "sold_buy_now": false,
+        "sold_timed": false
+      },
+      "pricing": {
+        "current_bid_usd": null,
+        "current_bid_at": null,
+        "current_bid2_usd": null,
+        "buy_now_usd": null,
+        "estimated_retail_value_usd": null,
+        "sale_price_usd": null,
+        "last_sold_price_usd": null,
+        "reserve_price_usd": null,
+        "reserve_off_bid_usd": null,
+        "seller_reserve": {
+          "price_usd": null,
+          "price_is_exact": false,
+          "price_source": null,
+          "scope": "latest_observed_auction_cycle",
+          "reserve_off_bid_usd": null,
+          "reserve_off_previous_bid_usd": null,
+          "reserve_off_observed_at": null,
+          "status": "unknown",
+          "last_unmet_bid_usd": null,
+          "first_met_bid_usd": null,
+          "inferred_range_usd": null,
+          "latest_signal": null,
+          "cycle_key": null,
+          "observed_at": null,
+          "observations": 0
+        },
+        "estimated_cost": {
+          "from": 225,
+          "to": 350,
+          "median": 288,
+          "text": "$225 - $350",
+          "sample_count": 12,
+          "refinement_method": null,
+          "refinement_sample_count": null,
+          "engine_size_l": null,
+          "mileage_bucket": null,
+          "market_multiplier": null,
+          "previous_high_bid_usd": null
+        }
+      },
+      "location": {
+        "display": "Fresno (CA)",
+        "send_from": "LA",
+        "state": null
+      },
+      "seller": {
+        "name": "Geico",
+        "type": "insurance",
+        "class": "bg-success-C2F7D7",
+        "text_class": "text-success",
+        "name_source": "copart_sn",
+        "type_source": "seller_name",
+        "type_is_inferred": true
+      },
+      "condition": {
+        "run_condition": {
+          "value": "DEFAULT",
+          "label": "No information",
+          "class_hint": "secondary"
+        },
+        "has_key": false,
+        "loss": null,
+        "primary_damage": "Burn - engine",
+        "secondary_damage": null
+      },
+      "odometer": {
+        "mi": 0,
+        "km": 0
+      },
+      "vehicle_specs": {
+        "exterior_color": "White",
+        "engine": {
+          "raw": "2.0L 4",
+          "size_l": null,
+          "hp": 0,
+          "layout": null
+        },
+        "transmission": "Automatic",
+        "fuel_type": "Gas",
+        "drive_type": "FRONT WHEEL DRIVE",
+        "body_style": "Sedan 4dr",
+        "airbags": null,
+        "restraint_system": null
+      },
+      "sale_document": {
+        "variant_id": "16c33482e9f90871c22c692b729422af004bae4c8a398c0779e550339af7702e",
+        "source_name": "NR",
+        "name": "NR",
+        "raw_name": "CA - Nr",
+        "issuing_state": "CA",
+        "type": "other",
+        "export": true,
+        "registration": true,
+        "is_pending": false,
+        "pending_status": "unknown",
+        "pending_source": null,
+        "page_id": 1,
+        "sale_document_group": "warning"
+      },
+      "media": {
+        "thumbs_count": 12,
+        "images_count": 12,
+        "items_count": 13,
+        "has_video": false,
+        "has_360": true,
+        "thumbs": [
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/28a88f39e3124809b58c2f47077c80e8_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/1c87f67cc2ab42e9a37bb2b30df0a9fb_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2a2f481529d446ca8a19ab5e51650600_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a0fc9a67ed56491593066b412ba3efd2_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/e57584d97c8648dcbebb1c57a6f5e0fa_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c55a3894599f4435a24f8857c07fb34a_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f0ee4d4bcd18477cb61f699eaf1cb26c_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/74f0f627850645adaa05a38c163e8b84_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/dd0ea9ef2ca74dfdb0d075659f325c3f_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8c5a0a25bc92485e8a6955245ef9637e_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2c2fe2dd9f754a1f8a3e700d26910ff3_ful.jpg",
+          "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/becb5071413c4a25b2c60ff6bd4f472b_ful.jpg"
+        ],
+        "items": [
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/28a88f39e3124809b58c2f47077c80e8_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/28a88f39e3124809b58c2f47077c80e8_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/28a88f39e3124809b58c2f47077c80e8_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/1c87f67cc2ab42e9a37bb2b30df0a9fb_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/1c87f67cc2ab42e9a37bb2b30df0a9fb_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/1c87f67cc2ab42e9a37bb2b30df0a9fb_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2a2f481529d446ca8a19ab5e51650600_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2a2f481529d446ca8a19ab5e51650600_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2a2f481529d446ca8a19ab5e51650600_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a0fc9a67ed56491593066b412ba3efd2_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a0fc9a67ed56491593066b412ba3efd2_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/a0fc9a67ed56491593066b412ba3efd2_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/e57584d97c8648dcbebb1c57a6f5e0fa_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/e57584d97c8648dcbebb1c57a6f5e0fa_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/e57584d97c8648dcbebb1c57a6f5e0fa_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c55a3894599f4435a24f8857c07fb34a_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c55a3894599f4435a24f8857c07fb34a_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/c55a3894599f4435a24f8857c07fb34a_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f0ee4d4bcd18477cb61f699eaf1cb26c_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f0ee4d4bcd18477cb61f699eaf1cb26c_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/f0ee4d4bcd18477cb61f699eaf1cb26c_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/74f0f627850645adaa05a38c163e8b84_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/74f0f627850645adaa05a38c163e8b84_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/74f0f627850645adaa05a38c163e8b84_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/dd0ea9ef2ca74dfdb0d075659f325c3f_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/dd0ea9ef2ca74dfdb0d075659f325c3f_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/dd0ea9ef2ca74dfdb0d075659f325c3f_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8c5a0a25bc92485e8a6955245ef9637e_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8c5a0a25bc92485e8a6955245ef9637e_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/8c5a0a25bc92485e8a6955245ef9637e_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2c2fe2dd9f754a1f8a3e700d26910ff3_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2c2fe2dd9f754a1f8a3e700d26910ff3_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/2c2fe2dd9f754a1f8a3e700d26910ff3_hrs.jpg"
+          },
+          {
+            "type": "image",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/becb5071413c4a25b2c60ff6bd4f472b_ful.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/becb5071413c4a25b2c60ff6bd4f472b_hrs.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/becb5071413c4a25b2c60ff6bd4f472b_hrs.jpg"
+          },
+          {
+            "type": "vr360",
+            "thumb": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/edc016c397b3472d9724c848242634fa_vthb.jpg",
+            "full": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/edc016c397b3472d9724c848242634fa_vful.jpg",
+            "large": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0926/edc016c397b3472d9724c848242634fa_vhrs.jpg"
+          }
+        ]
+      },
+      "details": {
+        "source": "copart_csv",
+        "sale_status": "Pure Sale",
+        "bid_status": null,
+        "has_bid": null,
+        "seller_reserve_met": null,
+        "starting_bid": null,
+        "buy_now_available": false,
+        "buy_now_price_usd": null,
+        "estimated_retail_value_usd": null,
+        "yard": {
+          "number": 4,
+          "name": "CA - FRESNO"
+        },
+        "media": {
+          "source_image_count": 13,
+          "views_360_count": 1,
+          "image_api_url": "https://inventoryv2.copart.io/v1/lotImages/68264476?country=us&brand=cprt&yardNumber=4",
+          "fetched_at": "2026-10-27T11:14:24+02:00"
+        },
+        "source_updated_at": "2026-10-02 16:07:14"
+      },
+      "facility": {
+        "id": 4,
+        "state": "CA",
+        "zip": "93725",
+        "lat": 36.677,
+        "lng": -119.76739,
+        "office_name": "CA - FRESNO",
+        "address": "1255 EAST CENTRAL",
+        "city": "FRESNO",
+        "source_location_name": "CA - FRESNO",
+        "is_offsite": false,
+        "storage_location_id": null,
+        "storage_facility_id": 4,
+        "canonical": {
+          "id": 4,
+          "name": "CA - FRESNO",
+          "address": "1255 EAST CENTRAL",
+          "city": "FRESNO",
+          "state": "CA",
+          "zip": "93725",
+          "lat": 36.677,
+          "lng": -119.76739,
+          "url": "/locations/fresno-ca-4"
+        }
+      },
+      "distance": null,
+      "updated_at": "2026-10-27T08:15:49.000000Z",
+      "added_at": "2026-10-27T09:14:06+00:00",
+      "history": [],
+      "vin_lots": []
+    }
+  }
+}

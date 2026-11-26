@@ -1,0 +1,65 @@
+{
+  "request": "/api/v1/vehicle-auction/shipping/auction-to-port?lot_number=43713710",
+  "status": 200,
+  "ms": 1125,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5b5a78d81ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:50:26 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=77pCn0C0Bh7uhB33%2BCUg93hTdp3sfHPzheFpCUtbLgMoE6yFG0fRq%2BA4Joe6tvokkv7IgmI7niH5eFDBVjIocD8DS8Kd3yDKlRHzn7sYoirMMy9cQy9fI9vJfUE8ahw%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "64",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:50:26",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "57",
+    "x-subscription-used": "43"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "vehicle": {
+        "platform": "iaai",
+        "lot_number": "43713710",
+        "vin": "JS2RF9A85C6101024",
+        "title": "2012 SUZUKI KIZASHI SPORT SLS",
+        "type": "AUTOMOBILE"
+      },
+      "auction_location": {
+        "display": "Columbus (OH)",
+        "facility_id": 662,
+        "matched_location_id": "Columbus (OH)",
+        "match_score": 100
+      },
+      "shipping": {
+        "recommended_port": "Norfolk",
+        "recommended_price_usd": 550,
+        "has_shipping_price": true,
+        "available_ports": [
+          {
+            "port": "Norfolk",
+            "price": 550
+          }
+        ]
+      }
+    }
+  }
+}

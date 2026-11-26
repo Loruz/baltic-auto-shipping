@@ -1,0 +1,4 @@
+{
+  "site": { "name": "Baltic Auto Shipping", "tagline": "Cars from US auctions" },
+  "nav": { "search": "Search", "account": "Account", "signIn": "Sign in" }
+}

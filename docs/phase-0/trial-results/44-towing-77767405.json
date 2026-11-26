@@ -1,0 +1,65 @@
+{
+  "request": "/api/v1/vehicle-auction/shipping/auction-to-port?lot_number=77767405",
+  "status": 200,
+  "ms": 976,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-cache, private",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5db5b545e6c1ecb-ARN",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Fri, 20 Nov 2026 23:50:25 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SpDUqx5nuCTz4pROQjtVSqGyxDEWHQmpJuVqUQDEMihWR2hExtIWElpH7YRGxoZUk9G9UyrWGGOizewDhuh4p8Dw%2BdJvsPCbc7Q5vZbU0kN4IRmh02R%2FJfNqYFeLc0U%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-concurrency-limit": "48",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-per-page-limit": "20",
+    "x-response-time-ms": "56",
+    "x-subscription-base-limit": "100",
+    "x-subscription-extra-limit": "0",
+    "x-subscription-limit": "100",
+    "x-subscription-period-end": "2026-11-20 23:50:25",
+    "x-subscription-period-start": "2026-11-16 12:20:09",
+    "x-subscription-remaining": "58",
+    "x-subscription-used": "42"
+  },
+  "body": {
+    "ok": true,
+    "data": {
+      "vehicle": {
+        "platform": "copart",
+        "lot_number": "77767405",
+        "vin": "WA1LGAFE6ED006056",
+        "title": "2014 AUDI Q7 PREMIUM PLUS",
+        "type": "AUTOMOBILE"
+      },
+      "auction_location": {
+        "display": "Hayward (CA)",
+        "facility_id": 3,
+        "matched_location_id": "Hayward-CA",
+        "match_score": 100
+      },
+      "shipping": {
+        "recommended_port": "LA",
+        "recommended_price_usd": 400,
+        "has_shipping_price": true,
+        "available_ports": [
+          {
+            "port": "LA",
+            "price": 400
+          }
+        ]
+      }
+    }
+  }
+}
