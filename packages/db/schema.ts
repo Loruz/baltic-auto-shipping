@@ -25,7 +25,7 @@
  *  - Auth tables follow Better Auth's Drizzle schema (core + admin + twoFactor
  *    plugins). Configure the admin plugin with `defaultRole: "customer"` and
  *    `adminRoles: ["admin"]`. At Milestone 1 regenerate them with
- *    `npx @better-auth/cli generate`: the CLI output wins for auth tables, but keep
+ *    `npx auth@<better-auth version> generate`: the CLI output wins for auth tables, but keep
  *    `user_role_chk` and the `customer` default.
  *  - Domain tables use bigint identity PKs; auth tables use text PKs (Better Auth).
  */
@@ -248,14 +248,22 @@ export const verification = pgTable(
   (t) => [index("verification_identifier_idx").on(t.identifier)],
 );
 
-export const twoFactor = pgTable("two_factor", {
-  id: text("id").primaryKey(),
-  secret: text("secret").notNull(),
-  backupCodes: text("backup_codes").notNull(),
-  userId: text("user_id")
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
-});
+export const twoFactor = pgTable(
+  "two_factor",
+  {
+    id: text("id").primaryKey(),
+    secret: text("secret").notNull(),
+    backupCodes: text("backup_codes").notNull(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => user.id, { onDelete: "cascade" }),
+    // Better Auth 1.7 twoFactor plugin: enrolment confirmation and brute-force lockout.
+    verified: boolean("verified").default(true),
+    failedVerificationCount: integer("failed_verification_count").default(0),
+    lockedUntil: ts("locked_until"),
+  },
+  (t) => [index("two_factor_secret_idx").on(t.secret), index("two_factor_user_idx").on(t.userId)],
+);
 
 /* ───────────────────────────── Customers ───────────────────────────── */
 

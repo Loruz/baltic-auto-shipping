@@ -1,4 +1,38 @@
 {
-  "site": { "name": "Baltic Auto Shipping", "tagline": "Automobiliai iš JAV aukcionų" },
-  "nav": { "search": "Paieška", "account": "Paskyra", "signIn": "Prisijungti" }
+  "site": {
+    "name": "Baltic Auto Shipping",
+    "tagline": "Automobiliai iš JAV aukcionų"
+  },
+  "nav": {
+    "search": "Paieška",
+    "account": "Paskyra",
+    "signIn": "Prisijungti"
+  },
+  "auth": {
+    "signIn": "Prisijungti",
+    "signUp": "Registruotis",
+    "signOut": "Atsijungti",
+    "name": "Vardas ir pavardė",
+    "email": "El. paštas",
+    "password": "Slaptažodis",
+    "newPassword": "Naujas slaptažodis",
+    "passwordHint": "Bent 10 simbolių",
+    "continueWithGoogle": "Tęsti su Google",
+    "noAccount": "Neturite paskyros?",
+    "haveAccount": "Jau turite paskyrą?",
+    "forgotPassword": "Pamiršote slaptažodį?",
+    "forgotTitle": "Slaptažodžio atkūrimas",
+    "sendResetLink": "Siųsti nuorodą",
+    "resetLinkSent": "Jei toks el. paštas registruotas, išsiuntėme slaptažodžio keitimo nuorodą.",
+    "resetTitle": "Naujas slaptažodis",
+    "resetSubmit": "Pakeisti slaptažodį",
+    "resetDone": "Slaptažodis pakeistas. Prisijunkite iš naujo.",
+    "resetInvalid": "Nuoroda negalioja arba baigė galioti. Paprašykite naujos.",
+    "genericError": "Nepavyko. Patikrinkite duomenis ir bandykite dar kartą.",
+    "accountTitle": "Paskyra",
+    "emailVerified": "El. paštas patvirtintas",
+    "emailNotVerified": "El. paštas nepatvirtintas",
+    "resendVerification": "Siųsti patvirtinimo laišką dar kartą",
+    "verificationSent": "Patvirtinimo laiškas išsiųstas."
+  }
 }

@@ -1,4 +1,38 @@
 {
-  "site": { "name": "Baltic Auto Shipping", "tagline": "Cars from US auctions" },
-  "nav": { "search": "Search", "account": "Account", "signIn": "Sign in" }
+  "site": {
+    "name": "Baltic Auto Shipping",
+    "tagline": "Cars from US auctions"
+  },
+  "nav": {
+    "search": "Search",
+    "account": "Account",
+    "signIn": "Sign in"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "signOut": "Sign out",
+    "name": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "newPassword": "New password",
+    "passwordHint": "At least 10 characters",
+    "continueWithGoogle": "Continue with Google",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "forgotPassword": "Forgot your password?",
+    "forgotTitle": "Reset your password",
+    "sendResetLink": "Send reset link",
+    "resetLinkSent": "If that email is registered, we've sent a link to reset the password.",
+    "resetTitle": "Choose a new password",
+    "resetSubmit": "Change password",
+    "resetDone": "Password changed. Please sign in again.",
+    "resetInvalid": "This link is invalid or has expired. Ask for a new one.",
+    "genericError": "That didn't work. Check the details and try again.",
+    "accountTitle": "Account",
+    "emailVerified": "Email confirmed",
+    "emailNotVerified": "Email not confirmed yet",
+    "resendVerification": "Send the confirmation email again",
+    "verificationSent": "Confirmation email sent."
+  }
 }

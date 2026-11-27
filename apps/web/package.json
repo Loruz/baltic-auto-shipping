@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run",
+    "auth:create-staff": "tsx --env-file-if-exists=../../.env scripts/create-staff.ts"
   },
   "dependencies": {
     "@bas/auctions": "workspace:*",
@@ -22,10 +23,12 @@
     "@bas/notifications": "workspace:*",
     "@bas/pricing": "workspace:*",
     "@bas/search": "workspace:*",
+    "better-auth": "1.7.28",
     "ioredis": "5.11.1",
     "next": "16.4.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
+    "react-qr-code": "2.2.0",
     "server-only": "0.0.1"
   },
   "devDependencies": {
@@ -37,6 +40,7 @@
     "eslint": "10.15.0",
     "globals": "17.14.0",
     "tailwindcss": "4.3.5",
+    "tsx": "4.23.15",
     "typescript": "5.9.3",
     "vitest": "5.1.2"
   }

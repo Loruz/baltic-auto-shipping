@@ -28,6 +28,8 @@ jobs:
       APP_ENV: test
       DATABASE_URL: postgres://postgres:postgres@localhost:5432/bas
       REDIS_URL: redis://localhost:6379
+      BETTER_AUTH_SECRET: ci-only-secret-at-least-32-characters-long
+      BETTER_AUTH_URL: http://localhost:3000
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4

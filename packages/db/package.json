@@ -6,7 +6,8 @@
   "exports": {
     ".": "./client.ts",
     "./schema": "./schema.ts",
-    "./migrate": "./migrate.ts"
+    "./migrate": "./migrate.ts",
+    "./testing": "./testing.ts"
   },
   "scripts": {
     "lint": "eslint .",

@@ -9,6 +9,9 @@ export type AppEnv = (typeof APP_ENVS)[number];
 
 const optional = z.string().trim().min(1).optional().catch(undefined);
 
+/** The secret in .env.example. Fine on a laptop, refused in production. */
+export const DEV_AUTH_SECRET = "dev-only-insecure-secret-change-me-0123456789";
+
 export const serverEnvSchema = z
   .object({
     APP_ENV: z.enum(APP_ENVS).default("development"),
@@ -20,10 +23,10 @@ export const serverEnvSchema = z
 
     DATABASE_URL: z.url(),
     REDIS_URL: z.url(),
-    SMTP_URL: optional,
+    SMTP_URL: z.url().default("smtp://localhost:1025"),
 
-    BETTER_AUTH_SECRET: optional,
-    BETTER_AUTH_URL: optional,
+    BETTER_AUTH_SECRET: z.string().min(32),
+    BETTER_AUTH_URL: z.url(),
     GOOGLE_CLIENT_ID: optional,
     GOOGLE_CLIENT_SECRET: optional,
     STRIPE_SECRET_KEY: optional,
@@ -58,6 +61,13 @@ export const serverEnvSchema = z
           message: `${key}=${standIn} is not allowed when APP_ENV=production`,
         });
       }
+    }
+    if (env.BETTER_AUTH_SECRET === DEV_AUTH_SECRET) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["BETTER_AUTH_SECRET"],
+        message: "the development BETTER_AUTH_SECRET is not allowed when APP_ENV=production",
+      });
     }
   });
 

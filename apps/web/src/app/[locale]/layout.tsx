@@ -2,6 +2,7 @@ import { LOCALES, isLocale, messages } from "@bas/i18n";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HeaderAccountLink } from "@/components/auth/HeaderAccountLink";
 import { montserrat, plexSans } from "../fonts";
 import "../globals.css";
 
@@ -31,9 +32,10 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
               {t.site.name}
             </Link>
             <Link href={`/${locale}/search`}>{t.nav.search}</Link>
-            <Link href={`/${locale}/account`} className="ml-auto">
-              {t.nav.account}
-            </Link>
+            <HeaderAccountLink
+              locale={locale}
+              labels={{ account: t.nav.account, signIn: t.nav.signIn }}
+            />
           </nav>
         </header>
         <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>

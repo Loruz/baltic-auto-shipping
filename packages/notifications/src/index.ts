@@ -25,3 +25,4 @@ export type TemplateKey = (typeof TEMPLATES)[number];
 
 /** Delay before attempt n+1 after a failure: 1 min, 5 min, 30 min, 2 h, 6 h; then `failed`. */
 export const RETRY_DELAYS_MS = [60_000, 300_000, 1_800_000, 7_200_000, 21_600_000] as const;
+export * from "./email.ts";

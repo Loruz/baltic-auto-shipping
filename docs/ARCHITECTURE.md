@@ -48,6 +48,12 @@ Locally, everything runs offline (plan §6):
 - **Web:** Next.js App Router. `/[locale]` (lt, en) serves public and account pages, `/admin` the
   operator console (a separate root layout), and `/api/webhooks/*` the provider callbacks.
   Server-only singletons (`src/server/`) are created lazily, so `next build` needs no runtime env.
+- **Auth:** Better Auth (`apps/web/src/server/auth-config.ts`, a factory shared by the app, the
+  staff CLI and the tests). Roles `customer` / `operator` / `admin` (`src/lib/permissions.ts`).
+  Access checks are `requireUser()` / `requireStaff()` in `src/server/session.ts`; `src/proxy.ts`
+  only short-circuits requests that have no session cookie. Staff need TOTP 2FA before any
+  `/admin` console page renders. A Postgres trigger (`migrations/0001_user_bootstrap.sql`) gives
+  every new user a `customer_profiles` row and a buying-power account in the same transaction.
 - **Worker:** queues and schedules are declared in `apps/worker/src/queues.ts`, and processors are
   keyed by job name in `processors.ts`. Every scheduled job must have a processor (a unit test
   checks this).
