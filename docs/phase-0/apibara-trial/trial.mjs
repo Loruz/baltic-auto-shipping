@@ -32,7 +32,7 @@ async function call(name, path, params = {}) {
   const text = await res.text();
   let body;
   try { body = JSON.parse(text); } catch { body = text.slice(0, 5000); }
-  const headers = Object.fromEntries([...res.headers].filter(([k]) => k !== "set-cookie"));
+  const headers = Object.fromEntries([...res.headers].filter(([k]) => k !== "set-cookie" && k !== "x-api-key-prefix"));
   const usedHdr = Object.entries(headers).find(([k]) => /subscription-used/i.test(k));
   if (usedHdr) lastUsed = Number(usedHdr[1]);
   const file = `${String(sent).padStart(2, "0")}-${name}.json`;

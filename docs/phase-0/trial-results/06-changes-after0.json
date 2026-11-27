@@ -17,7 +17,7 @@
     "server": "cloudflare",
     "strict-transport-security": "max-age=31536000",
     "transfer-encoding": "chunked",
-    "x-api-key-prefix": "ak_live_o4wIX2",
+    "x-api-key-prefix": "[redacted]",
     "x-concurrency-limit": "48",
     "x-content-type-options": "nosniff",
     "x-frame-options": "SAMEORIGIN",
