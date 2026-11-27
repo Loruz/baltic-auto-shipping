@@ -698,6 +698,14 @@ table two_factor {
   secret text [not null]
   backup_codes text [not null]
   user_id text [not null]
+  verified boolean [default: true]
+  failed_verification_count integer [default: 0]
+  locked_until "timestamp with time zone"
+
+  indexes {
+    secret [name: 'two_factor_secret_idx']
+    user_id [name: 'two_factor_user_idx']
+  }
 }
 
 table user {

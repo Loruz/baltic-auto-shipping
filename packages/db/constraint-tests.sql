@@ -1,4 +1,4 @@
--- Self-checking constraint tests. Run on an EMPTY database after migrating:
+-- Self-checking constraint tests (14 cases). Run on an EMPTY database after migrating:
 --   psql -v ON_ERROR_STOP=1 -f constraint-tests.sql
 -- Any failed expectation raises an exception and psql exits non-zero.
 -- Milestone 1 ports these to Vitest + Testcontainers (Postgres 17) in CI.
@@ -23,7 +23,7 @@ end $$;
 
 -- fixtures
 insert into "user"(id,name,email) values ('u1','A','a@x.lt'),('u2','B','b@x.lt');
-insert into buying_power_accounts(user_id) values ('u1'),('u2');
+-- customer_profiles and buying_power_accounts rows come from the user_bootstrap trigger (T14)
 insert into vehicles(vin,make,model,year) values ('1HGCM82633A004352','Honda','Accord',2003);
 insert into lots(source,external_lot_id,vehicle_id,status,sale_at) values ('copart','12345678',1,'upcoming', now()+interval '2 days');
 insert into bids(user_id,lot_id,max_bid_usd_cents,lot_snapshot,terms_version,idempotency_key) values ('u1',1,500000,'{}','2026-11','k1');
@@ -72,4 +72,18 @@ select pg_temp.expect_violation($q$update bids set outbid_by_bid_id=999 where id
 
 -- T13 vehicles without VIN are allowed (many)
 insert into vehicles(make) values ('X'),('Y');
+
+-- T14 every new user gets a customer profile and an all-zero buying-power account (§4.2)
+do $$
+begin
+  if (select count(*) from customer_profiles where user_id in ('u1','u2')) <> 2 then
+    raise exception 'FAIL: T14 customer_profiles not bootstrapped';
+  end if;
+  if (select count(*) from buying_power_accounts
+      where user_id in ('u1','u2') and granted_usd_cents = 0 and consumed_usd_cents = 0) <> 2 then
+    raise exception 'FAIL: T14 buying_power_accounts not bootstrapped';
+  end if;
+  raise notice 'PASS: T14 user insert bootstraps profile and buying-power account';
+end $$;
+
 \echo 'ALL CONSTRAINT TESTS PASSED'

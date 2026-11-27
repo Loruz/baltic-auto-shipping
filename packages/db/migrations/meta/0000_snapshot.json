@@ -1,5 +1,5 @@
 {
-  "id": "dae6a020-59df-43ba-b4df-bf78a771def2",
+  "id": "3c4ad84a-3256-4470-b737-5109b91a5245",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -4187,9 +4187,60 @@
           "type": "text",
           "primaryKey": false,
           "notNull": true
+        },
+        "verified": {
+          "name": "verified",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "default": true
+        },
+        "failed_verification_count": {
+          "name": "failed_verification_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "locked_until": {
+          "name": "locked_until",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
         }
       },
-      "indexes": {},
+      "indexes": {
+        "two_factor_secret_idx": {
+          "name": "two_factor_secret_idx",
+          "columns": [
+            {
+              "expression": "secret",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "two_factor_user_idx": {
+          "name": "two_factor_user_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
       "foreignKeys": {
         "two_factor_user_id_user_id_fk": {
           "name": "two_factor_user_id_user_id_fk",

@@ -42,15 +42,16 @@ docs/               implementation plan, broker questions, Phase 0 research, rev
 
 ## Commands
 
-| Command                                      | What it does                                          |
-| -------------------------------------------- | ----------------------------------------------------- |
-| `pnpm dev`                                   | Web + worker with hot reload                          |
-| `pnpm build`                                 | Production builds (Next.js standalone, worker bundle) |
-| `pnpm lint` / `pnpm typecheck` / `pnpm test` | Checks across every package (Turborepo)               |
-| `pnpm format`                                | Prettier                                              |
-| `pnpm db:generate`                           | Generate SQL from `packages/db/schema.ts`             |
-| `pnpm db:migrate`                            | Apply migrations                                      |
-| `pnpm db:reset`                              | Drop, recreate and migrate (development only)         |
-| `pnpm db:constraint-tests`                   | Run the database rule tests on a scratch database     |
-| `pnpm db:dbml`                               | Regenerate `packages/db/schema.dbml` for dbdiagram.io |
-| `pnpm infra:up` / `pnpm infra:down`          | Start / stop the local services                       |
+| Command                                                                       | What it does                                                                        |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `pnpm dev`                                                                    | Web + worker with hot reload                                                        |
+| `pnpm build`                                                                  | Production builds (Next.js standalone, worker bundle)                               |
+| `pnpm lint` / `pnpm typecheck` / `pnpm test`                                  | Checks across every package (Turborepo)                                             |
+| `pnpm format`                                                                 | Prettier                                                                            |
+| `pnpm db:generate`                                                            | Generate SQL from `packages/db/schema.ts`                                           |
+| `pnpm db:migrate`                                                             | Apply migrations                                                                    |
+| `pnpm db:reset`                                                               | Drop, recreate and migrate (development only)                                       |
+| `pnpm db:constraint-tests`                                                    | Run the database rule tests on a scratch database                                   |
+| `pnpm db:dbml`                                                                | Regenerate `packages/db/schema.dbml` for dbdiagram.io                               |
+| `pnpm infra:up` / `pnpm infra:down`                                           | Start / stop the local services                                                     |
+| `pnpm --filter @bas/web auth:create-staff --email <e> --role admin\|operator` | Create a staff login with a one-time password; 2FA setup is forced at first sign-in |

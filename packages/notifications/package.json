@@ -12,11 +12,13 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@bas/db": "workspace:*"
+    "@bas/config": "workspace:*",
+    "@bas/db": "workspace:*",
+    "nodemailer": "10.6.1"
   },
   "devDependencies": {
-    "@bas/config": "workspace:*",
     "@types/node": "24.19.4",
+    "@types/nodemailer": "8.0.2",
     "eslint": "10.15.0",
     "typescript": "5.9.3",
     "vitest": "5.1.2"

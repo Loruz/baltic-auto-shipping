@@ -456,7 +456,10 @@ CREATE TABLE "two_factor" (
 	"id" text PRIMARY KEY NOT NULL,
 	"secret" text NOT NULL,
 	"backup_codes" text NOT NULL,
-	"user_id" text NOT NULL
+	"user_id" text NOT NULL,
+	"verified" boolean DEFAULT true,
+	"failed_verification_count" integer DEFAULT 0,
+	"locked_until" timestamp with time zone
 );
 --> statement-breakpoint
 CREATE TABLE "user" (
@@ -605,6 +608,8 @@ CREATE INDEX "stripe_events_unprocessed_idx" ON "stripe_events" USING btree ("re
 CREATE INDEX "sync_runs_feed_started_idx" ON "sync_runs" USING btree ("provider","feed","started_at");--> statement-breakpoint
 CREATE UNIQUE INDEX "tax_rates_uq" ON "tax_rates" USING btree ("rate_card_id","code");--> statement-breakpoint
 CREATE INDEX "towing_lookup_idx" ON "towing_rates" USING btree ("rate_card_id","yard_id","state");--> statement-breakpoint
+CREATE INDEX "two_factor_secret_idx" ON "two_factor" USING btree ("secret");--> statement-breakpoint
+CREATE INDEX "two_factor_user_idx" ON "two_factor" USING btree ("user_id");--> statement-breakpoint
 CREATE UNIQUE INDEX "vehicles_vin_uq" ON "vehicles" USING btree ("vin") WHERE "vehicles"."vin" is not null;--> statement-breakpoint
 CREATE INDEX "vehicles_make_model_idx" ON "vehicles" USING btree ("make","model","year");--> statement-breakpoint
 CREATE INDEX "verification_identifier_idx" ON "verification" USING btree ("identifier");--> statement-breakpoint
